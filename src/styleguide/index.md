@@ -131,39 +131,77 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 ---
 
+## Blues
 <div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
+      <span style="background: #00356B"></span>
+      #00356B
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
+      <span style="background: #286DC0"></span>
+      #286DC0
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
+      <span style="background: #63AAFF"></span>
+      #63AAFF
+    </div>
+  </div>  
+</div>
+
+## Grays  
+<div class="row up-1 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #222222"></span>
+      #222222
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
+      <span style="background: #4a4a4a"></span>
+      #4a4a4a
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
+      <span style="background: #63AAFF"></span>
+      #63AAFF
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #DDDDDD"></span>
+      #DDDDDD
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #F9F9F9"></span>
+      #F9F9F9
     </div>
   </div>
 </div>
 
+## Accent Colors
+<div class="row up-1 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #5F712D"></span>
+      #5F712D
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #BD5319"></span>
+      #BD5319
+    </div>
+  </div>
+</div>
 
 
 # Typography
