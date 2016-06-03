@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 @import 'settings';
-@import 'y-settings';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -49,3 +48,93 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+/* ==========================================================================
+   Fonts
+============================================================================= */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+
+@font-face {
+  font-family: 'yale';
+  src: url('../fonts/yalenew-roman-webfont.eot');
+  src: url('../fonts/yalenew-roman-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/yalenew-roman-webfont.woff2') format('woff2'),
+       url('../fonts/yalenew-roman-webfont.woff') format('woff'),
+       url('../fonts/yalenew-roman-webfont.ttf') format('truetype'),
+       url('../fonts/yalenew-roman-webfont.svg#yalenewregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yale';
+  src: url('../fonts/yalenew-bold-webfont.eot');
+  src: url('../fonts/yalenew-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/yalenew-bold-webfont.woff2') format('woff2'),
+       url('../fonts/yalenew-bold-webfont.woff') format('woff'),
+       url('../fonts/yalenew-bold-webfont.ttf') format('truetype'),
+       url('../fonts/yalenew-bold-webfont.svg#yalenewbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yale';
+  src: url('../fonts/yalenew-italic-webfont.eot');
+  src: url('../fonts/yalenew-italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/yalenew-italic-webfont.woff2') format('woff2'),
+       url('../fonts/yalenew-italic-webfont.woff') format('woff'),
+       url('../fonts/yalenew-italic-webfont.ttf') format('truetype'),
+       url('../fonts/yalenew-italic-webfont.svg#yalenewitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'yale';
+  src: url('../fonts/yalenew-bolditalic-webfont.eot');
+  src: url('../fonts/yalenew-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/yalenew-bolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/yalenew-bolditalic-webfont.woff') format('woff'),
+       url('../fonts/yalenew-bolditalic-webfont.ttf') format('truetype'),
+       url('../fonts/yalenew-bolditalic-webfont.svg#yalenewbold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "TheSans";
+  src: url("../fonts/TheSans_B2_200_.eot");
+  src: url("../fonts/TheSans_B2_200_.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/TheSans_B2_200_.woff") format("woff"),
+       url("../fonts/TheSans_B2_200_.svg#TheSans_B2_200_") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TheSans";
+  src: url("../fonts/TheSans_B2_200i.eot");
+  src: url("../fonts/TheSans_B2_200i.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/TheSans_B2_200i.woff") format("woff"),
+       url("../fonts/TheSans_B2_200i.svg#TheSans_B2_200i") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TheSans";
+  src: url("../fonts/TheSans_B2_600_.eot");
+  src: url("../fonts/TheSans_B2_600_.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/TheSans_B2_600_.woff") format("woff"),
+       url("../fonts/TheSans_B2_600_.svg#TheSans_B2_600_") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+/* ==========================================================================
+   Overrides
+============================================================================= */
+
+@import 'typography-overrides';

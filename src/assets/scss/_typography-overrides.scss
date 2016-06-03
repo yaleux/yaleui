@@ -1,0 +1,23 @@
+// Base Typography Overrides
+// - - - - - - - - - - - - - - -
+
+
+// Headings
+
+h2 {
+  color: $marine;
+}
+
+h3 {
+  color: $yale-blue;
+}
+
+h5,
+h6 {
+  color: $yale-blue;
+
+  font-family: $sans-font;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}

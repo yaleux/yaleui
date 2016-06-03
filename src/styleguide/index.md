@@ -132,6 +132,7 @@ As you've probably noticed in the examples above, you have access to a small, me
 ---
 
 ## Blues
+
 <div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
@@ -153,7 +154,10 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>  
 </div>
 
+---
+
 ## Grays  
+
 <div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
@@ -187,7 +191,10 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>
 </div>
 
+---
+
 ## Accent Colors
+
 <div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
@@ -203,10 +210,13 @@ As you've probably noticed in the examples above, you have access to a small, me
   </div>
 </div>
 
+---
+
+
 
 # Typography
 
-<p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+<p class="lead">This design uses Yale New for headings and Open Sans for paragraph text.</p>
 
 ---
 

@@ -48,21 +48,27 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  primary: #00356B,   //Yale Blue
+  secondary: #F9F9F9, //Off-White;
+  success: #286DC0,   //Blue - Denim
+  warning: #BD5319,   //Accent Color - Orange Roughy
+  alert: #BD5319,     //Accent Color - Orange Roughy
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+
+$yale-blue: #00356B;
+$marine: #286DC0;
+
+$light-gray: #dddddd;
+$medium-gray: #978D85;
+$dark-gray: #4a4a4a;
+$black: #222222;
+$off-white: #F9F9F9;
+$white: #FFFFFF;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -102,28 +108,34 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$yale-font: 'yale', TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+$thesans-font:  'TheSans', sans-serif;
+$opensans-font: 'Open Sans', sans-serif;
+$sans-font: $opensans-font;
+
+$header-font-family: $yale-font;
+$header-font-weight: 400;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': 34,
+    'h2': 30,
+    'h3': 36,
+    'h4': 24,
+    'h5': 14,
+    'h6': 14,
   ),
   medium: (
-    'h1': 48,
+    'h1': 55,
     'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
+    'h3': 30,
+    'h4': 24,
+    'h5': 14,
+    'h6': 14,
   ),
 );
+
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
@@ -166,6 +178,7 @@ $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
+
 
 // 5. Typography Helpers
 // ---------------------
