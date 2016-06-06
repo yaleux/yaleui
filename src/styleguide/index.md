@@ -275,6 +275,13 @@ These buttons are primary calls to action and should be used sparingly. Their si
 <a href="#" class="primary tiny button">Tiny button</a>
 ```
 
+```html_example
+<a href="#" class="primary large hollow button">Large button</a>
+<a href="#" class="primary hollow button">Regular button</a>
+<a href="#" class="primary small hollow button">Small button</a>
+<a href="#" class="primary tiny hollow button">Tiny button</a>
+```
+
 ---
 
 ## Secondary Buttons
@@ -286,6 +293,13 @@ These buttons are used for less important, secondary actions on a page.
 <a href="#" class="secondary button">Regular button</a>
 <a href="#" class="secondary small button">Small button</a>
 <a href="#" class="secondary tiny button">Tiny button</a>
+```
+
+```html_example
+<a href="#" class="secondary large hollow button">Large button</a>
+<a href="#" class="secondary hollow button">Regular button</a>
+<a href="#" class="secondary small hollow button">Small button</a>
+<a href="#" class="secondary tiny hollow button">Tiny button</a>
 ```
 
 

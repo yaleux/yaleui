@@ -51,7 +51,7 @@ $global-lineheight: 1.5;
 
 $foundation-palette: (
   primary: #286DC0,   //Blue - Denim
-  secondary: #F9F9F9, //Off-White;
+  secondary: #786f67, //Off-White;
   success: #00356B,   //Yale Blue
   warning: #BD5319,   //Accent Color - Orange Roughy
   alert: #BD5319,     //Accent Color - Orange Roughy
@@ -246,11 +246,11 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 1em;
+$button-padding: rem-calc(16) rem-calc(20);
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: $yale-blue;
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
