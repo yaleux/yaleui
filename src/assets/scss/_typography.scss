@@ -1,0 +1,32 @@
+// Base Typography Overrides
+// - - - - - - - - - - - - - - -
+
+
+// Headings
+
+@mixin heading_5 {
+  font-size: rem-calc(14);
+  font-family: $sans-font;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: $global-weight-bold;
+}
+
+@mixin heading_6 {
+  font-size: rem-calc(14);
+  font-family: $sans-font;
+  color: $black;
+  font-weight: $global-weight-bold;
+}
+
+h1 {
+  color: $black;
+}
+
+h5 {
+  @include heading_5;
+}
+
+h6 {
+  @include heading_6;
+}

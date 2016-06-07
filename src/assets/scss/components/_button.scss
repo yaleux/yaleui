@@ -1,0 +1,10 @@
+// Button Overrides
+// - - - - - - - - - - - - - - -
+
+
+// Typography
+
+button,
+.button {
+  @include heading_5;
+}
