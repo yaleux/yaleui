@@ -74,6 +74,7 @@
             <li><a href="#colors">Colors</a></li>
             <li><a href="#typography">Typography</a></li>
             <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#button-groups">Button Groups</a></li>
             <li><a href="#forms">Forms</a></li>
             <li><a href="#new-section">New Section</a></li>
         </ul>
@@ -88,7 +89,7 @@
 <hr>
 <h2>Nesting</h2><p>In the Grid you can nest columns down as far as you&#39;d like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.</p>
 <hr>
-<h2>How to Use</h2><p>Using this framework is easy. Here&#39;s how your code will look when you use a series of <div> tags to create vertical columns.</p>
+<h2>How to Use</h2><p>Using this framework is easy. Here&#39;s how your code will look when you use a series of <code>&lt;div&gt;</code> tags to create vertical columns.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-4 large-3 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-8 large-9 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -245,9 +246,6 @@
     </div>
   </div>
 </div>
-
-<hr>
-
           </section>
           <section class="ss-section" id="typography">
             <h1>Typography</h1><p class="lead">This design uses Yale New for headings and Open Sans for paragraph text.</p>
@@ -317,6 +315,105 @@
 <a href="#" class="secondary hollow button">Regular button</a>
 <a href="#" class="secondary small hollow button">Small button</a>
 <a href="#" class="secondary tiny hollow button">Tiny button</a></div>
+          </section>
+          <section class="ss-section" id="button-groups">
+            <h1>Button Groups</h1><p class="lead">Button groups are containers for related action items. They&#39;re great when you need to display a group of actions in a bar. These build off the button styles and work perfectly with the grid.</p>
+
+<hr>
+<h2>Basics</h2><p>Add the <code>.button-group</code> class to a container, and inside it place any number of buttons. The buttons are separated by a small border.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="button-group">
+  <a class="button">One</a>
+  <a class="button">Two</a>
+  <a class="button">Three</a>
+</div></div><hr>
+<h2>Sizing</h2><p>Button groups can be sized with the same classes as standard buttons: <code>.tiny</code>, <code>.small</code>, and <code>.large</code>.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Group<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="small button-group">
+  <a class="button">Small</a>
+  <a class="button">Button</a>
+  <a class="button">Group</a>
+</div></div><hr>
+<h2>Coloring</h2><p>Buttons within a button group can be colored individually with the <code>.secondary</code>, <code>.success</code>, <code>.warning</code>, and <code>.alert</code> classes.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary button"</span>&gt;</span>View<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success button"</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning button"</span>&gt;</span>Share<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert button"</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="button-group">
+  <a class="secondary button">View</a>
+  <a class="success button">Edit</a>
+  <a class="warning button">Share</a>
+  <a class="alert button">Delete</a>
+</div></div><p>The entire group can also be colored using the same classes.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Harder<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Better<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Faster<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Stronger<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="success button-group">
+  <a class="button">Harder</a>
+  <a class="button">Better</a>
+  <a class="button">Faster</a>
+  <a class="button">Stronger</a>
+</div></div><hr>
+<h2>Even-width Group</h2><p>Add the <code>.expanded</code> class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of six.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"expanded button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Expanded<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Group<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="expanded button-group">
+  <a class="button">Expanded</a>
+  <a class="button">Button</a>
+  <a class="button">Group</a>
+</div></div><hr>
+<h2>Stacking</h2><p>A button group can be made vertical with the <code>.stacked</code> class. You can also use <code>.stacked-for-small</code> to only stack a button group on small screens, or <code>.stacked-for-medium</code> to only stack on small and medium screens.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stacked-for-small button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>How<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Low<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Can<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>You<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="stacked-for-small button-group">
+  <a class="button">How</a>
+  <a class="button">Low</a>
+  <a class="button">Can</a>
+  <a class="button">You</a>
+  <a class="button">Go</a>
+</div></div><hr>
+<h2>Split Buttons</h2><p>To build a split button, just create a button group with two buttons.</p>
+<p>To create a button with only an arrow, add the class <code>.arrow-only</code>. Note that the button still needs a label for screen readers, which can be embedded inside the button with a <code>.show-for-sr</code> element. In the example below, an assistive device will read the arrow button as &quot;Show menu&quot;.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Primary Action<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown button arrow-only"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Show menu<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="button-group">
+  <a class="button">Primary Action</a>
+  <a class="dropdown button arrow-only">
+    <span class="show-for-sr">Show menu</span>
+  </a>
+</div></div>
           </section>
           <section class="ss-section" id="forms">
             <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
