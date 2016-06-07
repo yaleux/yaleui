@@ -77,6 +77,7 @@
             <li><a href="#button-groups">Button Groups</a></li>
             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
             <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
             <li><a href="#new-section">New Section</a></li>
         </ul>
       </div>
@@ -580,6 +581,233 @@
     </div>
   </div>
 </form></div>
+          </section>
+          <section class="ss-section" id="tables">
+            <h1>Tables</h1><p class="lead">Okay, they&#39;re not the sexiest things ever, but tables get the job done (for tabular data, of course). They have responsive modifiers to help solve some of your layout issues based on your tables needs.</p>
+
+
+<h2>Basics</h2><p>No bells or whistles here, just a straight up table for all of your basic table needs.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><table>
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table></div><hr>
+<h2>Hover State</h2><p>Need to spiff up the table just a tad? Just add the class <code>.hover</code> to lightly darken the table rows on hover.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hover"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></code></pre></div><table class="hover">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2>Stacked Table</h2><p>To stack a table on small screens, add the class <code>.stack</code>.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stack"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></code></pre></div><table class="stack">
+  <thead>
+    <tr>
+      <th>Cookies</th>
+      <th>Taste</th>
+      <th>Calories</th>
+      <th>Overall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chocolate Chip</td>
+      <td>Tastey</td>
+      <td>120cal</td>
+      <td>7.5/10</td>
+    </tr>
+    <tr>
+      <td>Snickerdoodle</td>
+      <td>Delicious</td>
+      <td>95cal</td>
+      <td>8/10</td>
+    </tr>
+    <tr>
+      <td>Oatmeal Raisin</td>
+      <td>Superb</td>
+      <td>10cal</td>
+      <td>11/10</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2>Scrolling Table</h2><p>Got a lot of tubular tabular data? Add a wrapper element with the class <code>.table-scroll</code> around your table to enable horizontal scrolling.</p>
+<div class="primary callout">
+  <p>The wrapping element was added in Foundation 6.2&mdash;prior to that, you just added the class <code>.scroll</code> to the table itself. However, this method doesn&#39;t work great with Internet Explorer 9. <strong>If you don&#39;t need IE9 support, you can just add <code>.scroll</code> to your table, and the wrapping element isn&#39;t necessary.</strong>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-scroll"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="table-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th>This is the description!</th>
+        <th>One</th>
+        <th>Two</th>
+        <th>Three</th>
+        <th>Four</th>
+        <th>Five</th>
+        <th>Six</th>
+        <th>Seven</th>
+        <th>Eight</th>
+        <th>Nine</th>
+        <th>Ten</th>
+        <th>Eleven</th>
+        <th>Twelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="display:block; width:400px;">These are all the words that people use to describe Foundation 6!</td>
+        <td>Cool</td>
+        <td>Swag</td>
+        <td>Chill</td>
+        <td>Killer</td>
+        <td>Rad</td>
+        <td>Baller</td>
+        <td>OMG</td>
+        <td>Sweet</td>
+        <td>Awesome</td>
+        <td>Beast</td>
+        <td>Dope</td>
+        <td>Tubular</td>
+      </tr>
+      <tr>
+        <td>These are some words that people use to describe other web frameworks.</td>
+        <td>Whatevs</td>
+        <td>Ugh.</td>
+        <td>LOL</td>
+        <td>K</td>
+        <td>Aight</td>
+        <td>Eh.</td>
+        <td>Grrr...</td>
+        <td>Meh.</td>
+        <td>TTYL</td>
+        <td>Bleh.</td>
+        <td>Really?</td>
+        <td>Why?</td>
+      </tr>
+      <tr>
+        <td>Here are some great super heros.</td>
+        <td>Batman</td>
+        <td>Superman</td>
+        <td>Spiderman</td>
+        <td>Wonder Woman</td>
+        <td>Hulk</td>
+        <td>Nicolas Cage</td>
+        <td>Antman</td>
+        <td>Aquaman</td>
+        <td>Captain America</td>
+        <td>Wolverine</td>
+        <td>Thor</td>
+        <td>Iron Man</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Here&#39;s a footer, just in case</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
           </section>
           <section class="ss-section" id="new-section">
             <h1>New Section</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid <strong>expedita!</strong> <a href="zurb.com">Non dicta</a>, autem obcaecati error, id ab voluptate unde culpa nulla.</p>
