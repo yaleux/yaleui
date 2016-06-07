@@ -632,6 +632,15 @@ To mark a disabled item, add the class `.disabled` to the `<li>`, and just use p
 
 
 
+# Dialogs
+
+Modal dialogs, or pop-up windows, are handy for prototyping and production. Foundation includes Reveal, a jQuery modal plugin, to make this easy for you. 
+
+<a href="http://foundation.zurb.com/sites/docs/reveal.html" class="button">Foundation's Reveal</a>
+
+
+
+
 # Forms
 
 <p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
