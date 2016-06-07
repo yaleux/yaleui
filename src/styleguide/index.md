@@ -409,8 +409,6 @@ The contrast between the color of an element's text and its background should be
 
 Google Chrome's [Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en) also includes a contrast checker. By selecting an element in the inspector, you can see if the contrast meets the minimum standards.
 
-<img class="thumbnail" src="assets/img/a11y/chrome-a11y-inspector.jpg" alt="Screenshot of Google Chrome's Accessibility Tools">
-
 ---
 
 ### Type Size
