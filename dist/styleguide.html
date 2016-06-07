@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yale UI Style Guide</title>
+    <title>Yale UI</title>
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
 
@@ -59,7 +59,7 @@
   <body>
 
     <div class="column row">
-      <h1>Yale UI Style Guide</h1>
+      <h1>Yale UI</h1>
       <p class="lead">The Yale UI Library and style guide were built with <a href="http://foundation.zurb.com/docs/">Foundation for Sites</a>. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
       <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
       <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a>
@@ -253,28 +253,165 @@
             <h1>Typography</h1><p class="lead">This design uses Yale New for headings and Open Sans for paragraph text.</p>
 
 <hr>
-<h2>Headings</h2><p>Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest)</p>
+<h2>Paragraphs</h2><p>This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content&mdash;so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool. Use the <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> tags to denote text that should be displayed or read with emphasis. Browsers will <strong>bold</strong> and <em>italicize</em> the words, while screen readers will read them with <em>emphasis</em>.</p>
+<div class="callout primary">
+  <p>If the emphasis of a phrase is important, don&#39;t make the emphasis purely visual&mdash;use the <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code> tags to mark it as well. Both of these tags have built-in styles, but there&#39;s no harm in adding additional styles in specific contexts.</p>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool. Wrap strong around type to <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>make it bold!<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>. You can also use em to <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>italicize your words<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><hr>
+<h2>Header</h2><div class="callout primary">
+  <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. For example, after using an <code>&lt;h2&gt;</code> in your code, the next heading used should be either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code>. If you need a heading to look bigger or smaller to match a specific style, use CSS to override the default size.</p>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>h1. This is a very large header.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>h2. This is a large header.<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>h3. This is a medium header.<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>h4. This is a moderate header.<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>h5. This is a small header.<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>h6. This is a tiny header.<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><h1>h1. This is a very large header.</h1>
+<h2>h2. This is a large header.</h2>
+<h3>h3. This is a medium header.</h3>
+<h4>h4. This is a moderate header.</h4>
+<h5>h5. This is a small header.</h5>
+<h6>h6. This is a tiny header.</h6></div><hr>
+<h2>Small Header Segments</h2><p>By inserting a <code>&lt;small&gt;</code> element into a header Foundation will scale the header font size down for an inline element, allowing you to use this for subtitles or other secondary header text.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Foundation for Sites <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Version 6.0.4<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><h3>Foundation for Sites <small>Version 6.0.4</small></h3></div><hr>
+<h2>Links</h2><p>Links are very standard, and the color is preset to the Foundation primary color. <a href="global.html">Learn more about Foundation&#39;s global colors.</a></p>
+<div class="callout">
+  <p>To make links screen reader-friendly, avoid using vague words like &quot;here&quot; or &quot;read more&quot; within link text. The text of the link itself should adequately describe where the link goes.</p>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Links are very standard, and the color is preset to the Foundation primary color. <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"global.html"</span>&gt;</span>Learn more about Foundation's global colors.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><hr>
+<h2>Dividers</h2><p>Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it&#39;s better to use the <code>&lt;section&gt;</code> tag.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span></code></pre></div><hr>
+<h2>Unordered Lists</h2><p>Use an unordered list to... <em>list things</em>, if the order of the items doesn&#39;t matter.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item with a much longer description or more content.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><ul>
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested list item</li>
+      <li>Nested list item</li>
+      <li>Nested list item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul></div><hr>
+<h2>Ordered Lists</h2><p>Use an <code>&lt;ol&gt;</code> when creating a list where the order of the items is important, like ranking pizza toppings from best to worst.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Cheese (essential)<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Pepperoni<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Bacon
+    <span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Normal bacon<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Canadian bacon<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Sausage<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Onions<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Mushrooms<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><ol>
+  <li>Cheese (essential)</li>
+  <li>Pepperoni</li>
+  <li>Bacon
+    <ol>
+      <li>Normal bacon</li>
+      <li>Canadian bacon</li>
+    </ol>
+  </li>
+  <li>Sausage</li>
+  <li>Onions</li>
+  <li>Mushrooms</li>
+</ol></div><hr>
+<h2>Definition Lists</h2><p>A definition list (<code>&lt;dl&gt;</code>) is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>&lt;dt&gt;</code>) is paired with one or more definitions (<code>&lt;dd&gt;</code>).</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Time<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Space<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>A continuous area or expanse that is free, available, or unoccupied.<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>The dimensions of height, depth, and width within which all things exist and move.<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">dl</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><dl>
+  <dt>Time</dt>
+  <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
+  <dt>Space</dt>
+  <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
+  <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
+</dl></div><hr>
+<h2>Blockquotes</h2><p>Sometimes other people say smart things, and you may want to mention those things with a quote. We&#39;ve got you covered.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+  Those people who think they know everything are a great annoyance to those of us who do.
+  <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>Isaac Asimov<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><blockquote>
+  Those people who think they know everything are a great annoyance to those of us who do.
+  <cite>Isaac Asimov</cite>
+</blockquote></div><hr>
+<h2>Abbreviations</h2><p>Use the <code>&lt;abbr&gt;</code> tag to annotate a shortened term. Abbreviations must always have a <code>title</code> attribute which clarifies the full term.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>In my dream last night, I saw <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"John Ronald Reuel"</span>&gt;</span>J. R. R.<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span> Tolkien and George <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Raymond Richard"</span>&gt;</span>R. R.<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span> Martin hanging out on Sunset <span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Boulevard"</span>&gt;</span>Blvd<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p></div><hr>
+<h2>Code</h2><p>Format references to code with the <code>&lt;code&gt;</code> tag.</p>
+<div class="ss-code"><pre><code class="html">Remember to escape angle brackets when printing HTML: <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>&amp;lt;div&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live">Remember to escape angle brackets when printing HTML: <code>&lt;div&gt;</code></div><hr>
+<h2>Keystrokes</h2><p>Use the <code>&lt;kbd&gt;</code> element to annotate a key stroke or combination.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Press <span class="hljs-tag">&lt;<span class="hljs-title">kbd</span>&gt;</span>Cmd+Q<span class="hljs-tag">&lt;/<span class="hljs-title">kbd</span>&gt;</span> (or <span class="hljs-tag">&lt;<span class="hljs-title">kbd</span>&gt;</span>Ctrl+Q<span class="hljs-tag">&lt;/<span class="hljs-title">kbd</span>&gt;</span> on Windows) to play Half-Life 3.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p></div><hr>
+<h2>Accessibility</h2><p>Text is core to the content of your page, so making it accessible to everyone is important. Here are some general guidelines to follow.</p>
+<h3>Text vs. Images</h3><p>Prefer using actual text over text inside a graphic. Assistive technologies can&#39;t read an image, and the text in an image can&#39;t be resized by a browser, like normal text. If an image has text that needs to be read, add it in the <code>alt</code> attribute of the image.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/buy-now.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Buy now"</span>&gt;</span></code></pre></div><hr>
+<h3>Contrast</h3><p>The contrast between the color of an element&#39;s text and its background should be high enough that low-vision users can read it. <strong>The minimum recommended contrast ratio is 4.5:1.</strong> There are no automated tools that can effectively check this for you, but if you aren&#39;t sure about a specific color combination, you can run it through one of many color contrast checkers, such as <a href="http://webaim.org/resources/contrastchecker/">WebAIM&#39;s color contrast checker</a>.</p>
+<p>Google Chrome&#39;s <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Accessibility Developer Tools</a> also includes a contrast checker. By selecting an element in the inspector, you can see if the contrast meets the minimum standards.</p>
+<p><img class="thumbnail" src="assets/img/a11y/chrome-a11y-inspector.jpg" alt="Screenshot of Google Chrome's Accessibility Tools"></p>
 <hr>
-<h2>Paragraphs</h2><p>Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such.</p>
+<h3>Type Size</h3><p>When possible, use the <code>rem</code> and <code>em</code> units to size everything. Not just font size, but also padding, margins, and any length value. This ensures that your design scales up and down uniformly if the user changes their browser&#39;s text size. It&#39;s common for vision-impaired users to resize their browser up to 200% zoom.</p>
+<p>We use the <code>rem</code> unit nearly everywhere in Foundation, and even wrote a Sass function to make it a little easier. The <code>rem-calc()</code> function can take one or more pixel values and convert them to proper <code>rem</code> values.</p>
+<div class="ss-code"><pre><code class="scss"><span class="hljs-class">.element</span> {
+  <span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-function">rem-calc</span>(<span class="hljs-number">300</span>);</span>
+  <span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-function">rem-calc</span>(<span class="hljs-number">10</span> <span class="hljs-number">16</span>);</span>
+}</code></pre></div><hr>
+<h3>More Resources</h3><ul>
+<li><a href="http://webaim.org/techniques/fonts/">WebAIM: Fonts</a></li>
+<li><a href="http://webaim.org/techniques/hypertext/">WebAIM: Links and HyperText</a></li>
+<li><a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Writing Clearly and Simply</a></li>
+<li><a href="http://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
+</ul>
 <hr>
-<h1>Heading Level 1</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h2>Heading Level 2</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h3>Heading Level 3</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h4>Heading Level 4</h4>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h5>Heading Level 5</h5>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h6>Heading Level 6</h6>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
+<h2>Print Styles</h2><p>Foundation includes print styles developed by HTML5 Boilerplate to give you some basic print-specific styles. These are activated when you print through a media query. It includes:</p>
+<ul>
+<li>Clearing out backgrounds, box shadows and text shadows</li>
+<li>Appending link URLs after the anchor text</li>
+<li>Adding borders to <code>&lt;blockquote&gt;</code> and <code>&lt;pre&gt;</code> elements</li>
+<li>Page cleanup and window minimization</li>
+</ul>
+<p>On top of that, Foundation includes a couple of simple classes you can use to control elements printing, or not printing. Simply attach <code>.show-for-print</code> to an element to only show when printing, and <code>.hide-for-print</code> to hide something when printing.</p>
 
           </section>
           <section class="ss-section" id="buttons">
