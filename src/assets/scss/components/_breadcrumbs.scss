@@ -1,11 +1,10 @@
 // Button Overrides
 // - - - - - - - - - - - - - - -
 
-
-// Typography
-
-button,
-.button {
+.breadcrumbs {
   @include heading_5;
-  text-decoration: none;
+
+  a {
+    text-decoration: none;
+  }
 }

@@ -75,6 +75,7 @@
             <li><a href="#typography">Typography</a></li>
             <li><a href="#buttons">Buttons</a></li>
             <li><a href="#button-groups">Button Groups</a></li>
+            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
             <li><a href="#forms">Forms</a></li>
             <li><a href="#new-section">New Section</a></li>
         </ul>
@@ -414,6 +415,38 @@
     <span class="show-for-sr">Show menu</span>
   </a>
 </div></div>
+          </section>
+          <section class="ss-section" id="breadcrumbs">
+            <h1>Breadcrumbs</h1><p class="lead">Breadcrumbs come in handy to show a navigation trail for users clicking through your site.</p>
+
+<p>To make a set of breadcrumb links, just add the class <code>.breadcrumbs</code> to a <code>&lt;ul&gt;</code>, and then add links instead of <code>&lt;li&gt;</code> elements.</p>
+<p>The current page doesn&#39;t require a link or a class, but you should add some explanatory text for AT that indicates which item is the current page.</p>
+<p>To mark a disabled item, add the class <code>.disabled</code> to the <code>&lt;li&gt;</code>, and just use plain text instead of a link.</p>
+<div class="warning callout">
+  <p>We use a CSS <code>::after</code> element containing a slash character to create the separator between items. Some screen readers will read this character out loud&mdash;if this is an issue, you can use a background image or a separate element with <code>aria-hidden=&quot;true&quot;</code> to create the separator instead.</p>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"You are here:"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"breadcrumbs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Features<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"disabled"</span>&gt;</span>Gene Splicing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Current: <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> Cloning
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li class="disabled">Gene Splicing</li>
+    <li>
+      <span class="show-for-sr">Current: </span> Cloning
+    </li>
+  </ul>
+</nav></div>
           </section>
           <section class="ss-section" id="forms">
             <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
