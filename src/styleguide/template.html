@@ -69,14 +69,14 @@
     <div class="column row"><div class="row collapse">
 
       <div class="large-3 medium-4 columns" data-sticky-container>
-        <ul class="vertical menu">
+        <ul class="vertical menu sticky" data-sticky data-anchor="style-guide-content">
           {{#each pages}}
             <li><a href="#{{ anchor }}">{{ title }}</a></li>
           {{/each}}
         </ul>
       </div>
 
-      <div class="large-9 medium-8 columns">
+      <div id="style-guide-content" class="large-9 medium-8 columns">
         {{#each pages}}
           <section class="ss-section" id="{{ anchor }}">
             {{ body }}
