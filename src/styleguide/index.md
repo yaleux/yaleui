@@ -900,6 +900,14 @@ Form elements in Foundation are styled based on their type attribute rather than
       <textarea placeholder="placeholder"></textarea>
     </div>
   </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>
+        How many puppies?
+        <input type="number" value="100">
+      </label>
+    </div>
+  </div>
 </form>
 ```
 
