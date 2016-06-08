@@ -1376,3 +1376,12 @@ Got a lot of tubular tabular data? Add a wrapper element with the class `.table-
     </tfoot>
   </table>
 </div>
+
+
+
+
+# Animations
+
+[Foundation's Motion UI](http://foundation.zurb.com/sites/docs/motion-ui.html) is a standalone library that powers the transition effects used in a number of Foundation components. 
+
+<a href="http://foundation.zurb.com/sites/docs/motion-ui.html" class="button">Motion UI Documentation</a>
