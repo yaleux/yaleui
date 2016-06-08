@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <div class="column row">
+      <div class="column row">
       <h1>Yale UI Library</h1>
       <p class="lead">The Yale UI Library and style guide were built with <a href="http://foundation.zurb.com/docs/">Foundation for Sites</a>. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
       <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
@@ -19,8 +19,8 @@
 
     <div class="column row"><div class="row collapse">
 
-      <div class="large-3 medium-4 columns" data-sticky-container>
-        <ul class="vertical menu sticky" data-sticky data-anchor="style-guide-content">
+      <div class="large-3 medium-4 columns">
+        <ul id="style-guide-menu" class="vertical menu">
             <li><a href="#the-grid">The Grid</a></li>
             <li><a href="#colors">Colors</a></li>
             <li><a href="#typography">Typography</a></li>
@@ -1030,8 +1030,13 @@
           </section>
       </div>
 
+
     </div></div>
+    
+    <a href="#0" class="cd-top">Top</a>
 
     <script src="assets/js/app.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/back-to-top.js"></script>
   </body>
 </html>
