@@ -24,26 +24,28 @@
       <a href="http://foundation.zurb.com/business/business-support.html" class="secondary button">Technical Support</a>
     </div>
 
-    <div class="column row"><div class="row collapse">
+    <div class="column row medium-unstack">
 
-      <div class="large-3 medium-4 columns">
-        <ul id="style-guide-menu" class="vertical menu">
+    <div class="row medium-unstack">
+        <div class="large-3 medium-4 columns">
+          <ul id="style-guide-menu" class="vertical menu">
+            {{#each pages}}
+              <li><a href="#{{ anchor }}">{{ title }}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div id="style-guide-content" class="large-9 medium-8 columns">
           {{#each pages}}
-            <li><a href="#{{ anchor }}">{{ title }}</a></li>
+            <section class="ss-section" id="{{ anchor }}">
+              {{ body }}
+            </section>
           {{/each}}
-        </ul>
+        </div>
+
+
       </div>
-
-      <div id="style-guide-content" class="large-9 medium-8 columns">
-        {{#each pages}}
-          <section class="ss-section" id="{{ anchor }}">
-            {{ body }}
-          </section>
-        {{/each}}
-      </div>
-
-
-    </div></div>
+    </div>
     
     <a href="#0" class="cd-top">Top</a>
 
