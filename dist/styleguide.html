@@ -17,7 +17,7 @@
       </header>
 
       <div class="column row">
-      <h1><a href="./">Yale UI Library</a></h1>
+      <h1><a href="./">Yale UI Library <span class="label">Version 0.0.1</span></a></h1>
       <p class="lead">The Yale UI Library and style guide were built with <a href="http://foundation.zurb.com/docs/">Foundation for Sites</a>. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
       <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
       <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a>
@@ -30,7 +30,9 @@
         <div class="large-3 medium-4 columns">
           <ul id="style-guide-menu" class="vertical menu">
               <li><a href="#the-grid">The Grid</a></li>
+              <li><a href="#colors">Colors</a></li>
               <li><a href="#typography">Typography</a></li>
+              <li><a href="#navigation">Navigation</a></li>
               <li><a href="#buttons">Buttons</a></li>
               <li><a href="#button-groups">Button Groups</a></li>
               <li><a href="#breadcrumbs">Breadcrumbs</a></li>
@@ -48,14 +50,11 @@
 
         <div id="style-guide-content" class="large-9 medium-8 columns">
             <section class="ss-section" id="the-grid">
-              <h1>The Grid</h1><p class="lead">Problem: You&#39;ve got tons of content, each needing different sized vertical columns, and don&#39;t know how to quick and easily get it all done. Solution: The awesome grid!</p>
-
-<hr>
-<h2>Overview</h2><p>The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a row or column.</p>
+              <h1>The Grid</h1><h2>Overview</h2><p>The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a row or column.</p>
 <hr>
 <h2>Nesting</h2><p>In the Grid you can nest columns down as far as you&#39;d like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.</p>
 <hr>
-<h2>How to Use</h2><p>Using this framework is easy. Here&#39;s how your code will look when you use a series of <code>&lt;div&gt;</code> tags to create vertical columns.</p>
+<h2>How to Use</h2><p>Here&#39;s how your code will look when you use a series of <code>&lt;div&gt;</code> tags to create vertical columns.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-4 large-3 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-8 large-9 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -122,7 +121,7 @@
 </div>
 
 <hr>
-<h2>Small Grid</h2><p>As you&#39;ve probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.</p>
+<h2>Small Grid</h2><p>You have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 columns"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-10 columns"</span>&gt;</span>10, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -180,26 +179,31 @@
   <div class="column">
     <img src="//placehold.it/300x300" class="thumbnail" alt="">
   </div>
-</div></div><h1>Colors</h1><p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>_settings.scss</code></p>
-
-<hr>
-<h2>Blues</h2><div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #00356B"></span>
-      #00356B
-    </div>
-  </div>
+</div></div>
+            </section>
+            <section class="ss-section" id="colors">
+              <h1>Colors</h1><h2>Blues</h2><div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
       <span style="background: #286DC0"></span>
       #286DC0
+      <br> $marine
+      <br> .primary
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #00356B"></span>
+      #00356B
+      <br> $yale-blue
+      <br> .success
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #63AAFF"></span>
       #63AAFF
+      <br> $blue-lt
     </div>
   </div><br></div>
 
@@ -207,32 +211,38 @@
 <h2>Grays</h2><div class="row up-1 medium-up-3 large-up-5">
   <div class="column">
     <div class="color-block">
+      <span style="background: #786f67"></span>
+      #786f67
+      <br> $medium-gray
+      <br> .secondary
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
       <span style="background: #222222"></span>
       #222222
+      <br> $black
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #4a4a4a"></span>
       #4a4a4a
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #978D85"></span>
-      #978D85
+      <br> $dark-gray
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #DDDDDD"></span>
       #DDDDDD
+      <br> $light-gray
     </div>
   </div>
   <div class="column">
     <div class="color-block">
       <span style="background: #F9F9F9"></span>
       #F9F9F9
+      <br> $off-white
     </div>
   </div>
 </div>
@@ -249,6 +259,14 @@
     <div class="color-block">
       <span style="background: #BD5319"></span>
       #BD5319
+      <br> .warning
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #AF1109"></span>
+      #AF1109
+      <br> .alert
     </div>
   </div>
 </div>
@@ -284,12 +302,14 @@
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Foundation for Sites <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Version 6.0.4<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span></code></pre></div>
 
 <div class="ss-code-live"><h3>Foundation for Sites <small>Version 6.0.4</small></h3></div><hr>
-<h2>Links</h2><p>Links are very standard, and the color is preset to the Foundation primary color. <a href="global.html">Learn more about Foundation&#39;s global colors.</a></p>
-<div class="callout">
+<h2>Links</h2><div class="callout primary">
   <p>To make links screen reader-friendly, avoid using vague words like &quot;here&quot; or &quot;read more&quot; within link text. The text of the link itself should adequately describe where the link goes.</p>
 </div>
 
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Links are very standard, and the color is preset to the Foundation primary color. <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"global.html"</span>&gt;</span>Learn more about Foundation's global colors.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><hr>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Links are very standard, and the color is preset to the <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#colors"</span>&gt;</span>primary color<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><p>Links are very standard, and the color is preset to the <a href="#colors">primary color</a>.</p></div><hr>
 <h2>Dividers</h2><p>Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it&#39;s better to use the <code>&lt;section&gt;</code> tag.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span></code></pre></div><hr>
 <h2>Unordered Lists</h2><p>Use an unordered list to... <em>list things</em>, if the order of the items doesn&#39;t matter.</p>
@@ -415,6 +435,248 @@
 <li>Page cleanup and window minimization</li>
 </ul>
 <p>On top of that, Foundation includes a couple of simple classes you can use to control elements printing, or not printing. Simply attach <code>.show-for-print</code> to an element to only show when printing, and <code>.hide-for-print</code> to hide something when printing.</p>
+
+            </section>
+            <section class="ss-section" id="navigation">
+              <h1>Navigation</h1><p class="lead">Foundation is bundled with many simple navigation patterns, which can be combined to form more complex, robust responsive navigation solutions.</p>
+
+
+<h2>Basics: Menu</h2><p>The Menu is an all-purpose navigation component. It can be aligned horizontally or vertically, can be nested, and supports icons. <a href="menu.html">Learn more about the Menu.</a></p>
+<p>All menus use the <code>ul &gt; li &gt; a</code> pattern. The markup is a little strict, but this makes it easy to attach a navigation plugin to any menu, as you&#39;ll see below.</p>
+<p>Here&#39;s a basic Menu.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item Three<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><ul class="menu">
+  <li><a href="#">Item One</a></li>
+  <li><a href="#">Item Two</a></li>
+  <li><a href="#">Item Three</a></li>
+</ul></div><hr>
+<p>To nest menus, add a new <code>&lt;ul&gt;</code> inside of an <code>&lt;li&gt;</code>, <em>after</em> the <code>&lt;a&gt;</code> inside.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item One-one<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item Three<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><hr>
+<h2>Top Bar</h2><p>Top bar is a simple wrapper around these menu patterns. It supports a left-hand and right-hand section, which collapse on top of each other on small screens. <a href="top-bar.html">Learn more about the top bar.</a></p>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Site Title</li>
+      <li><a href="#">One</a></li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+<h2>Menu Plugins</h2><p>The basic Menu can be enhanced with one of three <strong>Menu plugins</strong>. All three use the exact same markup to create a different style of multi-tier navigation.</p>
+<h3>Dropdown Menu</h3><p>The dropdown menu plugin (<code>data-dropdown-menu</code>) converts a nested menu into a series of dropdown menus. The nested menus can be opened through hover, click, or keyboard. <a href="dropdown-menu.html">Learn more about the dropdown menu.</a></p>
+<ul class="dropdown menu" data-dropdown-menu>
+  <li class="has-submenu">
+    <a>Item 1</a>
+    <ul class="submenu menu" data-submenu>
+      <li><a href="#">Item 1A Loooong</a></li>
+      <li class="has-submenu">
+        <a href="#"> Item 1 sub</a>
+        <ul class="submenu menu" data-submenu>
+          <li><a href="#">Item 1 subA</a></li>
+          <li><a href="#">Item 1 subB</a></li>
+          <li class="has-submenu">
+            <a href="#"> Item 1 sub</a>
+            <ul class="submenu menu" data-submenu>
+              <li><a href="#">Item 1 subA</a></li>
+              <li><a href="#">Item 1 subB</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="#">Item 1 sub</a>
+            <ul class="submenu menu" data-submenu>
+              <li><a href="#">Item 1 subA</a></li>
+              <li><a href="#">Item 1 subB</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+      <li><a href="#">Item 1B</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 2</a>
+    <ul class="submenu menu" data-submenu>
+      <li><a href="#">Item 2A</a></li>
+      <li><a href="#">Item 2B</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 3</a>
+    <ul class="submenu menu" data-submenu>
+      <li><a href="#">Item 3A</a></li>
+      <li><a href="#">Item 3B</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 4</a></li>
+</ul>
+
+<hr>
+<h3>Drilldown Menu</h3><p>The drilldown menu plugin (<code>data-drilldown</code>) converts a nested menu into a series of sliding menus. Clicking an item slides the next level menu into view. <a href="drilldown-menu.html">Learn more about the drilldown menu.</a></p>
+<ul class="vertical menu" data-drilldown style="width: 300px;" id="m1">
+  <li class="has-submenu">
+    <a href="#">Item 1</a>
+    <ul class="vertical menu" data-submenu id="m2">
+      <li class="has-submenu">
+        <a href="#">Item 1A</a>
+        <ul class="vertical menu" data-submenu id="m3">
+          <li><a href="#">Item 1Aa</a></li>
+          <li><a href="#">Item 1Ba</a></li>
+          <li><a href="#">Item 1Ca</a></li>
+          <li><a href="#">Item 1Da</a></li>
+          <li><a href="#">Item 1Ea</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item 1B</a></li>
+      <li><a href="#">Item 1C</a></li>
+      <li><a href="#">Item 1D</a></li>
+      <li><a href="#">Item 1E</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 2</a>
+    <ul class="vertical menu" data-submenu>
+      <li><a href="#">Item 2A</a></li>
+      <li><a href="#">Item 2B</a></li>
+      <li><a href="#">Item 2C</a></li>
+      <li><a href="#">Item 2D</a></li>
+      <li><a href="#">Item 2E</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 3</a>
+    <ul class="vertical menu" data-submenu>
+      <li><a href="#">Item 3A</a></li>
+      <li><a href="#">Item 3B</a></li>
+      <li><a href="#">Item 3C</a></li>
+      <li><a href="#">Item 3D</a></li>
+      <li><a href="#">Item 3E</a></li>
+    </ul>
+  </li>
+  <li><a href="#"> Item 4</a></li>
+</ul>
+
+<hr>
+<h3>Accordion Menu</h3><p>The accordion menu plugin (<code>data-accordion-menu</code>) converts a nested menu into a series of collapsed accordions. Clicking an item slides down the nested menu. <a href="accordion-menu.html">Learn more about the accordion menu.</a></p>
+<div class="vertical menu" data-accordion-menu>
+  <li class="has-submenu">
+    <a href="#">Item 1</a>
+    <ul class="menu vertical nested is-active" data-submenu>
+      <li class="has-submenu">
+        <a href="#">Item 1A</a>
+        <ul class="menu vertical nested" data-submenu>
+          <li><a href="#">Item 1Ai</a></li>
+          <li><a href="#">Item 1Aii</a></li>
+          <li><a href="#">Item 1Aiii</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item 1B</a></li>
+      <li><a href="#">Item 1C</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 2</a>
+    <ul class="menu vertical nested" data-submenu>
+      <li><a href="#">Item 2A</a></li>
+      <li><a href="#">Item 2B</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 3</a></li>
+</div>
+
+<hr>
+<h2>Responsive Navigation</h2><p>Each of the above three patterns has a use in a specific context. But some patterns only work at certain screen sizes. For example, dropdown menus don&#39;t work as well on smaller screens, but the same navigation items might work better as a drilldown or an accordion menu at that screen size.</p>
+<p>Our responsive menu plugin (<code>data-responsive-menu</code>) allows you to take a Menu, and assign different navigation patterns to it at different screen sizes. In the below example, a drilldown menu changes to a dropdown menu at larger screen sizes. <a href="responsive-navigation.html#responsive-menu">Learn more about the responsive Menu plugin.</a></p>
+<ul class="vertical menu" data-responsive-menu="drilldown medium-dropdown" style="width: 300px;">
+  <li class="has-submenu">
+    <a href="#">Item 1</a>
+    <ul class="vertical submenu menu" data-submenu id="m2">
+      <li class="has-submenu">
+        <a href="#">Item 1A</a>
+        <ul class="vertical submenu menu" data-submenu id="m3">
+          <li><a href="#">Item 1A</a></li>
+          <li><a href="#">Item 1B</a></li>
+          <li><a href="#">Item 1C</a></li>
+          <li><a href="#">Item 1D</a></li>
+          <li><a href="#">Item 1E</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item 1B</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 2</a>
+    <ul class="vertical submenu menu" data-submenu>
+      <li><a href="#">Item 2A</a></li>
+      <li><a href="#">Item 2B</a></li>
+    </ul>
+  </li>
+  <li class="has-submenu">
+    <a href="#">Item 3</a>
+    <ul class="vertical submenu menu" data-submenu>
+      <li><a href="#">Item 3A</a></li>
+      <li><a href="#">Item 3B</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+<p>In other situations, you may wish to always display a menu on a larger screen, but hide that same menu behind a click toggle on smaller screens. You can do this with the responsive toggle plugin (<code>data-responsive-toggle</code>). This plugin works with any container, not just a menu. <a href="responsive-navigation.html#responsive-toggle">Learn more about the responsive toggle plugin.</a></p>
+<p>To see the below example in action, scale your browser down. The top bar will be replaced by a smaller title bar. Clicking the icon inside the title bar reveals the top bar.</p>
+<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Site Title</li>
+      <li class="has-submenu">
+        <a href="#">One</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+<h2>Sticky Navigation</h2><p>See the documentation for the <a href="sticky.html#sticky-navigation">Sticky</a> plugin to see how to easily make a sticky nav bar.</p>
 
             </section>
             <section class="ss-section" id="buttons">
