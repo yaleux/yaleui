@@ -745,10 +745,6 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 # Switch
 
-Now you can tell your users to flip the switch or switch off.
-
----
-
 ## Basics
 
 Add the `.switch` class to an element to create a switch. Inside the switch, add an `<input type="checkbox">` with the class `.switch-input`. Next to that, create a `<label>` with the class `.switch-paddle`.
