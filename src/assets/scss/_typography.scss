@@ -30,3 +30,13 @@ h5 {
 h6 {
   @include heading_6;
 }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+  color: initial;
+}
