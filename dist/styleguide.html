@@ -36,6 +36,7 @@
               <li><a href="#button-groups">Button Groups</a></li>
               <li><a href="#breadcrumbs">Breadcrumbs</a></li>
               <li><a href="#dialogs">Dialogs</a></li>
+              <li><a href="#dropdown-menu">Dropdown Menu</a></li>
               <li><a href="#forms">Forms</a></li>
               <li><a href="#switch">Switch</a></li>
               <li><a href="#tables">Tables</a></li>
@@ -549,6 +550,135 @@
               <h1>Dialogs</h1><p>Modal dialogs, or pop-up windows, are handy for prototyping and production. Foundation includes Reveal, a jQuery modal plugin, to make this easy for you. </p>
 <p><a href="http://foundation.zurb.com/sites/docs/reveal.html" class="button">Foundation&#39;s Reveal</a></p>
 
+            </section>
+            <section class="ss-section" id="dropdown-menu">
+              <h1>Dropdown Menu</h1><p class="lead"> Change a basic Menu into an expandable dropdown menu with the Dropdown Menu plugin.</p>
+
+<h2>Horizontal</h2><p>Dropdown menus build on the <a href="http://foundation.zurb.com/sites/docs/menu.html">Menu</a> component&#39;s syntax. Add the class <code>.dropdown</code> and the attribute <code>data-dropdown-menu</code> to the menu container to set up the dropdown.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown menu"</span> <span class="hljs-attribute">data-dropdown-menu</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><p>To create dropdown menus, nest a new <code>&lt;ul&gt;</code> inside an <code>&lt;li&gt;</code>. You can nest further to create more levels of dropdowns.</p>
+<div class="primary callout">
+  <p>Note that the <code>&lt;ul&gt;</code> goes <em>after</em> the <code>&lt;a&gt;</code>, and not inside of it.</p>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown menu"</span> <span class="hljs-attribute">data-dropdown-menu</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 1A<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><ul class="dropdown menu" data-dropdown-menu>
+  <li>
+    <a>Item 1</a>
+    <ul class="menu">
+      <li><a href="#Item-1A">Item 1A</a></li>
+      <li>
+        <a href="#Item-1B">Item 1B</a>
+        <ul class="menu">
+          <li><a href="#Item-1Bi">Item 1B i</a></li>
+          <li><a href="#Item-1Bii">Item 1B ii</a></li>
+          <li>
+            <a href="#Item-1Biii">Item 1B iii</a>
+            <ul class="menu">
+              <li><a href="#Item-1Biiialpha">Item 1B iii alpha</a></li>
+              <li><a href="#Item-1Biiiomega">Item 1B iii omega</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Item-1Biv">Item 1B iv</a>
+            <ul class="menu">
+              <li><a href="#Item-1Bivalpha">Item 1B iv alpha</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#Item-1C">Item 1C</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#Item-2">Item 2</a>
+    <ul class="menu">
+      <li><a href="#Item-2A">Item 2A</a></li>
+      <li><a href="#Item-2B">Item 2B</a></li>
+    </ul>
+  </li>
+  <li><a href="#Item-3">Item 3</a></li>
+  <li><a href="#Item-4">Item 4</a></li>
+</ul>
+
+<hr>
+<h2>Vertical</h2><p>Add the <code>.vertical</code> class to the top-level menu to make it vertical. Sub-menus are automatically vertical, regardless of the orientation of the top-level menu.</p>
+<div class="primary callout">
+  <p>Menus are block-level elements, which means they stretch to fill the width of their container. To make the below example less goofy, we&#39;ve hard-coded a <code>max-width</code> on the menu.</p>
+</div>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"vertical dropdown menu"</span> <span class="hljs-attribute">data-dropdown-menu</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"max-width: 300px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><ul class="vertical dropdown menu" data-dropdown-menu style="max-width: 300px;">
+  <li>
+    <a>Item 1</a>
+    <ul class="menu">
+      <li><a href="#Item-1A">Item 1A</a></li>
+      <li>
+        <a href="#Item-1B">Item 1B</a>
+        <ul class="menu">
+          <li><a href="#Item-1Bi">Item 1B i</a></li>
+          <li><a href="#Item-1Bii">Item 1B ii</a></li>
+          <li>
+            <a href="#Item-1Biii">Item 1B iii</a>
+            <ul class="menu">
+              <li><a href="#Item-1Biiialpha">Item 1B iii alpha</a></li>
+              <li><a href="#Item-1Biiiomega">Item 1B iii omega</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Item-1Biv">Item 1B iv</a>
+            <ul class="menu">
+              <li><a href="#Item-1Bivalpha">Item 1B iv alpha</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#Item-1C">Item 1C</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#Item-2">Item 2</a>
+    <ul class="menu">
+      <li><a href="#Item-2A">Item 2A</a></li>
+      <li><a href="#Item-2B">Item 2B</a></li>
+    </ul>
+  </li>
+  <li><a href="#Item-3">Item 3</a></li>
+  <li><a href="#Item-4">Item 4</a></li>
+</ul>
+
+<hr>
+<h2>Sticky Navigation</h2><p>See the documentation for the <a href="sticky.html#sticky-navigation">Sticky</a> plugin to see how to easily make a sticky nav bar. </p>
+<hr>
+<h3>Preventing FOUC</h3><p>Before the JavaScript on your page loads, the dropdown menus will not have arrows. However, once the JavaScript file has loaded, the arrows will appear causing a <a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content">flash of unstyled content</a>. You can prevent this by adding the <code>is-dropdown-submenu-parent</code> class manually. </p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown menu"</span> <span class="hljs-attribute">data-dropdown-menu</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"is-dropdown-submenu-parent"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 1A<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Item 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div>
             </section>
             <section class="ss-section" id="forms">
               <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
