@@ -38,6 +38,7 @@
               <li><a href="#dialogs">Dialogs</a></li>
               <li><a href="#dropdown-menu">Dropdown Menu</a></li>
               <li><a href="#forms">Forms</a></li>
+              <li><a href="#progress-bar">Progress Bar</a></li>
               <li><a href="#slider">Slider</a></li>
               <li><a href="#switch">Switch</a></li>
               <li><a href="#tables">Tables</a></li>
@@ -830,6 +831,76 @@
     </div>
   </div>
 </form></div>
+            </section>
+            <section class="ss-section" id="progress-bar">
+              <h1>Progress Bar</h1><p class="lead">Show your progress. A simple way to add progress bars to your layouts. You only need two HTML elements to make them and they&#39;re easy to customize.</p>
+
+
+<h2>Basics</h2><p>A progress bar has two elements: the container <code>.progress</code>, and the meter <code>.progress-meter</code>. The <code>role</code> and <code>aria-</code> attributes in the code example clarify the status of the bar:</p>
+<ul>
+<li><code>aria-valuemin</code>: Minimum value.</li>
+<li><code>aria-valuemax</code>: Maximum value.</li>
+<li><code>aria-valuenow</code>: Current value.</li>
+</ul>
+<p>If the value of the progress bar is not numeric, also add the attribute <code>aria-valuetext</code>, which should include a human-readable version of the bar&#39;s value.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-meter"></div>
+</div></div><p>Add a <code>width</code> CSS property to the inner meter to fill the progress bar.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"50"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuetext</span>=<span class="hljs-value">"50 percent"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 50%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+  <div class="progress-meter" style="width: 50%"></div>
+</div></div><hr>
+<h2>Colors</h2><p>A progress bar can be styled with the <code>.secondary</code>, <code>.success</code>, <code>.warning</code>, and <code>.alert</code> colors.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary progress"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"25"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuetext</span>=<span class="hljs-value">"25 percent"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 25%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success progress"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 50%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning progress"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 50%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert progress"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 75%"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+  <div class="progress-meter" style="width: 25%"></div>
+</div>
+
+<div class="success progress">
+  <div class="progress-meter" style="width: 50%"></div>
+</div>
+
+<div class="warning progress">
+  <div class="progress-meter" style="width: 50%"></div>
+</div>
+
+<div class="alert progress">
+  <div class="progress-meter" style="width: 75%"></div>
+</div></div><hr>
+<h2>With Text</h2><p>You can add text inside the meter of a progress bar. Make sure the text you use in the meter is also used in the <code>aria-valuetext</code> attribute.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"20"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuetext</span>=<span class="hljs-value">"25 percent"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 25%"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress-meter-text"</span>&gt;</span>25%<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="20" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+  <span class="progress-meter" style="width: 25%">
+    <p class="progress-meter-text">25%</p>
+  </span>
+</div></div>
             </section>
             <section class="ss-section" id="slider">
               <h1>Slider</h1><p class="lead">This handy lil slider is perfect for setting specific values within a range.</p>
