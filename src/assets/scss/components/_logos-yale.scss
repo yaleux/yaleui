@@ -1,0 +1,62 @@
+/* Topper & Footer Logos :: Components
+-------------------------------------- */
+.topper-logo {
+font-size: rem-calc(24);
+line-height: 2.2em;
+}
+
+.topper-logo a {
+color: $yale-blue;
+}
+
+.topper-logo span.ext {
+display: none; // hide external link icon
+}
+
+.footer-logo {
+padding-top: 30px;
+}
+
+.footer-logo a {
+color: #fff;
+    &:hover {
+    color: lighten($blue-lt, 10%);
+    }
+}
+
+// YaleMarks icons font
+.y-icons { 
+font-family: "YaleMarks";
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+speak: none;
+display: inline-block;
+}
+
+.y-yale:before { content: '\f2a2'; }
+.y-univ:after { content: '\f2a3'; }
+
+.y-mark {
+font-size: 2em;
+}
+
+
+// PNG for IE 
+// -------------------------------------
+@media screen {
+    .ie8 .topper-logo .y-yale:before,
+    .ie8 .topper-logo .y-univ:after {
+    content: none;
+    }
+    
+    .ie8 .topper-logo .y-icons {
+    display: block;
+    width: 150px;
+    height: 60px;
+    // no bg-position for boxed & wide themes
+    background-image: url(/sites/all/themes/yalenew_base/images/yaleu-logo-ie.png);
+    background-repeat: no-repeat;
+    zoom: 1;
+    }
+}
