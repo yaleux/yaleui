@@ -7,7 +7,7 @@
 @mixin heading_5 {
   font-size: rem-calc(14);
   font-family: $sans-font;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   text-transform: uppercase;
   font-weight: $global-weight-bold;
 }
@@ -41,6 +41,8 @@ h6 a {
   color: initial;
 }
 
-.menu a {
+.menu a,
+.tabs a {
   text-decoration: none;
+  font-weight: $global-weight-bold;
 }
