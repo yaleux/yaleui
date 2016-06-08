@@ -41,6 +41,7 @@
               <li><a href="#progress-bar">Progress Bar</a></li>
               <li><a href="#slider">Slider</a></li>
               <li><a href="#switch">Switch</a></li>
+              <li><a href="#tabs">Tabs</a></li>
               <li><a href="#tables">Tables</a></li>
               <li><a href="#animations">Animations</a></li>
           </ul>
@@ -1143,6 +1144,131 @@
     <span class="switch-active" aria-hidden="true">Yes</span>
     <span class="switch-inactive" aria-hidden="true">No</span>
   </label>
+</div></div>
+            </section>
+            <section class="ss-section" id="tabs">
+              <h1>Tabs</h1><p class="pre">Tabs are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.</p>
+
+
+<h2>Basics</h2><p>There are two pieces to a tabbed interface: the tabs themselves, and the content for each tab. The tabs are an element with the class <code>.tabs</code>, and each item has the class <code>.tabs-title</code>. Each tab contains a link to a tab. The <code>href</code> of each link should match the ID of a tab.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs"</span> <span class="hljs-attribute">data-tabs</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"example-tabs"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title is-active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel1"</span> <span class="hljs-attribute">aria-selected</span>=<span class="hljs-value">"true"</span>&gt;</span>Tab 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel2"</span>&gt;</span>Tab 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><p>The tab content container has the class <code>.tabs-content</code>, while each section has the class <code>.tabs-panel</code>. Each content pane also has a unique ID, which is targeted by a link in the tabstrip.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-content"</span> <span class="hljs-attribute">data-tabs-content</span>=<span class="hljs-value">"example-tabs"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel is-active"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><p>Put it all together, and we get this:</p>
+<ul class="tabs" data-tabs id="example-tabs">
+  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+  <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
+  <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
+  <li class="tabs-title"><a href="#panel4">Tab 4</a></li>
+  <li class="tabs-title"><a href="#panel5">Tab 5</a></li>
+  <li class="tabs-title"><a href="#panel6">Tab 6</a></li>
+</ul>
+
+<div class="tabs-content" data-tabs-content="example-tabs">
+  <div class="tabs-panel is-active" id="panel1">
+    <p>one</p>
+    <p>Check me out! I&#39;m a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel2">
+    <p>two</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+  </div>
+  <div class="tabs-panel" id="panel3">
+    <p>three</p>
+    <p>Check me out! I&#39;m a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel4">
+    <p>four</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+  </div>
+  <div class="tabs-panel" id="panel5">
+    <p>five</p>
+    <p>Check me out! I&#39;m a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel6">
+    <p>six</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
+  </div>
+</div>
+
+<hr>
+<h2>Vertical Tabs</h2><p>Add the <code>.vertical</code> class to a tabstrip to stack tabs vertically. You can also place the tabstrip and the tab contents in a grid to make them sit side-by-side.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row collapse"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-3 columns"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs vertical"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"example-vert-tabs"</span> <span class="hljs-attribute">data-tabs</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title is-active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel1v"</span> <span class="hljs-attribute">aria-selected</span>=<span class="hljs-value">"true"</span>&gt;</span>Tab 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel2v"</span>&gt;</span>Tab 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel3v"</span>&gt;</span>Tab 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel4v"</span>&gt;</span>Tab 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel3v"</span>&gt;</span>Tab 5<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#panel4v"</span>&gt;</span>Tab 6<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"medium-9 columns"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-content vertical"</span> <span class="hljs-attribute">data-tabs-content</span>=<span class="hljs-value">"example-vert-tabs"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel is-active"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel1v"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel2v"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel3v"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/generic/rectangle-3.jpg"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel4v"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel5v"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabs-panel"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"panel6v"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"thumbnail"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/generic/rectangle-5.jpg"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="row collapse">
+  <div class="medium-3 columns">
+    <ul class="tabs vertical" id="example-vert-tabs" data-tabs>
+      <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Tab 1</a></li>
+      <li class="tabs-title"><a href="#panel2v">Tab 2</a></li>
+      <li class="tabs-title"><a href="#panel3v">Tab 3</a></li>
+      <li class="tabs-title"><a href="#panel4v">Tab 4</a></li>
+      <li class="tabs-title"><a href="#panel3v">Tab 5</a></li>
+      <li class="tabs-title"><a href="#panel4v">Tab 6</a></li>
+    </ul>
+    </div>
+    <div class="medium-9 columns">
+    <div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
+      <div class="tabs-panel is-active" id="panel1v">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="tabs-panel" id="panel2v">
+        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+      </div>
+      <div class="tabs-panel" id="panel3v">
+        <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg">
+      </div>
+      <div class="tabs-panel" id="panel4v">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="tabs-panel" id="panel5v">
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="tabs-panel" id="panel6v">
+        <img class="thumbnail" src="assets/img/generic/rectangle-5.jpg">
+      </div>
+    </div>
+  </div>
 </div></div>
             </section>
             <section class="ss-section" id="tables">
