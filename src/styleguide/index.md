@@ -123,7 +123,31 @@ As you've probably noticed in the examples above, you have access to a small, me
   <div class="small-9 columns">9, last</div>
 </div>
 
+---
 
+## Block Grids
+```html_example
+<div class="row small-up-1 medium-up-2 large-up-4">
+  <div class="column">
+    <img src="//placehold.it/300x300" class="thumbnail" alt="">
+  </div>
+  <div class="column">
+    <img src="//placehold.it/300x300" class="thumbnail" alt="">
+  </div>
+  <div class="column">
+    <img src="//placehold.it/300x300" class="thumbnail" alt="">
+  </div>
+  <div class="column">
+    <img src="//placehold.it/300x300" class="thumbnail" alt="">
+  </div>
+  <div class="column">
+    <img src="//placehold.it/300x300" class="thumbnail" alt="">
+  </div>
+  <div class="column">
+    <img src="//placehold.it/300x300" class="thumbnail" alt="">
+  </div>
+</div>
+```
 
 # Colors
 
