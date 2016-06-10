@@ -45,7 +45,7 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
+// @include foundation-float-classes;
 @include foundation-flex-classes;
 
 @include motion-ui-transitions;
@@ -66,5 +66,5 @@
 @import 'typography';
 @import 'components/button';
 @import 'components/breadcrumbs';
-@import 'components/header';
 @import 'components/logos-yale';
+@import 'components/top-bar';

@@ -19,6 +19,17 @@
   font-weight: $global-weight-bold;
 }
 
+@mixin light_link {
+  color: $white;
+    &:hover {
+        color: lighten($blue-lt, 10%);
+    }
+}
+
+.site-title{
+  margin-top: 1em;
+}
+
 h1 {
   color: $black;
 }

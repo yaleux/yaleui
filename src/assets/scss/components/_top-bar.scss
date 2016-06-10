@@ -1,0 +1,19 @@
+/* Yale Top Bar :: Components
+-------------------------------------- */
+
+header {
+  background: $yale-blue;
+    .topper-logo {
+    a {
+      @include light_link;
+      text-decoration: none;
+    }
+  }
+}
+
+.top-bar 
+.top-bar-left, 
+.top-bar 
+.top-bar-right { 
+  // flex: none; 
+}
