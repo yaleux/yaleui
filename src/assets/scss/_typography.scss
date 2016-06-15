@@ -26,6 +26,10 @@
     }
 }
 
+.light_link {
+  @include light_link;
+}
+
 .site-title{
   margin-top: 1em;
 }
@@ -55,4 +59,8 @@ h6 a {
 .menu a,
 .tabs a {
   text-decoration: none;
+}
+
+.fa {
+  font-family: $fa-font;
 }

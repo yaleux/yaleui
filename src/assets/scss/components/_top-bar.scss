@@ -9,6 +9,8 @@ header {
       text-decoration: none;
     }
   }
+  border-bottom: 1px solid $yale-blue;
+  border-top: 1px solid $yale-blue;
 }
 
 button.menu-icon{
@@ -24,6 +26,14 @@ button.menu-icon{
   font-family: $yale-font;
   @include heading_5;
   margin-top: .7rem;
+  a {
+    text-decoration: none;
+    color: initial;
+    
+    &:hover{
+      color: $marine;
+    }
+  }
 }
 
 .top-bar-left{
