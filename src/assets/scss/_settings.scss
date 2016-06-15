@@ -77,7 +77,7 @@ $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-text-direction: ltr;
-$global-flexbox: true;
+$global-flexbox: false;
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
@@ -578,9 +578,9 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0 0.5rem ;
+$topbar-padding: 0.2rem 0.5rem ;
 $topbar-background: $off-white;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
-$topbar-input-width: 180px;
+$topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

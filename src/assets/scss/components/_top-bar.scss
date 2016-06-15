@@ -11,9 +11,26 @@ header {
   }
 }
 
-.top-bar 
-.top-bar-left, 
-.top-bar 
-.top-bar-right { 
-  // flex: none; 
+button.menu-icon{
+  margin-right: 1rem;
+}
+
+.top-bar-container{
+    background: $topbar-background;
+    width: 100%;
+}
+
+.top-bar-title{
+  font-family: $yale-font;
+  @include heading_5;
+  margin-top: .7rem;
+}
+
+.top-bar-left{
+  margin-top: .2rem;
+}
+
+/* Match input field to search button height*/
+input[type='search']{
+  height: 48px;
 }
