@@ -26,10 +26,6 @@
     }
 }
 
-.light_link {
-  @include light_link;
-}
-
 .site-title{
   margin-top: 1em;
 }
@@ -44,6 +40,16 @@ h5 {
 
 h6 {
   @include heading_6;
+}
+
+.fa {
+  font-family: $fa-font;
+}
+
+// Links
+
+.light_link {
+  @include light_link;
 }
 
 h1 a,
@@ -61,6 +67,28 @@ h6 a {
   text-decoration: none;
 }
 
-.fa {
-  font-family: $fa-font;
+// Link icons
+
+// TODO This should be a mixin
+
+a[href$='pdf']:after,
+a[href$='doc']:after,
+a[href$='docx']:after,
+a[href$='xls']:after,
+a[href$='xlsx']:after,
+a[href$='ppt']:after,
+a[href$='pptx']:after {
+  font-family: 'FontAwesome';
+  margin-left: 5px;
+  text-decoration: none;
+  display: inline-block;
 }
+
+
+a[href$='pdf']:after {content: "\f1c1"}
+a[href$='doc']:after {content: "\f1c2"}
+a[href$='docx']:after {content: "\f1c2"}
+a[href$='xls']:after {content: "\f1c3"}
+a[href$='xlsx']:after {content: "\f1c3"}
+a[href$='ppt']:after {content: "\f1c4"}
+a[href$='pptx']:after {content: "\f1c4"}
