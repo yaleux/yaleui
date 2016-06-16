@@ -17,15 +17,28 @@ button.menu-icon{
   margin-right: 1rem;
 }
 
+.top-bar {
+  @each $breakpoints, $value in $grid-column-gutter {
+      $padding: rem-calc($value) / 2;
+
+      @include breakpoint($breakpoints) {
+        padding-left: $padding;
+        padding-right: $padding;
+      }
+  }
+}
+
 .top-bar-container{
     background: $topbar-background;
     width: 100%;
 }
 
 .top-bar-title{
-  font-family: $yale-font;
   @include heading_5;
-  margin-top: .7rem;
+  display: block;
+  padding: 0.75rem 0;
+  line-height: 1;
+
   a {
     text-decoration: none;
     color: initial;
@@ -36,11 +49,7 @@ button.menu-icon{
   }
 }
 
-.top-bar-left{
-  margin-top: .2rem;
-}
-
 /* Match input field to search button height*/
 input[type='search']{
-  height: 48px;
+  // height: 48px;
 }
