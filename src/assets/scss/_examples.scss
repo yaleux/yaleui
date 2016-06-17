@@ -1,0 +1,19 @@
+// Examples styling
+// - - - - - - - - - - - - - - -
+
+
+.example {
+  background: $white;
+  border: 1px solid $light-gray;
+  padding: 2em; 
+  max-width: 80%;
+  margin: 2em auto;
+
+  > * ~ * {
+    margin-top: 20px;
+  }
+}
+
+a:hover .example {
+  background: $light-gray;
+}

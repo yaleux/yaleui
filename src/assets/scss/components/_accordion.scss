@@ -1,0 +1,8 @@
+/* Yale Accordions :: Components
+-------------------------------------- */
+
+.accordion{
+  .accordion-title{
+    @include heading_5;
+  }
+}

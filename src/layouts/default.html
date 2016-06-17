@@ -9,11 +9,15 @@
     <title>Yale UI Style Guide</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
 
   </head>
   <body>
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> header-no-search}}
     {{> body}}
 
     <script src="{{root}}assets/js/app.js"></script>
