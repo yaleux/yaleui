@@ -1,18 +1,6 @@
 /* Yale Top Bar :: Components
 -------------------------------------- */
 
-header {
-  background: $yale-blue;
-    .topper-logo {
-    a {
-      @include light_link;
-      text-decoration: none;
-    }
-  }
-  border-bottom: 1px solid $yale-blue;
-  border-top: 1px solid $yale-blue;
-}
-
 button.menu-icon{
   margin-right: 1rem;
 }

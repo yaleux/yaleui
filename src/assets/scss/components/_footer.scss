@@ -1,0 +1,17 @@
+/* Yale Footer :: Components
+-------------------------------------- */
+
+footer {
+  background: $yale-blue;
+  
+  .footer-logo {
+    font-size: rem-calc(18);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    a {
+      @include light_link;
+      text-decoration: none;
+    }
+  }
+}
