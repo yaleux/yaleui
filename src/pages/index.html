@@ -1,3 +1,16 @@
+---
+featured-examples:
+  - title: Yale Header & Footer
+    thumb: assets/img/header-footer.png
+    link: examples/header-footer.html
+  - title: Placeholder
+    thumb: assets/img/demo.png
+    link: examples/header-footer.html
+  - title: Placeholder
+    thumb: assets/img/demo.png
+    link: examples/header-footer.html    
+---
+
 <div class="content">
   <section>
     <div class="hero">
@@ -30,23 +43,21 @@
     </div>
   </section>
 
+
   <section id="examples">
     <div class="row columns">
+      
       <h2>Examples</h2>
-        <a href="examples/header-footer.html">
-        <div class="example column small-4">
-          <h3>Header &amp; Footer</h3>
-          <img src="{{root}}assets/img/header-footer.png" alt="Thumbnail preview of header and footer">
-        </div>   
-        </a>
 
-        <a href="#">
-        <div class="example column small-4">
-          <h3>Another Example</h3>
-          <img src="//placehold.it/300x300" class="thumbnail" alt="">
-        </div>
-        </a>   
-    </div>
+      {{#each featured-examples}}
+          <a href="{{root}}{{link}}">
+            <div class="example column small-4">
+            <h3>{{title}}</h3>
+            <img src="{{root}}{{thumb}}" alt="Thumbnail preview of {{title}}">
+            </div>   
+          </a>  
+      {{/each}}
+
   </section>
 </div>
 
