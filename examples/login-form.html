@@ -60,73 +60,49 @@
     </header>
 
       <div class="row columns small-centered">
-        <h1 class="page-title"></h1>
+        <h1 class="page-title">Yale Login Form</h1>
       </div>
 
-    <header>
-        <div class="topper-logo row">
-            <div class="columns">
-                <a class="y-icons y-yale y-univ" href=
-                "http://www.yale.edu/"><span class="show-for-sr">Yale
-                University</span></a>
-            </div>
-        </div>
-        <div class="top-bar-container">
-            <div class="top-bar row columns">
-                <div class="top-bar-title">
-                    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-                    <button class="menu-icon dark" type="button" data-toggle></button>
-                    </span>Site Title
-                </div>
-                <div id="responsive-menu">
-                    <div class="top-bar-left">
-                        <ul class="dropdown menu" data-dropdown-menu>
-                            <li><a href="#">One</a>
-                              <ul class="menu vertical">
-                                <li><a href="#">One</a></li>
-                                <li><a href="#">Two</a></li>
-                                <li><a href="#">Three</a></li>
-                              </ul>
-                            </li>
-                        <li><a href="#">Two</a></li>
-                        <li><a href="#">Three</a></li>
-                        <ul>
-                    </div>
-                    <div class="top-bar-right">
-                        <ul class="menu">
-                            <li><input type="search" placeholder="Search"></li>
-                            <li><button type="button" class="small button">Search</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div class="example">
     
-    <div class="row align-center">
-      <div class="medium-5 medium-centered large-4 large-centered columns">
-       <h1 class="text-center"><small>Log in</small></h1>
-        <form>
-          <div class="row column" id="log-in-form">
-            <label>NetID
-              <input type="text" aria-required="true" required="" >
-            </label>
-            <label>Password
-                <input type="password" aria-required="true" required="" maxlength="128" name="password" size="60">        
-            </label>
-            <p><a type="submit" class="button expanded">Log In</a></p>
-            <p class="text-center"><a href="#">Forgot your password?</a></p>   
-          </div>
-        </form>
+      <h1 class="text-center"><small>Log in</small></h1>
+      
+      <form id="log-in-form">
+          <label>NetID
+            <input type="text" aria-required="true" required="" >
+          </label>
+          <label>Password
+              <input type="password" aria-required="true" required="" maxlength="128" name="password" size="60">        
+          </label>
+          <p><a type="submit" class="button expanded">Log In</a></p>
+          <p class="text-center"><a href="#">Forgot your password?</a></p>   
+      </form>
+    
+      <ul class="accordion" data-accordion data-allow-all-closed="true">
+      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Show HTML</a>
+      <div class="accordion-content" data-tab-content>
+    
+    <pre><code>
+    &lt;h1 class=&quot;text-center&quot;&gt;&lt;small&gt;Log in&lt;/small&gt;&lt;/h1&gt;
+    
+    &lt;form id=&quot;log-in-form&quot;&gt;
+        &lt;label&gt;NetID
+          &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot; &gt;
+        &lt;/label&gt;
+        &lt;label&gt;Password
+            &lt;input type=&quot;password&quot; aria-required=&quot;true&quot; required=&quot;&quot; maxlength=&quot;128&quot; name=&quot;password&quot; size=&quot;60&quot;&gt;        
+        &lt;/label&gt;
+        &lt;p&gt;&lt;a type=&quot;submit&quot; class=&quot;button expanded&quot;&gt;Log In&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;text-center&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot your password?&lt;/a&gt;&lt;/p&gt;   
+    &lt;/form&gt;
+    </code></pre>
       </div>
-    </div>
+      </li>
+      </ul>
+      
     
-    <style>
-      #log-in-form {
-        border: 1px solid #ddd;
-        padding: 2em;
-      }
-    </style>
+    </div>
 
     <footer>
          <div class="footer-logo row columns">
