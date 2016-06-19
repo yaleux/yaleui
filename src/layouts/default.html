@@ -18,7 +18,16 @@
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> header-no-search}}
+
+    {{#unlesspage 'index'}}
+      <div class="row columns small-centered">
+        <h1 class="page-title">{{title}}</h1>
+      </div>
+    {{/unlesspage}}
+
     {{> body}}
+
+    {{> footer}}
 
     <script src="{{root}}assets/js/app.js"></script>
   </body>

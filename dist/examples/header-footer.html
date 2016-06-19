@@ -16,8 +16,8 @@
   <body>
 
     <header>
-        <div class="topper-logo row columns">
-            <div>
+        <div class="topper-logo row">
+            <div class="columns">
                 <a class="y-icons y-yale y-univ" href=
                 "http://www.yale.edu/"><span class="show-for-sr">Yale
                 University</span></a>
@@ -31,7 +31,7 @@
                     "responsive-menu"><button class="menu-icon dark"
                     data-toggle="" type="button"><span data-hide-for="medium"
                     data-responsive-toggle=
-                    "responsive-menu"></span></button></span><a href="./">Yale UI
+                    "responsive-menu"></span></button></span><a href="../">Yale UI
                     Style Guide</a>
                 </div>
         
@@ -58,11 +58,17 @@
             </div>
         </div>
     </header>
-    
+
+      <div class="row columns small-centered">
+        <h1 class="page-title">Yale Header &amp; Footer</h1>
+      </div>
+
     <div class="example">
+      <h2>Yale Header &amp; Title Bar</h2>
+    
       <header>
-          <div class="topper-logo row columns">
-              <div>
+          <div class="topper-logo row">
+              <div class="columns">
                   <a class="y-icons y-yale y-univ" href=
                   "http://www.yale.edu/"><span class="show-for-sr">Yale
                   University</span></a>
@@ -102,57 +108,91 @@
     
       <ul class="accordion" data-accordion data-allow-all-closed="true">
       <li class="accordion-item" data-accordion-item>
-        <a href="#" class="accordion-title">Header &amp; Top Bar HTML</a>
-        <div class="accordion-content" data-tab-content>
+      <a href="#" class="accordion-title">Show HTML</a>
+      <div class="accordion-content" data-tab-content>
     
-    <pre><code class="lang-&lt;header&gt;">    &lt;div class=&quot;topper-logo row columns&quot;&gt;
-            &lt;div&gt;
+    <pre><code>
+    &lt;header&gt;
+        &lt;div class=&quot;topper-logo row&quot;&gt;
+            &lt;div class=&quot;columns&quot;&gt;
                 &lt;a class=&quot;y-icons y-yale y-univ&quot; href=
                 &quot;http://www.yale.edu/&quot;&gt;&lt;span class=&quot;show-for-sr&quot;&gt;Yale
                 University&lt;/span&gt;&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;top-bar-container&quot;&gt;
-          &lt;div class=&quot;top-bar row columns&quot;&gt;
-              &lt;div class=&quot;top-bar-title&quot;&gt;
-                  &lt;span data-responsive-toggle=&quot;responsive-menu&quot; data-hide-for=&quot;medium&quot;&gt;
-                  &lt;button class=&quot;menu-icon dark&quot; type=&quot;button&quot; data-toggle&gt;&lt;/button&gt;
-                  &lt;/span&gt;Site Title
-              &lt;/div&gt;
-              &lt;div id=&quot;responsive-menu&quot;&gt;
-                  &lt;div class=&quot;top-bar-left&quot;&gt;
-                      &lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
-                          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
-                            &lt;ul class=&quot;menu vertical&quot;&gt;
-                              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
-                              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
-                              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
-                            &lt;/ul&gt;
-                          &lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
-                      &lt;ul&gt;
-                  &lt;/div&gt;
-                  &lt;div class=&quot;top-bar-right&quot;&gt;
-                      &lt;ul class=&quot;menu&quot;&gt;
-                          &lt;li&gt;&lt;input type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;&lt;/li&gt;
-                          &lt;li&gt;&lt;button type=&quot;button&quot; class=&quot;small button&quot;&gt;Search&lt;/button&gt;&lt;/li&gt;
-                      &lt;/ul&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
+            &lt;div class=&quot;top-bar row columns&quot;&gt;
+                &lt;div class=&quot;top-bar-title&quot;&gt;
+                    &lt;span data-responsive-toggle=&quot;responsive-menu&quot; data-hide-for=&quot;medium&quot;&gt;
+                    &lt;button class=&quot;menu-icon dark&quot; type=&quot;button&quot; data-toggle&gt;&lt;/button&gt;
+                    &lt;/span&gt;Site Title
+                &lt;/div&gt;
+                &lt;div id=&quot;responsive-menu&quot;&gt;
+                    &lt;div class=&quot;top-bar-left&quot;&gt;
+                        &lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
+                              &lt;ul class=&quot;menu vertical&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
+                        &lt;ul&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;top-bar-right&quot;&gt;
+                        &lt;ul class=&quot;menu&quot;&gt;
+                            &lt;li&gt;&lt;input type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;button type=&quot;button&quot; class=&quot;small button&quot;&gt;Search&lt;/button&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/header&gt;
     </code></pre>
-    
-      
-        </div>
+      </div>
       </li>
       </ul>
+      
+    </div>
+    
+    <div class="example">
+      <h2>Yale Footer</h2>
+    
+      <footer>
+           <div class="footer-logo row columns">
+              <div>
+                  <a class="y-icons y-yale y-mark" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  </span></a>
+              </div>
+          </div>
+      </footer>
+    
+      <ul class="accordion" data-accordion data-allow-all-closed="true">
+      <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Show HTML</a>
+      <div class="accordion-content" data-tab-content>
+    
+    <pre><code>
+    &lt;footer&gt;
+         &lt;div class=&quot;footer-logo row columns&quot;&gt;
+            &lt;div&gt;
+                &lt;a class=&quot;y-icons y-yale y-mark&quot; href=
+                &quot;http://www.yale.edu/&quot;&gt;&lt;span class=&quot;show-for-sr&quot;&gt;Yale
+                &lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+    </code></pre>
       </div>
-    
-    
-    
+      </li>
+      </ul>
+      
+    </div>
+
     <footer>
          <div class="footer-logo row columns">
             <div>

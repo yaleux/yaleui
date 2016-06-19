@@ -1,65 +1,36 @@
 ---
-title: Yale Header &amp; Footer
-type: example
+title: Yale Header & Footer
 ---
-
 <div class="example">
+  <h2>Yale Header &amp; Title Bar</h2>
+
   {{> header}}
 
-  <ul class="accordion" data-accordion data-allow-all-closed="true">
-  <li class="accordion-item" data-accordion-item>
-    <a href="#" class="accordion-title">Header &amp; Top Bar HTML</a>
-    <div class="accordion-content" data-tab-content>
+  {{> show-html-open }}
 
-{{#markdown}}
-```<header>
-    <div class="topper-logo row columns">
-        <div>
-            <a class="y-icons y-yale y-univ" href=
-            "http://www.yale.edu/"><span class="show-for-sr">Yale
-            University</span></a>
-        </div>
-    </div>
-    <div class="top-bar-container">
-      <div class="top-bar row columns">
-          <div class="top-bar-title">
-              <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-              <button class="menu-icon dark" type="button" data-toggle></button>
-              </span>Site Title
-          </div>
-          <div id="responsive-menu">
-              <div class="top-bar-left">
-                  <ul class="dropdown menu" data-dropdown-menu>
-                      <li><a href="#">One</a>
-                        <ul class="menu vertical">
-                          <li><a href="#">One</a></li>
-                          <li><a href="#">Two</a></li>
-                          <li><a href="#">Three</a></li>
-                        </ul>
-                      </li>
-                  <li><a href="#">Two</a></li>
-                  <li><a href="#">Three</a></li>
-                  <ul>
-              </div>
-              <div class="top-bar-right">
-                  <ul class="menu">
-                      <li><input type="search" placeholder="Search"></li>
-                      <li><button type="button" class="small button">Search</button></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </div>
-</header>
+  {{#markdown}}
+```
+
+{{> header}}
 ```
   {{/markdown}}  
 
-  
-    </div>
-  </li>
-  </ul>
-  </div>
+  {{> show-html-close }}
+</div>
 
+<div class="example">
+  <h2>Yale Footer</h2>
 
+  {{> footer}}
+
+  {{> show-html-open }}
+
+  {{#markdown}}
+```
 
 {{> footer}}
+```
+  {{/markdown}}  
+
+  {{> show-html-close }}
+</div>

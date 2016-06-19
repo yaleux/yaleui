@@ -26,7 +26,8 @@
     }
 }
 
-.site-title{
+.site-title,
+.page-title{
   margin-top: 1em;
 }
 
@@ -42,8 +43,10 @@ h6 {
   @include heading_6;
 }
 
-.fa {
-  font-family: $fa-font;
+.example h2{
+  @include heading_5;
+  text-align: center;
+  color: $medium-gray;
 }
 
 // Links
