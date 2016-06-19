@@ -45,6 +45,9 @@ h6 {
 
 .example h2{
   @include heading_5;
+  width: 100%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $light-gray;
   text-align: center;
   color: $medium-gray;
 }
