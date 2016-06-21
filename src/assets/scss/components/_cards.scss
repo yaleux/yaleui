@@ -1,15 +1,83 @@
 /* Yale Feature Cards :: Components
 -------------------------------------- */
 
-.feature-card {
-  border: 1px solid red;
+.feature-card,
+.feature-card--media-card {
+  background-color: $off-white;
+  margin-bottom: 20px;
 }
 
-.feature-card__title{
+.feature-card__title {
     font-size: rem-calc(36);
     line-height: rem-calc(40);
     font-family: $yale-font;
     letter-spacing: 0.89px;
     margin: 10px 0;
+}
+
+.feature-card__content{
+  padding: rem-calc(20);
+  @include breakpoint(medium) {
+    padding: rem-calc(50 60);
+  }
+}
+
+.feature-card__header{
+  width: 100%;
+  display: table;
+}
+
+.feature-card__category,
+.feature-card--media-card__title {
+  caption-side: top;
+  display: table-caption;
+  margin: 10px 0 20px;
+
+  @include heading_5;
+
+  &:after{
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #ddd;
+    content: "";
+    margin-top: 16px;
+  } 
+}
+
+.feature-card__category{
+  color: $black;
+}
+
+.feature-card--media-card__title{
+  color: $marine;
+}
+
+.feature-card__description{
+    
+    display: none; //hide for small screens
+
+    @include breakpoint(medium){
+      display: initial;
+    }
+
+    font-size: rem-calc(20);
+    p {
+      margin: 10px 0;
+    }
+}
+
+.feature-card__footer{
+  padding: 20px 0 10px;
+}
+
+.feature-card__figure {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.responsive_image img {
+    width: 100%;
 }
 

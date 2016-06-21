@@ -69,7 +69,6 @@ $off-white: #F9F9F9;
 $white: #FFFFFF;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -112,9 +111,11 @@ $block-grid-max: 8;
 $yale-font: 'yale', TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
 $thesans-font:  'TheSans', sans-serif;
 $opensans-font: 'Open Sans', sans-serif;
-$sans-font: $thesans-font;
+$sans-font: $opensans-font;
 $fa-font: 'FontAwesome';
 $icon-font: $fa-font;
+
+$body-font-family: $sans-font;
 
 $header-font-family: $yale-font;
 $header-font-weight: 400;

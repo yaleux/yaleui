@@ -430,6 +430,11 @@ Use the `<kbd>` element to annotate a key stroke or combination.
 
 Text is core to the content of your page, so making it accessible to everyone is important. Here are some general guidelines to follow.
 
+<p>It's best practice to avoid line lengths of fewer than 50 characters or greater than 120 characters. Line lengths of 80 characters are ideal.</p>
+<p>Avoid <code>&lt;del&gt;</code>, <code>&lt;s&gt;</code>, and <code>&lt;ins&gt;</code> tags, as screen readers do not alert the user at all that text contained within these tags are special. Some but not all screen readers will give special emphasis to text contained within <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> tags.</p>
+<p>Avoid styling non-link text with underlines. Some readers will mistake underlined texts for links, and may become confused and try to click on the unerlined text. Also, avoid styling test with to blink, scroll, or have a line through it.</p>
+
+
 ### Text vs. Images
 
 Prefer using actual text over text inside a graphic. Assistive technologies can't read an image, and the text in an image can't be resized by a browser, like normal text. If an image has text that needs to be read, add it in the `alt` attribute of the image.
@@ -469,19 +474,6 @@ We use the `rem` unit nearly everywhere in Foundation, and even wrote a Sass fun
 - [WebAIM: Links and HyperText](http://webaim.org/techniques/hypertext/)
 - [WebAIM: Writing Clearly and Simply](http://webaim.org/techniques/semanticstructure/)
 - [WebAIM: Color Contrast Checker](http://webaim.org/resources/contrastchecker/)
-
----
-
-## Print Styles
-
-Foundation includes print styles developed by HTML5 Boilerplate to give you some basic print-specific styles. These are activated when you print through a media query. It includes:
-
-- Clearing out backgrounds, box shadows and text shadows
-- Appending link URLs after the anchor text
-- Adding borders to `<blockquote>` and `<pre>` elements
-- Page cleanup and window minimization
-
-On top of that, Foundation includes a couple of simple classes you can use to control elements printing, or not printing. Simply attach `.show-for-print` to an element to only show when printing, and `.hide-for-print` to hide something when printing.
 
 
 
