@@ -445,6 +445,11 @@
 
 <div class="ss-code-live"><p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p></div><hr>
 <h2>Accessibility</h2><p>Text is core to the content of your page, so making it accessible to everyone is important. Here are some general guidelines to follow.</p>
+<p>It&#39;s best practice to avoid line lengths of fewer than 50 characters or greater than 120 characters. Line lengths of 80 characters are ideal.</p>
+<p>Avoid <code>&lt;del&gt;</code>, <code>&lt;s&gt;</code>, and <code>&lt;ins&gt;</code> tags, as screen readers do not alert the user at all that text contained within these tags are special. Some but not all screen readers will give special emphasis to text contained within <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> tags.</p>
+<p>Avoid styling non-link text with underlines. Some readers will mistake underlined texts for links, and may become confused and try to click on the unerlined text. Also, avoid styling test with to blink, scroll, or have a line through it.</p>
+
+
 <h3>Text vs. Images</h3><p>Prefer using actual text over text inside a graphic. Assistive technologies can&#39;t read an image, and the text in an image can&#39;t be resized by a browser, like normal text. If an image has text that needs to be read, add it in the <code>alt</code> attribute of the image.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/buy-now.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Buy now"</span>&gt;</span></code></pre></div><hr>
 <h3>Contrast</h3><p>The contrast between the color of an element&#39;s text and its background should be high enough that low-vision users can read it. <strong>The minimum recommended contrast ratio is 4.5:1.</strong> There are no automated tools that can effectively check this for you, but if you aren&#39;t sure about a specific color combination, you can run it through one of many color contrast checkers, such as <a href="http://webaim.org/resources/contrastchecker/">WebAIM&#39;s color contrast checker</a>.</p>
@@ -462,15 +467,6 @@
 <li><a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Writing Clearly and Simply</a></li>
 <li><a href="http://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
 </ul>
-<hr>
-<h2>Print Styles</h2><p>Foundation includes print styles developed by HTML5 Boilerplate to give you some basic print-specific styles. These are activated when you print through a media query. It includes:</p>
-<ul>
-<li>Clearing out backgrounds, box shadows and text shadows</li>
-<li>Appending link URLs after the anchor text</li>
-<li>Adding borders to <code>&lt;blockquote&gt;</code> and <code>&lt;pre&gt;</code> elements</li>
-<li>Page cleanup and window minimization</li>
-</ul>
-<p>On top of that, Foundation includes a couple of simple classes you can use to control elements printing, or not printing. Simply attach <code>.show-for-print</code> to an element to only show when printing, and <code>.hide-for-print</code> to hide something when printing.</p>
 
             </section>
             <section class="ss-section" id="navigation">
