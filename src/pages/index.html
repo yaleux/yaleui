@@ -47,17 +47,29 @@ featured-examples:
 
   <section id="examples">
     <div class="row columns">
-      
       <h2>Examples</h2>
 
       {{#each featured-examples}}
+        <div class="column medium-4">
           <a href="{{root}}{{link}}">
-            <div class="example column small-4">
-            <h3>{{title}}</h3>
-            <img src="{{root}}{{thumb}}" alt="Preview of {{title}}">
-            </div>   
-          </a>  
-      {{/each}}
+            <article class="feature-card--media-card">
+              <div class="feature-card__content">
+                <figure class="feature-card__figure responsive_image">
+                  <picture class="feature-card__picture">
+                    <img class="feature-card__image" src="{{root}}{{thumb}}" alt="Preview of {{title}}">
+                  </picture>
+                </figure>
 
+                <header class="feature-card__header">
+                  <h2 class="feature-card--media-card__title">
+                    {{title}}
+                  </h2>
+                </header>
+              </div>
+            </article> 
+          </a>
+        </div>  
+      {{/each}}
+      
   </section>
 </div>
