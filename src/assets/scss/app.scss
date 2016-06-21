@@ -53,7 +53,7 @@
 
 
 /* ==========================================================================
-   Overrides
+   Overrides & Custom Components
 ============================================================================= */
 
 @import 'typography';
@@ -67,6 +67,7 @@
 @import 'components/hero';
 @import 'components/tabs';
 @import 'components/accordion';
+@import 'components/cards';
 
 // Font Awesome icon font
 @import 'font-awesome.min';

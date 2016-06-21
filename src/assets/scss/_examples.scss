@@ -31,6 +31,15 @@ a:hover .example {
   background: $light-gray;
 }
 
+.example .example__subheading{
+  @include heading_5;
+  width: 100%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $light-gray;
+  text-align: center;
+  color: $medium-gray;
+}
+
 
 // Log in form
 #log-in-form {

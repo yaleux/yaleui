@@ -1,0 +1,15 @@
+/* Yale Feature Cards :: Components
+-------------------------------------- */
+
+.feature-card {
+  border: 1px solid red;
+}
+
+.feature-card__title{
+    font-size: rem-calc(36);
+    line-height: rem-calc(40);
+    font-family: $yale-font;
+    letter-spacing: 0.89px;
+    margin: 10px 0;
+}
+
