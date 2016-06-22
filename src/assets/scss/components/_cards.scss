@@ -22,25 +22,33 @@
 .feature-card__header{
   width: 100%;
   display: table;
+
+  .feature-card__category,
+  .feature-card--media-card__title {
+    caption-side: top;
+    display: table-caption;
+    margin: 10px 0 20px;
+
+    @include heading_5;
+  }
 }
 
-.feature-card__category,
-.feature-card--media-card__title {
-  caption-side: top;
-  display: table-caption;
-  margin: 10px 0 20px;
+.feature-card__header:not(:last-child){
 
-  @include heading_5;
+  .feature-card__category,
+  .feature-card--media-card__title {
 
-  &:after{
-    display: block;
-    width: 40px;
-    height: 1px;
-    background-color: #ddd;
-    content: "";
-    margin-top: 16px;
-  } 
+    &:after{
+      display: block;
+      width: 40px;
+      height: 1px;
+      background-color: #ddd;
+      content: "";
+      margin-top: 16px;
+    } 
+  }
 }
+
 
 .feature-card__category{
   color: $black;
