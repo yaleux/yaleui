@@ -51,8 +51,8 @@ featured-examples:
 
       {{#each featured-examples}}
         <div class="column medium-4">
-          <a href="{{root}}{{link}}">
-            <article class="feature-card--media-card">
+          <article class="feature-card--media-card">
+            <a class="feature-card--media-card__link" href="{{root}}{{link}}">
               <div class="feature-card__content">
                 <figure class="feature-card__figure responsive_image">
                   <picture class="feature-card__picture">
@@ -66,8 +66,8 @@ featured-examples:
                   </h2>
                 </header>
               </div>
-            </article> 
-          </a>
+            </a> 
+          </article>
         </div>  
       {{/each}}
       

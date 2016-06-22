@@ -7,6 +7,34 @@
   margin-bottom: 20px;
 }
 
+.feature-card--media-card__link{
+  text-decoration: none;
+  color: initial;
+  
+  .feature-card__figure{
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      -moz-transition: all 0.8s;
+      -webkit-transition: all 0.8s;
+      transition: all 0.8s;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $marine;
+
+    img {
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+  }
+}
+
 .feature-card__title {
     font-size: rem-calc(36);
     line-height: rem-calc(40);
