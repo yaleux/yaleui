@@ -1,63 +1,169 @@
 # The Grid
 
-## Overview
-
-The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
+<p class="lead">The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.</p>
 
 ---
 
-## Nesting
+## Basics
 
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
+Start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. You can use `.column` or `.columns`&mdash;the only difference is grammar. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
 
----
-
-## How to Use
-
-Here's how your code will look when you use a series of `<div>` tags to create vertical columns.
+**Foundation is mobile-first.** Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.
 
 ```html
 <div class="row">
-  <div class="small-6 medium-4 large-3 columns">...</div>
-  <div class="small-6 medium-8 large-9 columns">...</div>
+  <div class="small-2 large-4 columns"><!-- ... --></div>
+  <div class="small-4 large-4 columns"><!-- ... --></div>
+  <div class="small-6 large-4 columns"><!-- ... --></div>
+</div>
+<div class="row">
+  <div class="large-3 columns"><!-- ... --></div>
+  <div class="large-6 columns"><!-- ... --></div>
+  <div class="large-3 columns"><!-- ... --></div>
+</div>
+<div class="row">
+  <div class="small-6 large-2 columns"><!-- ... --></div>
+  <div class="small-6 large-8 columns"><!-- ... --></div>
+  <div class="small-12 large-2 columns"><!-- ... --></div>
+</div>
+<div class="row">
+  <div class="small-3 columns"><!-- ... --></div>
+  <div class="small-9 columns"><!-- ... --></div>
+</div>
+<div class="row">
+  <div class="large-4 columns"><!-- ... --></div>
+  <div class="large-8 columns"><!-- ... --></div>
+</div>
+<div class="row">
+  <div class="small-6 large-5 columns"><!-- ... --></div>
+  <div class="small-6 large-7 columns"><!-- ... --></div>
+</div>
+<div class="row">
+  <div class="large-6 columns"><!-- ... --></div>
+  <div class="large-6 columns"><!-- ... --></div>
 </div>
 ```
 
 <div class="row display">
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-4 columns">4</div>
+  <div class="small-2 large-4 columns"><span class="hide-for-large">2</span><span class="show-for-large">4</span></div>
+  <div class="small-4 large-4 columns">4</div>
+  <div class="small-6 large-4 columns"><span class="hide-for-large">6</span><span class="show-for-large">4</span></div>
 </div>
 <div class="row display">
-  <div class="small-12 large-3 columns">3</div>
-  <div class="small-12 large-6 columns">6</div>
-  <div class="small-12 large-3 columns">3</div>
+  <div class="large-3 columns"><span class="hide-for-large">full</span><span class="show-for-large">3</span></div>
+  <div class="large-6 columns"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+  <div class="large-3 columns"><span class="hide-for-large">full</span><span class="show-for-large">3</span></div>
 </div>
 <div class="row display">
-  <div class="small-12 large-2 columns">2</div>
-  <div class="small-12 large-8 columns">8</div>
-  <div class="small-12 large-2 columns">2</div>
+  <div class="small-6 large-2 columns"><span class="hide-for-large">6</span><span class="show-for-large">2</span></div>
+  <div class="small-6 large-8 columns"><span class="hide-for-large">6</span><span class="show-for-large">8</span></div>
+  <div class="small-12 large-2 columns"><span class="hide-for-large">full</span><span class="show-for-large">2</span></div>
 </div>
 <div class="row display">
-  <div class="small-12 large-3 columns">3</div>
-  <div class="small-12 large-9 columns">9</div>
+  <div class="small-3 columns">3</div>
+  <div class="small-9 columns">9</div>
 </div>
 <div class="row display">
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-8 columns">8</div>
+  <div class="large-4 columns"><span class="hide-for-large">full</span><span class="show-for-large">4</span></div>
+  <div class="large-8 columns"><span class="hide-for-large">full</span><span class="show-for-large">8</span></div>
 </div>
 <div class="row display">
-  <div class="small-12 large-5 columns">5</div>
-  <div class="small-12 large-7 columns">7</div>
+  <div class="small-6 large-5 columns"><span class="hide-for-large">6</span><span class="show-for-large">5</span></div>
+  <div class="small-6 large-7 columns"><span class="hide-for-large">6</span><span class="show-for-large">7</span></div>
 </div>
 <div class="row display">
-  <div class="small-12 large-6 columns">6</div>
-  <div class="small-12 large-6 columns">6</div>
+  <div class="large-6 columns"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+  <div class="large-6 columns"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
 </div>
 
 ---
 
-## Nesting Rows
+### Small Grids
+
+Small grids expand to large screens easier than large grids cram into small screens.
+
+```html
+<div class="row">
+  <div class="small-2 columns">2 <span class="hide-for-small-only">columns</span></div>
+  <div class="small-10 columns">10 columns</div>
+</div>
+<div class="row">
+  <div class="small-3 columns">3 columns</div>
+  <div class="small-9 columns">9 columns</div>
+</div>
+```
+
+<div class="row display">
+  <div class="small-2 columns">2 columns</div>
+  <div class="small-10 columns">10 columns</div>
+</div>
+<div class="row display">
+  <div class="small-3 columns">3 columns</div>
+  <div class="small-9 columns">9 columns</div>
+</div>
+
+---
+
+### Medium Grid
+
+Medium sized screens will inherit styles from small, unless you specify a different layout using the medium grid classes.
+
+```html
+<div class="row">
+  <div class="medium-2 columns">2 columns</div>
+  <div class="medium-10 columns">10 columns</div>
+</div>
+<div class="row">
+  <div class="medium-3 columns">3 columns</div>
+  <div class="medium-9 columns">9 columns</div>
+</div>
+```
+
+<div class="row display">
+  <div class="medium-2 columns">2 columns</div>
+  <div class="medium-10 columns">10 columns</div>
+</div>
+<div class="row display">
+  <div class="medium-3 columns">3 columns</div>
+  <div class="medium-9 columns">9 columns</div>
+</div>
+
+---
+
+## Advanced
+
+### Combined Column/Row
+
+If you need a full-width column to use as a container, put the `.column` and `.row` classes on the same element. You can still nest more grids inside this container like usual.
+
+<div class="warning callout">
+  <p>Column rows can use sizing classes like <code>.small-8</code>, but only when used as a top-level container&mdash;not when nested inside another row.</p>
+</div>
+
+```html
+<div class="column row">
+  Row column
+</div>
+```
+
+<div class="column row display">
+  Row column
+</div>
+
+---
+
+### Fluid Row
+
+Normally, a row is always 1200 pixels wide. Make a row completely fluid by adding the `.expanded` class.
+
+```html
+<div class="expanded row">
+</div>
+```
+
+---
+
+### Nesting
 
 In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
 
@@ -95,33 +201,215 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 
 ---
 
-## Small Grid
+### Offsets
 
-You have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.
+Move blocks up to 11 columns to the right by using classes like `.large-offset-1` and `.small-offset-3`.
 
 ```html
 <div class="row">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
+  <div class="large-1 columns">1</div>
+  <div class="large-11 columns">11</div>
 </div>
 <div class="row">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
+  <div class="large-1 columns">1</div>
+  <div class="large-10 large-offset-1 columns">10, offset 1</div>
+</div>
+<div class="row">
+  <div class="large-1 columns">1</div>
+  <div class="large-9 large-offset-2 columns">9, offset 2</div>
+</div>
+<div class="row">
+  <div class="large-1 columns">1</div>
+  <div class="large-8 large-offset-3 columns">8, offset 3</div>
 </div>
 ```
 
 <div class="row display">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
+  <div class="large-1 columns">1</div>
+  <div class="large-11 columns">11</div>
 </div>
 <div class="row display">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
+  <div class="large-1 columns">1</div>
+  <div class="large-10 large-offset-1 columns">10, offset 1</div>
+</div>
+<div class="row display">
+  <div class="large-1 columns">1</div>
+  <div class="large-9 large-offset-2 columns">9, offset 2</div>
+</div>
+<div class="row display">
+  <div class="large-1 columns">1</div>
+  <div class="large-8 large-offset-3 columns">8, offset 3</div>
 </div>
 
 ---
 
-## Block Grids
+### Incomplete Rows
+
+In order to work around browsers' different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn't have a count that adds up to 12 columns, you can tag the last column with a class of `.end` in order to override that behavior.
+
+```html
+<div class="row">
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+</div>
+<div class="row">
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns end">3 end</div>
+</div>
+```
+
+<div class="row display-end">
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+</div>
+<div class="row display-end">
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns end">3 end</div>
+</div>
+
+---
+
+### Gutters
+
+The grid *gutter*&mdash;the space between two columns in a row, and the space between the edge of a grid and the edge of the page&mdash;is responsive, and becomes wider on larger screens.
+
+Breakpoint | Gutter Size
+-----------|------------
+`small`    | 20px
+`medium`   | 30px
+
+---
+
+### Collapse/Uncollapse Rows
+
+The `.collapse` class lets you remove column gutters (padding).
+
+There are times when you won't want each media query to be collapsed or uncollapsed. In this case, use the media query size you want and collapse or uncollapse and add that to your row element. Example shows no gutter at small media size and then adds the gutter to columns at medium.
+
+```html
+<div class="row medium-uncollapse large-collapse">
+  <div class="small-6 columns">
+    Removes gutter at large media query
+  </div>
+  <div class="small-6 columns">
+    Removes gutter at large media query
+  </div>
+</div>
+```
+
+<p class="lead">Scale the browser down to a medium size to see the difference.</p>
+
+<div class="row medium-uncollapse large-collapse">
+  <div class="small-6 columns">
+    <div class="callout secondary">
+      <p class="show-for-small-only">On a small screen, I have gutters!</p>
+      <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
+      <p class="show-for-large">On a large screen, I have no gutters!</p>
+    </div>
+  </div>
+  <div class="small-6 columns">
+    <div class="callout secondary">
+      <p class="show-for-small-only">On a small screen, I have gutters!</p>
+      <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
+      <p class="show-for-large">On a large screen, I have no gutters!</p>
+    </div>
+  </div>
+</div>
+
+---
+
+### Centered Columns
+
+Center your columns by adding a class of `.small-centered` to your column. Large will inherit small centering by default, but you can also center solely on large by applying a `.large-centered` class. To uncenter on large screens, use `.large-uncentered`.
+
+```html
+<div class="row">
+  <div class="small-3 small-centered columns">3 centered</div>
+</div>
+<div class="row">
+  <div class="small-6 large-centered columns">6 centered</div>
+</div>
+<div class="row">
+  <div class="small-9 small-centered large-uncentered columns">9 centered</div>
+</div>
+<div class="row">
+  <div class="small-11 small-centered columns">11 centered</div>
+</div>
+```
+
+<div class="row display">
+  <div class="small-3 small-centered columns">3 centered</div>
+</div>
+<div class="row display">
+  <div class="small-6 large-centered columns">6 centered, large</div>
+</div>
+<div class="row display">
+  <div class="small-9 small-centered large-uncentered columns">9 centered small</div>
+</div>
+<div class="row display">
+  <div class="small-11 small-centered columns">11 centered</div>
+</div>
+
+---
+
+### Source Ordering
+
+Using these source ordering classes, you can shift columns around between our breakpoints. This means if you place sub-navigation below main content on small displays, you have the option to position the sub-navigation on either the left or right of the page for large displays. Prefix push/pull with the size of the device you want to apply the styles to. `.medium-push-#`, `.large-push-#` is the syntax you'll use. Use the number 0 instead to reset a push/pull, such as `.medium-push-0` or `.large-pull-0`.
+
+```html
+<div class="row">
+  <div class="small-10 small-push-2 columns">10</div>
+  <div class="small-2 small-pull-10 columns">2, last</div>
+</div>
+<div class="row">
+  <div class="large-9 large-push-3 columns">9</div>
+  <div class="large-3 large-pull-9 columns">3, last</div>
+</div>
+<div class="row">
+  <div class="large-8 large-push-4 columns">8</div>
+  <div class="large-4 large-pull-8 columns">4, last</div>
+</div>
+<div class="row">
+  <div class="small-5 small-push-7 medium-7 medium-push-5 columns">7</div>
+  <div class="small-7 small-pull-5 medium-5 medium-pull-7 columns">5, last</div>
+</div>
+<div class="row">
+  <div class="medium-6 medium-push-6 columns">6</div>
+  <div class="medium-6 medium-pull-6 columns">6, last</div>
+</div>
+```
+
+<div class="row display">
+  <div class="small-10 small-push-2 columns">10</div>
+  <div class="small-2 small-pull-10 columns">2, last</div>
+</div>
+<div class="row display">
+  <div class="large-9 large-push-3 columns">9</div>
+  <div class="large-3 large-pull-9 columns">3, last</div>
+</div>
+<div class="row display">
+  <div class="large-8 large-push-4 columns">8</div>
+  <div class="large-4 large-pull-8 columns">4, last</div>
+</div>
+<div class="row display">
+  <div class="small-5 small-push-7 medium-7 medium-push-5 columns">7</div>
+  <div class="small-7 small-pull-5 medium-5 medium-pull-7 columns">5, last</div>
+</div>
+<div class="row display">
+  <div class="medium-6 medium-push-6 columns">6</div>
+  <div class="medium-6 medium-pull-6 columns">6, last</div>
+</div>
+
+---
+
+### Block Grids
+
+To create a block grid, add a class of the format `[size]-up-[n]` to change the size of all columns within the row. By default, the max number of columns you can use with block grid are 8.
+
 ```html_example
 <div class="row small-up-1 medium-up-2 large-up-4">
   <div class="column">
@@ -260,22 +548,26 @@ You have access to a small, medium, and large grid. If you know that your grid s
 
 ## Paragraphs
 
-This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content&mdash;so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool. Use the `<strong>` and `<em>` tags to denote text that should be displayed or read with emphasis. Browsers will **bold** and *italicize* the words, while screen readers will read them with *emphasis*.
+```html_example 
+<p>This is a paragraph. Paragraphs are preset with a
+font size, line height and spacing to match the overall vertical
+rhythm. To show what a paragraph looks like this needs a little more
+content so, did you know that there are storms occurring on Jupiter
+that are larger than the Earth? Pretty cool. Wrap strong around type
+to <strong>make it bold!</strong>. You can also use em to
+<em>italicize your words</em>.</p> 
+```
 
 <div class="callout primary">
   <p>If the emphasis of a phrase is important, don't make the emphasis purely visual&mdash;use the `<em>` or `<strong>` tags to mark it as well. Both of these tags have built-in styles, but there's no harm in adding additional styles in specific contexts.</p>
 </div>
-
-```html
-<p>This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool. Wrap strong around type to <strong>make it bold!</strong>. You can also use em to <em>italicize your words</em>.</p>
-```
 
 ---
 
 ## Header
 
 <div class="callout primary">
-  <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. For example, after using an <code>&lt;h2&gt;</code> in your code, the next heading used should be either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code>. If you need a heading to look bigger or smaller to match a specific style, use CSS to override the default size.</p>
+  <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. For example, after using an `h2` in your code, the next heading used should be either `h2` or `h3`. If you need a heading to look bigger or smaller to match a specific style, use CSS to override the default size.</p>
 </div>
 
 ```html_example
@@ -411,7 +703,7 @@ Use the `<abbr>` tag to annotate a shortened term. Abbreviations must always hav
 Format references to code with the `<code>` tag.
 
 ```html_example
-Remember to escape angle brackets when printing HTML: <code>&lt;div&gt;</code>
+Remember to escape angle brackets when printing HTML: `div`
 ```
 
 ---
@@ -426,13 +718,15 @@ Use the `<kbd>` element to annotate a key stroke or combination.
 
 ---
 
-## Accessibility
+## Text Accessibility
 
 Text is core to the content of your page, so making it accessible to everyone is important. Here are some general guidelines to follow.
 
-<p>It's best practice to avoid line lengths of fewer than 50 characters or greater than 120 characters. Line lengths of 80 characters are ideal.</p>
-<p>Avoid <code>&lt;del&gt;</code>, <code>&lt;s&gt;</code>, and <code>&lt;ins&gt;</code> tags, as screen readers do not alert the user at all that text contained within these tags are special. Some but not all screen readers will give special emphasis to text contained within <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> tags.</p>
-<p>Avoid styling non-link text with underlines. Some readers will mistake underlined texts for links, and may become confused and try to click on the unerlined text. Also, avoid styling test with to blink, scroll, or have a line through it.</p>
+It's best practice to avoid line lengths of fewer than 50 characters or greater than 120 characters. Line lengths of 80 characters are ideal.
+
+Avoid `del`, `s`, and `ins` tags, as screen readers do not alert the user at all that text contained within these tags are special. Some but not all screen readers will give special emphasis to text contained within `em` and `strong` tags.
+
+Avoid styling non-link text with underlines. Some readers will mistake underlined texts for links, and may become confused and try to click on the unerlined text. Also, avoid styling test with to blink, scroll, or have a line through it.
 
 
 ### Text vs. Images
@@ -479,23 +773,31 @@ We use the `rem` unit nearly everywhere in Foundation, and even wrote a Sass fun
 
 
 # Navigation
-<p class="lead">Foundation is bundled with many simple navigation patterns, which can be combined to form more complex, robust responsive navigation solutions.</p>
+<p class="lead">Yale's UI Style Guide uses Foundation's builded patterns. Foundations is bundled with many simple navigation patterns, which can be combined to form more complex, robust responsive navigation solutions.</p>
 
+<div class="callout warning">
+<a href="./examples/header-footer.html">
+Take a look at our **Yale Header &amp; Footer Example**, which contains sample code for a Yale Header, Top-Bar Menu with Search, and Footer.
+</a>
+</div>
 
 ## Basics: Menu
 
-The Menu is an all-purpose navigation component. It can be aligned horizontally or vertically, can be nested, and supports icons. [Learn more about the Menu.](menu.html)
+The Menu is an all-purpose navigation component. It can be aligned horizontally or vertically, can be nested, and supports icons. [Learn more about the Menu.](http://foundation.zurb.com/sites/docs/menu.html)
 
 All menus use the `ul > li > a` pattern. The markup is a little strict, but this makes it easy to attach a navigation plugin to any menu, as you'll see below.
 
 Here's a basic Menu.
 
 ```html_example
-<ul class="menu">
-  <li><a href="#">Item One</a></li>
-  <li><a href="#">Item Two</a></li>
-  <li><a href="#">Item Three</a></li>
-</ul>
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+  <ul class="menu">
+    <li><a href="#">Item One</a></li>
+    <li><a href="#">Item Two</a></li>
+    <li><a href="#">Item Three</a></li>
+  </ul>
+</nav>
 ```
 
 ---
@@ -503,35 +805,41 @@ Here's a basic Menu.
 To nest menus, add a new `<ul>` inside of an `<li>`, *after* the `<a>` inside.
 
 ```html
-<ul class="menu">
-  <li>
-    <a href="#">Item One</a>
-    <ul class="menu">
-      <li><a href="#">Item One-one</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Item Two</a></li>
-  <li><a href="#">Item Three</a></li>
-</ul>
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+  <ul class="menu">
+    <li>
+      <a href="#">Item One</a>
+      <ul class="menu">
+        <li><a href="#">Item One-one</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Item Two</a></li>
+    <li><a href="#">Item Three</a></li>
+  </ul>
+</nav>
 ```
 
 ---
 
 ## Top Bar
 
-Top bar is a simple wrapper around these menu patterns. It supports a left-hand and right-hand section, which collapse on top of each other on small screens. [Learn more about the top bar.](top-bar.html)
+Top bar is a simple wrapper around these menu patterns. It supports a left-hand and right-hand section, which collapse on top of each other on small screens. [Learn more about the top bar.](http://foundation.zurb.com/sites/docs/top-bar.html)
 
 <div class="top-bar">
   <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Site Title</li>
-      <li><a href="#">One</a></li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-    </ul>
+    <nav role="navigation" aria-labelledby="main-menu-heading">
+      <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Site Title</li>
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </nav>
   </div>
   <div class="top-bar-right">
-    <ul class="menu">
+    <ul role="search" class="menu">
       <li><input type="search" placeholder="Search"></li>
       <li><button type="button" class="button">Search</button></li>
     </ul>
@@ -546,103 +854,110 @@ The basic Menu can be enhanced with one of three **Menu plugins**. All three use
 
 ### Dropdown Menu
 
-The dropdown menu plugin (`data-dropdown-menu`) converts a nested menu into a series of dropdown menus. The nested menus can be opened through hover, click, or keyboard. [Learn more about the dropdown menu.](dropdown-menu.html)
+The dropdown menu plugin (`data-dropdown-menu`) converts a nested menu into a series of dropdown menus. The nested menus can be opened through hover, click, or keyboard. [Learn more about the dropdown menu.](http://foundation.zurb.com/sites/docs/dropdown-menu.html)
 
-<ul class="dropdown menu" data-dropdown-menu>
-  <li class="has-submenu">
-    <a>Item 1</a>
-    <ul class="submenu menu" data-submenu>
-      <li><a href="#">Item 1A Loooong</a></li>
-      <li class="has-submenu">
-        <a href="#"> Item 1 sub</a>
-        <ul class="submenu menu" data-submenu>
-          <li><a href="#">Item 1 subA</a></li>
-          <li><a href="#">Item 1 subB</a></li>
-          <li class="has-submenu">
-            <a href="#"> Item 1 sub</a>
-            <ul class="submenu menu" data-submenu>
-              <li><a href="#">Item 1 subA</a></li>
-              <li><a href="#">Item 1 subB</a></li>
-            </ul>
-          </li>
-          <li class="has-submenu">
-            <a href="#">Item 1 sub</a>
-            <ul class="submenu menu" data-submenu>
-              <li><a href="#">Item 1 subA</a></li>
-              <li><a href="#">Item 1 subB</a></li>
-            </ul>
-          </li>
-
-        </ul>
-      </li>
-      <li><a href="#">Item 1B</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 2</a>
-    <ul class="submenu menu" data-submenu>
-      <li><a href="#">Item 2A</a></li>
-      <li><a href="#">Item 2B</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 3</a>
-    <ul class="submenu menu" data-submenu>
-      <li><a href="#">Item 3A</a></li>
-      <li><a href="#">Item 3B</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Item 4</a></li>
-</ul>
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+  <ul class="dropdown menu" data-dropdown-menu>
+    <li class="has-submenu">
+      <a>Item 1</a>
+      <ul class="submenu menu" data-submenu>
+        <li><a href="#">Item 1A Loooong</a></li>
+        <li class="has-submenu">
+          <a href="#"> Item 1 sub</a>
+          <ul class="submenu menu" data-submenu>
+            <li><a href="#">Item 1 subA</a></li>
+            <li><a href="#">Item 1 subB</a></li>
+            <li class="has-submenu">
+              <a href="#"> Item 1 sub</a>
+              <ul class="submenu menu" data-submenu>
+                <li><a href="#">Item 1 subA</a></li>
+                <li><a href="#">Item 1 subB</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">Item 1 sub</a>
+              <ul class="submenu menu" data-submenu>
+                <li><a href="#">Item 1 subA</a></li>
+                <li><a href="#">Item 1 subB</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Item 1B</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 2</a>
+      <ul class="submenu menu" data-submenu>
+        <li><a href="#">Item 2A</a></li>
+        <li><a href="#">Item 2B</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 3</a>
+      <ul class="submenu menu" data-submenu>
+        <li><a href="#">Item 3A</a></li>
+        <li><a href="#">Item 3B</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Item 4</a></li>
+  </ul>
+</nav>
 
 ---
+
 
 ### Drilldown Menu
 
 The drilldown menu plugin (`data-drilldown`) converts a nested menu into a series of sliding menus. Clicking an item slides the next level menu into view. [Learn more about the drilldown menu.](drilldown-menu.html)
 
-<ul class="vertical menu" data-drilldown style="width: 300px;" id="m1">
-  <li class="has-submenu">
-    <a href="#">Item 1</a>
-    <ul class="vertical menu" data-submenu id="m2">
-      <li class="has-submenu">
-        <a href="#">Item 1A</a>
-        <ul class="vertical menu" data-submenu id="m3">
-          <li><a href="#">Item 1Aa</a></li>
-          <li><a href="#">Item 1Ba</a></li>
-          <li><a href="#">Item 1Ca</a></li>
-          <li><a href="#">Item 1Da</a></li>
-          <li><a href="#">Item 1Ea</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Item 1B</a></li>
-      <li><a href="#">Item 1C</a></li>
-      <li><a href="#">Item 1D</a></li>
-      <li><a href="#">Item 1E</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 2</a>
-    <ul class="vertical menu" data-submenu>
-      <li><a href="#">Item 2A</a></li>
-      <li><a href="#">Item 2B</a></li>
-      <li><a href="#">Item 2C</a></li>
-      <li><a href="#">Item 2D</a></li>
-      <li><a href="#">Item 2E</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 3</a>
-    <ul class="vertical menu" data-submenu>
-      <li><a href="#">Item 3A</a></li>
-      <li><a href="#">Item 3B</a></li>
-      <li><a href="#">Item 3C</a></li>
-      <li><a href="#">Item 3D</a></li>
-      <li><a href="#">Item 3E</a></li>
-    </ul>
-  </li>
-  <li><a href="#"> Item 4</a></li>
-</ul>
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+  <ul class="vertical menu" data-drilldown style="width: 300px;" id="m1">
+    <li class="has-submenu">
+      <a href="#">Item 1</a>
+      <ul class="vertical menu" data-submenu id="m2">
+        <li class="has-submenu">
+          <a href="#">Item 1A</a>
+          <ul class="vertical menu" data-submenu id="m3">
+            <li><a href="#">Item 1Aa</a></li>
+            <li><a href="#">Item 1Ba</a></li>
+            <li><a href="#">Item 1Ca</a></li>
+            <li><a href="#">Item 1Da</a></li>
+            <li><a href="#">Item 1Ea</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Item 1B</a></li>
+        <li><a href="#">Item 1C</a></li>
+        <li><a href="#">Item 1D</a></li>
+        <li><a href="#">Item 1E</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 2</a>
+      <ul class="vertical menu" data-submenu>
+        <li><a href="#">Item 2A</a></li>
+        <li><a href="#">Item 2B</a></li>
+        <li><a href="#">Item 2C</a></li>
+        <li><a href="#">Item 2D</a></li>
+        <li><a href="#">Item 2E</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 3</a>
+      <ul class="vertical menu" data-submenu>
+        <li><a href="#">Item 3A</a></li>
+        <li><a href="#">Item 3B</a></li>
+        <li><a href="#">Item 3C</a></li>
+        <li><a href="#">Item 3D</a></li>
+        <li><a href="#">Item 3E</a></li>
+      </ul>
+    </li>
+    <li><a href="#"> Item 4</a></li>
+  </ul>
+</nav>
+
 
 ---
 
@@ -650,31 +965,34 @@ The drilldown menu plugin (`data-drilldown`) converts a nested menu into a serie
 
 The accordion menu plugin (`data-accordion-menu`) converts a nested menu into a series of collapsed accordions. Clicking an item slides down the nested menu. [Learn more about the accordion menu.](accordion-menu.html)
 
-<div class="vertical menu" data-accordion-menu>
-  <li class="has-submenu">
-    <a href="#">Item 1</a>
-    <ul class="menu vertical nested is-active" data-submenu>
-      <li class="has-submenu">
-        <a href="#">Item 1A</a>
-        <ul class="menu vertical nested" data-submenu>
-          <li><a href="#">Item 1Ai</a></li>
-          <li><a href="#">Item 1Aii</a></li>
-          <li><a href="#">Item 1Aiii</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Item 1B</a></li>
-      <li><a href="#">Item 1C</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 2</a>
-    <ul class="menu vertical nested" data-submenu>
-      <li><a href="#">Item 2A</a></li>
-      <li><a href="#">Item 2B</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Item 3</a></li>
-</div>
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+  <ul class="vertical menu" data-accordion-menu>
+    <li class="has-submenu">
+      <a href="#">Item 1</a>
+      <ul class="menu vertical nested is-active" data-submenu>
+        <li class="has-submenu">
+          <a href="#">Item 1A</a>
+          <ul class="menu vertical nested" data-submenu>
+            <li><a href="#">Item 1Ai</a></li>
+            <li><a href="#">Item 1Aii</a></li>
+            <li><a href="#">Item 1Aiii</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Item 1B</a></li>
+        <li><a href="#">Item 1C</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 2</a>
+      <ul class="menu vertical nested" data-submenu>
+        <li><a href="#">Item 2A</a></li>
+        <li><a href="#">Item 2B</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Item 3</a></li>
+  </ul>
+</nav>
 
 ---
 
@@ -684,38 +1002,41 @@ Each of the above three patterns has a use in a specific context. But some patte
 
 Our responsive menu plugin (`data-responsive-menu`) allows you to take a Menu, and assign different navigation patterns to it at different screen sizes. In the below example, a drilldown menu changes to a dropdown menu at larger screen sizes. [Learn more about the responsive Menu plugin.](responsive-navigation.html#responsive-menu)
 
-<ul class="vertical menu" data-responsive-menu="drilldown medium-dropdown" style="width: 300px;">
-  <li class="has-submenu">
-    <a href="#">Item 1</a>
-    <ul class="vertical submenu menu" data-submenu id="m2">
-      <li class="has-submenu">
-        <a href="#">Item 1A</a>
-        <ul class="vertical submenu menu" data-submenu id="m3">
-          <li><a href="#">Item 1A</a></li>
-          <li><a href="#">Item 1B</a></li>
-          <li><a href="#">Item 1C</a></li>
-          <li><a href="#">Item 1D</a></li>
-          <li><a href="#">Item 1E</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Item 1B</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 2</a>
-    <ul class="vertical submenu menu" data-submenu>
-      <li><a href="#">Item 2A</a></li>
-      <li><a href="#">Item 2B</a></li>
-    </ul>
-  </li>
-  <li class="has-submenu">
-    <a href="#">Item 3</a>
-    <ul class="vertical submenu menu" data-submenu>
-      <li><a href="#">Item 3A</a></li>
-      <li><a href="#">Item 3B</a></li>
-    </ul>
-  </li>
-</ul>
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+  <ul class="vertical menu" data-responsive-menu="drilldown medium-dropdown" style="width: 300px;">
+    <li class="has-submenu">
+      <a href="#">Item 1</a>
+      <ul class="vertical submenu menu" data-submenu id="m2">
+        <li class="has-submenu">
+          <a href="#">Item 1A</a>
+          <ul class="vertical submenu menu" data-submenu id="m3">
+            <li><a href="#">Item 1A</a></li>
+            <li><a href="#">Item 1B</a></li>
+            <li><a href="#">Item 1C</a></li>
+            <li><a href="#">Item 1D</a></li>
+            <li><a href="#">Item 1E</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Item 1B</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 2</a>
+      <ul class="vertical submenu menu" data-submenu>
+        <li><a href="#">Item 2A</a></li>
+        <li><a href="#">Item 2B</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a href="#">Item 3</a>
+      <ul class="vertical submenu menu" data-submenu>
+        <li><a href="#">Item 3A</a></li>
+        <li><a href="#">Item 3B</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 ---
 
@@ -756,14 +1077,38 @@ To see the below example in action, scale your browser down. The top bar will be
 
 ## Sticky Navigation
 
-See the documentation for the [Sticky](sticky.html#sticky-navigation) plugin to see how to easily make a sticky nav bar.
+See the documentation for the [Sticky](http://foundation.zurb.com/sites/docs/sticky.html#sticky-navigation) plugin to see how to easily make a sticky nav bar.
+
+---
+
+## Menu Accessibility
+
+Menus should be wrapped in a `nav` element to make it easier for screen readers to quickly move to the menu. `nav` elements also benefit from having an ARIA label associated with them. One way of providing an ARIA label is to use an `aria-label` attribute.
+
+
+Menus also benefit from approprite headings being included within the containing `nav` element. The heading can be visually hidden using the `show-for-sr` class, so that it is only visible to screen readers. Headings can be used as ARIA labels for `nav` elements by giving the heading an `id` attribute and giving the `nav` an `aria-labelledby` attribute whose value equals the value of the heading's `id` attribute.
+
+```html_example
+<nav role="navigation" aria-labelledby="main-menu-heading">
+  <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
+    <ul class="menu">
+      <li><a href="#">Item One</a></li>
+      <li><a href="#">Item Two</a></li>
+      <li><a href="#">Item Three</a></li>
+    </ul>
+</nav>
+```
 
 
 
+# Buttons & Links
 
-# Buttons
+<p class="lead">Buttons are tied to an **action** of some kind.</p>
 
-<p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.</p>
+It is best to use the `button` or `input type="button"` elements for buttons. These elements have ineractivity and accessibility features built in automatically. When using other elements (e.g. `div` and `li`, functionality such as focus, mouse interaction, and keyboard interaction must be added manually or interaction is inaccessible.
+        
+One common practice is to use `a` elements instead of `button` elements for styling purposes. That approach is not necessary in the Yale UI framework. It is still best to reserve use of `a` tags for links, and to use `button` or `input type="button"` elements for buttons. Visual appearance can be controlled through CSS and selecting appropriate classes; visual appearance should not influence tag selection.
+
 
 ---
 
@@ -772,17 +1117,17 @@ See the documentation for the [Sticky](sticky.html#sticky-navigation) plugin to 
 These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the `.tiny`, `.small`, and `.large` classes.
 
 ```html_example
-<a href="#" class="primary large button">Large button</a>
-<a href="#" class="primary button">Regular button</a>
-<a href="#" class="primary small button">Small button</a>
-<a href="#" class="primary tiny button">Tiny button</a>
+<button class="primary large button">Large button</button>
+<button class="primary button">Regular button</button>
+<button class="primary small button">Small button</button>
+<button class="primary tiny button">Tiny button</button>
 ```
 
 ```html_example
-<a href="#" class="primary large hollow button">Large button</a>
-<a href="#" class="primary hollow button">Regular button</a>
-<a href="#" class="primary small hollow button">Small button</a>
-<a href="#" class="primary tiny hollow button">Tiny button</a>
+<button class="primary large hollow button">Large button</button>
+<button class="primary hollow button">Regular button</button>
+<button class="primary small hollow button">Small button</button>
+<button class="primary tiny hollow button">Tiny button</button>
 ```
 
 ---
@@ -792,17 +1137,53 @@ These buttons are primary calls to action and should be used sparingly. Their si
 These buttons are used for less important, secondary actions on a page.
 
 ```html_example
-<a href="#" class="secondary large button">Large button</a>
-<a href="#" class="secondary button">Regular button</a>
-<a href="#" class="secondary small button">Small button</a>
-<a href="#" class="secondary tiny button">Tiny button</a>
+<button class="secondary large button">Large button</button>
+<button class="secondary button">Regular button</button>
+<button class="secondary small button">Small button</button>
+<button class="secondary tiny button">Tiny button</button>
 ```
 
 ```html_example
-<a href="#" class="secondary large hollow button">Large button</a>
-<a href="#" class="secondary hollow button">Regular button</a>
-<a href="#" class="secondary small hollow button">Small button</a>
-<a href="#" class="secondary tiny hollow button">Tiny button</a>
+<button  class="secondary large hollow button">Large button</button>
+<button  class="secondary hollow button">Regular button</button>
+<button  class="secondary small hollow button">Small button</button>
+<button  class="secondary tiny hollow button">Tiny button</button>
+```
+
+---
+
+## Button Accessibility
+
+It is best to use the `button` or `input type="button"` elements for buttons. These elements have ineractivity and accessibility features built in automatically. 
+
+When using other elements (e.g. `div` and `li`), important functionality such as focus, mouse interaction, and keyboard interaction must be added manually. If the interaction is not added manually, then it will be inaccessible.
+
+One common practice is to use `a` elements instead of `button` elements for styling purposes. **That approach is not necessary with Yale UI.** It is still best to reserve use of `a` tags for links, and to use `button` or `input type="button"` elements for buttons. Visual appearance can be controlled through CSS and selecting appropriate classes; visual appearance should not influence tag selection.
+
+```html_example
+<!-- This is best -->
+<button class="primary button">Best</button>
+<input type="button" class="primary button" value="Also Best" />
+
+<!-- This is acceptable but discouraged -->
+<a href="#" class="primary button">Discouraged</a>
+
+<!-- This must be avoided -->
+<div class="primary button">Avoid</div>
+```
+
+
+<div class="callout primary">
+    <strong>Note:</strong> It is approprite to use `a` elements with `class="button"` if the objective is to create a link that visually resembles a button. An element's **purpose** and **desired visual appearance*** are completely separate concerns.
+</div>
+
+
+```html_example
+<!-- This is discouraged -->
+<a href="#" class="primary button" onclick="doInteraction()" >Discouraged</a>
+
+<!-- This is appropriate -->
+<a href="someurl.com" class="primary button" >Appropriate</a>
 ```
 
 
@@ -818,10 +1199,10 @@ These buttons are used for less important, secondary actions on a page.
 Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.
 
 ```html_example
-<div class="button-group">
-  <a class="button">One</a>
-  <a class="button">Two</a>
-  <a class="button">Three</a>
+<div role="group" class="button-group">
+  <button class="button">One</button>
+  <button class="button">Two</button>
+  <button class="button">Three</button>
 </div>
 ```
 
@@ -832,10 +1213,10 @@ Add the `.button-group` class to a container, and inside it place any number of 
 Button groups can be sized with the same classes as standard buttons: `.tiny`, `.small`, and `.large`.
 
 ```html_example
-<div class="small button-group">
-  <a class="button">Small</a>
-  <a class="button">Button</a>
-  <a class="button">Group</a>
+<div role="group" class="small button-group">
+  <button class="button">Small</button>
+  <button class="button">Button</button>
+  <button class="button">Group</button>
 </div>
 ```
 
@@ -846,22 +1227,22 @@ Button groups can be sized with the same classes as standard buttons: `.tiny`, `
 Buttons within a button group can be colored individually with the `.secondary`, `.success`, `.warning`, and `.alert` classes.
 
 ```html_example
-<div class="button-group">
-  <a class="secondary button">View</a>
-  <a class="success button">Edit</a>
-  <a class="warning button">Share</a>
-  <a class="alert button">Delete</a>
+<div role="group" class="button-group">
+  <button class="secondary button">View</button>
+  <button class="success button">Edit</button>
+  <button class="warning button">Share</button>
+  <button class="alert button">Delete</button>
 </div>
 ```
 
 The entire group can also be colored using the same classes.
 
 ```html_example
-<div class="success button-group">
-  <a class="button">Harder</a>
-  <a class="button">Better</a>
-  <a class="button">Faster</a>
-  <a class="button">Stronger</a>
+<div role="group" class="hollow secondary button-group">
+  <button class="button">Harder</button>
+  <button class="button">Better</button>
+  <button class="button">Faster</button>
+  <button class="button">Stronger</button>
 </div>
 ```
 
@@ -873,10 +1254,10 @@ The entire group can also be colored using the same classes.
 Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of six.
 
 ```html_example
-<div class="expanded button-group">
-  <a class="button">Expanded</a>
-  <a class="button">Button</a>
-  <a class="button">Group</a>
+<div role="group" class="expanded button-group">
+  <button class="button">Expanded</button>
+  <button class="button">Button</button>
+  <button class="button">Group</button>
 </div>
 ```
 
@@ -887,12 +1268,12 @@ Add the `.expanded` class to the container to make a full-width button group. Ea
 A button group can be made vertical with the `.stacked` class. You can also use `.stacked-for-small` to only stack a button group on small screens, or `.stacked-for-medium` to only stack on small and medium screens.
 
 ```html_example
-<div class="stacked-for-small button-group">
-  <a class="button">How</a>
-  <a class="button">Low</a>
-  <a class="button">Can</a>
-  <a class="button">You</a>
-  <a class="button">Go</a>
+<div role="group" class="stacked-for-small button-group">
+  <button class="button">How</button>
+  <button class="button">Low</button>
+  <button class="button">Can</button>
+  <button class="button">You</button>
+  <button class="button">Go</button>
 </div>
 ```
 
@@ -905,12 +1286,31 @@ To build a split button, just create a button group with two buttons.
 To create a button with only an arrow, add the class `.arrow-only`. Note that the button still needs a label for screen readers, which can be embedded inside the button with a `.show-for-sr` element. In the example below, an assistive device will read the arrow button as "Show menu".
 
 ```html_example
-<div class="button-group">
-  <a class="button">Primary Action</a>
-  <a class="dropdown button arrow-only">
+<div role="group" class="button-group">
+  <button class="button">Primary Action</button>
+  <button class="dropdown button arrow-only">
     <span class="show-for-sr">Show menu</span>
-  </a>
+  </button>
 </div>
+```
+
+---
+
+## Button Group Accessibility
+
+Button groups should be given and ARIA role of "group" by adding the `role="group"` attribute to the container. 
+
+Accessibility requires that a a user interface purpose be clear. That purpose can be communicated by using ARIA labels or by associating descriptions with the button container. These labels and descriptions may be visually hidden so long as they are accessible by screen readers.
+
+```html_example 
+<div role="group" class="button-group" aria-labelledby="group-label" 
+aria-describedby="group-description">   
+  <h3 id="group-label" class="show-for-sr">Change widget amount</h3>   
+  <span id="group-label" class="show-for-sr">These buttons increase or 
+  decrease the amount of widgets in the widget collection.</span>   
+  <button class="button">Increase</button>   
+  <button class="button">Decrease</button> 
+</div> 
 ```
 
 
@@ -929,16 +1329,18 @@ To mark a disabled item, add the class `.disabled` to the `<li>`, and just use p
   <p>We use a CSS <code>::after</code> element containing a slash character to create the separator between items. Some screen readers will read this character out loud&mdash;if this is an issue, you can use a background image or a separate element with <code>aria-hidden="true"</code> to create the separator instead.</p>
 </div>
 
+
 ```html_example
-<nav aria-label="You are here:" role="navigation">
-  <ul class="breadcrumbs">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Features</a></li>
-    <li class="disabled">Gene Splicing</li>
-    <li>
-      <span class="show-for-sr">Current: </span> Cloning
-    </li>
-  </ul>
+<nav aria-labelledby="breadcrumbs-label" role="navigation">
+    <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+    <ul class="breadcrumbs">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li class="disabled">Gene Splicing</li>
+        <li>
+            <span class="show-for-sr">Current: </span>Cloning
+        </li>
+    </ul>
 </nav>
 ```
 
@@ -972,7 +1374,7 @@ Dropdown menus build on the [Menu](http://foundation.zurb.com/sites/docs/menu.ht
 To create dropdown menus, nest a new `<ul>` inside an `<li>`. You can nest further to create more levels of dropdowns.
 
 <div class="primary callout">
-  <p>Note that the <code>&lt;ul&gt;</code> goes <em>after</em> the <code>&lt;a&gt;</code>, and not inside of it.</p>
+  <p>Note that the `ul` goes <em>after</em> the `a`, and not inside of it.</p>
 </div>
 
 ```html
@@ -1117,9 +1519,6 @@ Before the JavaScript on your page loads, the dropdown menus will not have arrow
 
 # Forms
 
-<p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
-
----
 
 ## Elements of a Form
 
@@ -1134,22 +1533,6 @@ A form should be marked up using its default HTML properties. The ones we make u
 
 ---
 
-## How to Use
-
-Make forms great and easy to use with the following rules:
-
-- Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the for, name, and id attributes for all applicable elements.
-- Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
-- Before selecting any set of fields to use for a required input, explore other options (e.g., radio buttons over select lists).
-
----
-
-## Learn All About Forms
-
-Check out the [Foundation Docs](http://foundation.zurb.com/sites/docs) to learn about how flexible our forms are for creating different layouts. It works perfectly with the grid to meet all your form needs.
-
----
-
 ## Form Layouts
 
 Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:
@@ -1159,69 +1542,120 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 ---
 
-## Form Example
+## Form Accessibility
+
+### Labelling Basics
+For each control on a form, there must be a label providing information about the control's purpose. This is generally using a `label` element. Form labels provide a number of accessibility benefits. When clicking on a control's `label` element, focus will be applied to the control, thus increasing the size of the clickable area. Also, assistive technology can read the label each form control a blind user interacts with the control.
+Form labels can be marked up in one of two ways:
+<ol>
+  <li>Setting the `for` attribute of the `label` equal to the `id` attribute of the form control being labelled.</li>
+  <li>Wrapping the form control within its label.</li>
+</ol>
+<div class="callout warning">
+  While the `placeholder` attribute may be used, it is never a substitute for a `label` element.
+</div>
 
 ```html_example
-<form>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
-    </div>
+<label for="sample-form-control">Form Control</label>
+<input type="text" id="sample-form-control" />
+
+<label>Form Control<input type="text" /></label>
+```
+
+
+<div class="callout warning">
+  When adding labels to form elements, each `label` element must be associated to exactly one form control, and each form control must have exactly one label.
+  `label` elements can <strong>only</strong> be associated with form controls. Associating `label` elements with other elements can create accessibility problems.
+</div>
+
+```html_example
+<div class="callout alert">
+
+<!-- The following is incorrect because it associates a label element with a div -->
+  <label for="form-control-container">Inaccessible Form Label (! Don't do this)</label>
+  <div id="form-control-container">
+    <input type="text" id="form-control" />
   </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
-    </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
-        <label>Label</label>
-        <div class="input-group">
-          <input class="input-group-field" type="text" placeholder="placeholder">
-          <span class="input-group-label">.com</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Select Box</label>
-      <select>
-        <option value="good">Good</option>
-        <option value="better">Better</option>
-        <option value="best">Best</option>
-      </select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
-      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
-    </div>
-    <div class="large-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Textarea Label</label>
-      <textarea placeholder="placeholder"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>
-        How many puppies?
-        <input type="number" value="100">
-      </label>
-    </div>
-  </div>
+
+</div>
+```
+---
+
+### Self-Labelling Form Controls
+
+In general, buttons do not require `label` elements. For `button` elements, the text contained within the opening and closing tags functions as a label. For `input type="button"` and `input type="submit"` elements, provde a `value` attribute in lieu of a label.
+
+```html_example
+<button>Button</button>
+<input type="button" value="Button" />
+<input type="submit" value="Submit" />
+```
+
+<br>
+
+```html_example
+<button class="button primary">Button</button>
+<input class="button primary" type="button" value="Button" />
+<input class="button primary" type="submit" value="Submit" />
+```
+
+---
+### Fieldsets
+In long forms, groups of fields with a common purpose should be grouped together in a `fieldset` wrapper. Within the `fieldset`, include a `legend` element describing the purpose of the fieldset. Nesting fieldsets should be avoided.
+
+```html_example
+  <fieldset class="fieldset">
+    <legend>List Your Hobbies</legend>
+    <label>Hobby 1<input type="text"></label>
+    <label>Hobby 2<input type="text"></label>
+    <label>Hobby 3<input type="text"></label>
+    <label>Hobby 4<input type="text"></label>
+  </fieldset>
+```
+---
+### Checkboxes and Radio Buttons
+Checkboxes and radio buttons should generally be wrapped in a `fieldset` and have a `legend` describe the purpose of the controls. This is the semantically correct way to mark up these elements, and assistive technology handles such markup well. Omitting those elements often leads to accessibility errors, even if the form controls are described in other ways.
+
+```html_example
+<fieldset class="fieldset">
+  <legend>What is your favorite Ivy League school?</legend>
+  <label><input type="radio" name="ivy">Brown</label>
+  <label><input type="radio" name="ivy">Columbia</label>
+  <label><input type="radio" name="ivy">Cornell</label>
+  <label><input type="radio" name="ivy">Dartmouth</label>
+  <label class="disabled" ><input type="radio" name="ivy" disabled>Harvard</label>
+  <label><input type="radio" name="ivy">Penn</label>
+  <label><input type="radio" name="ivy">Princeton</label>
+  <label><input type="radio" name="ivy">Yale</label>
+</fieldset>
+
+<fieldset class="fieldset">
+  <legend>What is your Yale affiliation?</legend>
+  <label><input type="checkbox" name="affiliation">Undergraduate</label>
+  <label><input type="checkbox" name="affiliation">Graduate Student</label>
+  <label><input type="checkbox" name="affiliation">Alumni</label>
+  <label><input type="checkbox" name="affiliation">Faculty</label>
+  <label><input type="checkbox" name="affiliation">Staff</label>
+</fieldset>
+```
+---
+
+### Search Forms
+For simple search forms, such as those appearing in the header of many websites, the `input` need not have a label if the search button has a label such as "search" or "submit search" AND the form has a `role="search"` ARIA attribute AND the search button is visually rendered adjacent to the text input. If the visual design calls for an icon or image for the search button (such as magnifying class) in stead of text, adding a span with the text "Search" and a `show-for-sr` class is desirable.
+
+```html_example
+<form role="search" aria-label="Site Search">
+  <ul class="menu">
+    <li><input type="search" placeholder="Search" /></li>
+    <li><button type="button" class="small button">search</button></li>
+  </ul>
 </form>
 ```
+
+---
+### Labeling with ARIA
+While using the `label` element is preferable, there may be cases where it is not possible. As a fallback, using ARIA labels (the attributes `aria-label` and `aria-labelledby`) is acceptable.
+
 
 
 
@@ -1437,7 +1871,7 @@ Give the `<input>` a unique ID and point the `<label>` to it with the `for` attr
 </div>
 
 <div class="callout warning">
-  <p>Make sure the HTML of the switch goes in the order you see above&mdash;<code>&lt;input&gt;</code>, then <code>&lt;label&gt;</code></p>
+  <p>Make sure the HTML of the switch goes in the order you see above&mdash;`input`, then `label`</p>
 </div>
 
 ```html_example
@@ -1651,12 +2085,9 @@ Add the `.vertical` class to a tabstrip to stack tabs vertically. You can also p
 
 
 # Tables
-<p class="lead">Okay, they're not the sexiest things ever, but tables get the job done (for tabular data, of course). They have responsive modifiers to help solve some of your layout issues based on your tables needs.</p>
 
 
 ## Basics
-
-No bells or whistles here, just a straight up table for all of your basic table needs.
 
 ```html_example
 <table>
@@ -1695,7 +2126,7 @@ No bells or whistles here, just a straight up table for all of your basic table 
 
 ## Hover State
 
-Need to spiff up the table just a tad? Just add the class `.hover` to lightly darken the table rows on hover.
+Add the class `.hover` to lightly darken the table rows on hover.
 
 ```html
 <table class="hover">
@@ -1737,7 +2168,8 @@ Need to spiff up the table just a tad? Just add the class `.hover` to lightly da
 
 ## Stacked Table
 
-To stack a table on small screens, add the class `.stack`.
+To stack a table on small screens, add the class `.stack`. To see the below example in action, scale your browser down. 
+
 
 ```html
 <table class="stack">
@@ -1779,11 +2211,8 @@ To stack a table on small screens, add the class `.stack`.
 
 ## Scrolling Table
 
-Got a lot of tubular tabular data? Add a wrapper element with the class `.table-scroll` around your table to enable horizontal scrolling.
+Add a wrapper element with the class `.table-scroll` around your table to enable horizontal scrolling.
 
-<div class="primary callout">
-  <p>The wrapping element was added in Foundation 6.2&mdash;prior to that, you just added the class <code>.scroll</code> to the table itself. However, this method doesn't work great with Internet Explorer 9. <strong>If you don't need IE9 support, you can just add <code>.scroll</code> to your table, and the wrapping element isn't necessary.</strong>
-</div>
 
 ```html
 <div class="table-scroll">
@@ -1812,49 +2241,49 @@ Got a lot of tubular tabular data? Add a wrapper element with the class `.table-
     </thead>
     <tbody>
       <tr>
-        <td style="display:block; width:400px;">These are all the words that people use to describe Foundation 6!</td>
-        <td>Cool</td>
-        <td>Swag</td>
-        <td>Chill</td>
-        <td>Killer</td>
-        <td>Rad</td>
-        <td>Baller</td>
-        <td>OMG</td>
-        <td>Sweet</td>
-        <td>Awesome</td>
-        <td>Beast</td>
-        <td>Dope</td>
-        <td>Tubular</td>
+        <td style="display:block; width:400px;">Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
       </tr>
       <tr>
-        <td>These are some words that people use to describe other web frameworks.</td>
-        <td>Whatevs</td>
-        <td>Ugh.</td>
-        <td>LOL</td>
-        <td>K</td>
-        <td>Aight</td>
-        <td>Eh.</td>
-        <td>Grrr...</td>
-        <td>Meh.</td>
-        <td>TTYL</td>
-        <td>Bleh.</td>
-        <td>Really?</td>
-        <td>Why?</td>
+        <td>Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
       </tr>
       <tr>
-        <td>Here are some great super heros.</td>
-        <td>Batman</td>
-        <td>Superman</td>
-        <td>Spiderman</td>
-        <td>Wonder Woman</td>
-        <td>Hulk</td>
-        <td>Nicolas Cage</td>
-        <td>Antman</td>
-        <td>Aquaman</td>
-        <td>Captain America</td>
-        <td>Wolverine</td>
-        <td>Thor</td>
-        <td>Iron Man</td>
+        <td>Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
       </tr>
     </tbody>
     <tfoot>
@@ -1877,11 +2306,58 @@ Got a lot of tubular tabular data? Add a wrapper element with the class `.table-
   </table>
 </div>
 
+---
 
+## Table Accessibility
 
+A comprehensive guide to tables can be found at the <a href="http://www.w3.org/WAI/tutorials/tables/">W3C Accessibility Tutorial for Tables</a>.
 
-# Animations
+### Layout Tables vs. Data Tables
+In the past, tables were used to achieve specific layouts, such as correctly aligning the content from multiple columns. We strongly discourage that approach: it is outdated; it violates separation of content and visual presentation, and it creates accessibiltiy problems. 
 
-[Foundation's Motion UI](http://foundation.zurb.com/sites/docs/motion-ui.html) is a standalone library that powers the transition effects used in a number of Foundation components. 
+<div class="warning callout"> 
+**Tables must be reserved only for presenting tabular data.**
+</div>
 
-<a href="http://foundation.zurb.com/sites/docs/motion-ui.html" class="button">Motion UI Documentation</a>
+### Captions and Summaries
+The `caption` element functions as a title or heading for the title. It should be succinct and identify the content of hte table. Screen readers allow users to access a list of all tables on a page, and will also announce each table's `caption` element, if one is provided. Providing a `caption` element also allows screen reader users to decide whether they want to read or skip over a table. The `caption` element should be a child of the `table` element. In lieu of `caption` elements, ARIA labels can be used, as well.
+Table summaries provides information about how a data table is structured. If a table is large or complex, captions can explain how rows and columns are related. In previous versions of HTML, a `summary` attribute existed for this purpose. In HTML5, the `summary` attribute is depricated. Summaries can be provided within the `caption` element or with an ARIA description by using the `aria-describedby` attribute.
+Using `figure` and `figcaption` is also an appropriate way to provide table captions and summaries. However, when using `figure` and `figcaption`, ARIA labels and descriptions must also be used.
+
+```html_example
+<!-- Describing a table using a caption -->
+<table class="stack">
+  <caption>Degrees Conferred (July 1, 2014 - June 30, 2015)</caption>
+  <thead>
+    <tr>
+      <th scope="col">Degree</th>
+      <th scope="col">Men</th>
+      <th scope="col">Women</th>
+      <th scope="col">Total</th>
+      <th scope="col">% who are international</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bachelors</th>
+      <td>677</th>
+      <td>650</th>
+      <td>1327</th>
+      <td>10%</th>
+    </tr>
+    <tr>
+      <td>Masters & Post-Masters Certificates</th>
+      <td>1,119</th>
+      <td>1,101</th>
+      <td>2,220%</th>
+      <td>29%</th>
+    </tr>
+  </tbody>
+</table>
+```
+
+### Table Headers
+
+Simple tables with few rows and columns may only require either one header row or one header column. Longer tables require using both a header row and a header column. In any case, `scope="col"` or `scope="row"` should be added to each table header cell, as appropriate.
+
+It is possible to make tables with more complex columns usable and accessible, but in practice, it is often more difficult than it is worthwhile. In general, it is better to split up data among multiple tables than try to design complex tables.
