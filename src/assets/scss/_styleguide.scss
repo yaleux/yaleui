@@ -123,15 +123,16 @@ Main components
   }
 }
 
-.main-content{
-  margin-top: rem-calc(60);
+#styleguide-component{
+  margin-top: rem-calc(30);
 }
 
 pre code {
   margin-bottom: 1rem;
 }
 
-a.active{
+// TOC active state
+a.active {
   background: $marine;
   color: $white;
   &:hover{
@@ -139,12 +140,26 @@ a.active{
   }
 }
 
+// Submenu current state
+
+#styleguide-menu{
+  background: $off-white;
+  padding: rem-calc(5);
+}
+
+li.current a{
+  background: $light-gray;
+  color: $black;
+}
+
 .nav-title,
 .styleguide-nav-title {
   @include heading_5;
   color: $medium-gray;
   font-size: rem-calc(12);
-  margin-top: rem-calc(30);
+  &:not(:first-of-type){
+    margin-top: rem-calc(30);
+  }
 }
 
 #styleguide-menu,

@@ -1,0 +1,135 @@
+---
+title: Button Groups
+layout: styleguide
+---
+
+# Button Groups
+
+<p class="lead">Button groups are containers for related action items. They're great when you need to display a group of actions in a bar. These build off the button styles and work perfectly with the grid.</p>
+
+---
+
+## Basics
+
+Add the `.button-group` class to a container, and inside it place any number of buttons. The buttons are separated by a small border.
+
+{{#example_html}}
+<div role="group" class="button-group">
+  <button class="button">One</button>
+  <button class="button">Two</button>
+  <button class="button">Three</button>
+</div>
+{{/example_html}}
+
+
+---
+
+## Sizing
+
+Button groups can be sized with the same classes as standard buttons: `.tiny`, `.small`, and `.large`.
+
+{{#example_html}}
+<div role="group" class="small button-group">
+  <button class="button">Small</button>
+  <button class="button">Button</button>
+  <button class="button">Group</button>
+</div>
+{{/example_html}}
+
+
+---
+
+## Coloring
+
+Buttons within a button group can be colored individually with the `.secondary`, `.success`, `.warning`, and `.alert` classes.
+
+{{#example_html}}
+<div role="group" class="button-group">
+  <button class="secondary button">View</button>
+  <button class="success button">Edit</button>
+  <button class="warning button">Share</button>
+  <button class="alert button">Delete</button>
+</div>
+{{/example_html}}
+
+
+The entire group can also be colored using the same classes.
+
+{{#example_html}}
+<div role="group" class="hollow secondary button-group">
+  <button class="button">Harder</button>
+  <button class="button">Better</button>
+  <button class="button">Faster</button>
+  <button class="button">Stronger</button>
+</div>
+{{/example_html}}
+
+
+---
+
+
+## Even-width Group
+
+Add the `.expanded` class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of six.
+
+{{#example_html}}
+<div role="group" class="expanded button-group">
+  <button class="button">Expanded</button>
+  <button class="button">Button</button>
+  <button class="button">Group</button>
+</div>
+{{/example_html}}
+
+
+---
+
+## Stacking
+
+A button group can be made vertical with the `.stacked` class. You can also use `.stacked-for-small` to only stack a button group on small screens, or `.stacked-for-medium` to only stack on small and medium screens.
+
+{{#example_html}}
+<div role="group" class="stacked-for-small button-group">
+  <button class="button">How</button>
+  <button class="button">Low</button>
+  <button class="button">Can</button>
+  <button class="button">You</button>
+  <button class="button">Go</button>
+</div>
+{{/example_html}}
+
+
+---
+
+## Split Buttons
+
+To build a split button, just create a button group with two buttons.
+
+To create a button with only an arrow, add the class `.arrow-only`. Note that the button still needs a label for screen readers, which can be embedded inside the button with a `.show-for-sr` element. In the example below, an assistive device will read the arrow button as "Show menu".
+
+{{#example_html}}
+<div role="group" class="button-group">
+  <button class="button">Primary Action</button>
+  <button class="dropdown button arrow-only">
+    <span class="show-for-sr">Show menu</span>
+  </button>
+</div>
+{{/example_html}}
+
+
+---
+
+## Button Group Accessibility
+
+Button groups should be given and ARIA role of "group" by adding the `role="group"` attribute to the container. 
+
+Accessibility requires that a a user interface purpose be clear. That purpose can be communicated by using ARIA labels or by associating descriptions with the button container. These labels and descriptions may be visually hidden so long as they are accessible by screen readers.
+
+{{#example_html}} 
+<div role="group" class="button-group" aria-labelledby="group-label" 
+aria-describedby="group-description">   
+  <h3 id="group-label" class="show-for-sr">Change widget amount</h3>   
+  <span id="group-label" class="show-for-sr">These buttons increase or 
+  decrease the amount of widgets in the widget collection.</span>   
+  <button class="button">Increase</button> <button class="button">Decrease</button> 
+</div> 
+{{/example_html}}

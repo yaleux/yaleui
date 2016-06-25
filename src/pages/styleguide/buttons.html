@@ -1,0 +1,88 @@
+---
+title: Buttons
+layout: styleguide
+---
+
+# Buttons
+
+<p class="lead">Buttons are tied to an **action** of some kind.</p>
+
+
+---
+
+## Primary Buttons
+
+These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the `.tiny`, `.small`, and `.large` classes.
+
+{{#example_html}}
+<button class="primary large button">Large button</button>
+<button class="primary button">Regular button</button>
+<button class="primary small button">Small button</button>
+<button class="primary tiny button">Tiny button</button>
+{{/example_html}}
+
+{{#example_html}}
+<button class="primary large hollow button">Large button</button>
+<button class="primary hollow button">Regular button</button>
+<button class="primary small hollow button">Small button</button>
+<button class="primary tiny hollow button">Tiny button</button>
+{{/example_html}}
+
+---
+
+## Secondary Buttons
+
+These buttons are used for less important, secondary actions on a page.
+
+{{#example_html}}
+<button class="secondary large button">Large button</button>
+<button class="secondary button">Regular button</button>
+<button class="secondary small button">Small button</button>
+<button class="secondary tiny button">Tiny button</button>
+{{/example_html}}
+
+
+{{#example_html}}
+<button  class="secondary large hollow button">Large button</button>
+<button  class="secondary hollow button">Regular button</button>
+<button  class="secondary small hollow button">Small button</button>
+<button  class="secondary tiny hollow button">Tiny button</button>
+{{/example_html}}
+
+
+---
+
+## Button Accessibility
+
+It is best to use the `button` or `input type="button"` elements for buttons. These elements have ineractivity and accessibility features built in automatically. 
+
+When using other elements (e.g. `div` and `li`), important functionality such as focus, mouse interaction, and keyboard interaction must be added manually. If the interaction is not added manually, then it will be inaccessible.
+
+One common practice is to use `a` elements instead of `button` elements for styling purposes. **That approach is not necessary with Yale UI.** It is still best to reserve use of `a` tags for links, and to use `button` or `input type="button"` elements for buttons. Visual appearance can be controlled through CSS and selecting appropriate classes; visual appearance should not influence tag selection.
+
+{{#example_html}}
+<!-- This is best -->
+<button class="primary button">Best</button>
+<input type="button" class="primary button" value="Also Best" />
+
+<!-- This is acceptable but discouraged -->
+<a href="#" class="primary button">Discouraged</a>
+
+<!-- This must be avoided -->
+<div class="primary button">Avoid</div>
+{{/example_html}}
+
+
+
+<div class="callout primary">
+    <strong>Note:</strong> It is approprite to use `a` elements with `class="button"` if the objective is to create a link that visually resembles a button. An element's **purpose** and **desired visual appearance*** are completely separate concerns.
+</div>
+
+
+{{#example_html}}
+<!-- This is discouraged -->
+<a href="#" class="primary button" onclick="doInteraction()" >Discouraged</a>
+
+<!-- This is appropriate -->
+<a href="someurl.com" class="primary button" >Appropriate</a>
+{{/example_html}}
