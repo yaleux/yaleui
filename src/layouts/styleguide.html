@@ -25,6 +25,8 @@
     <div class="main-content">
       <div class="row columns">
         <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+
+        {{#unlesspage 'index'}}
         <nav aria-labelledby="breadcrumbs-label" role="navigation">
             <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
             <ul class="breadcrumbs">
@@ -35,6 +37,7 @@
                 </li>
             </ul>
         </nav>
+        {{/unlesspage}}
 
 {{> body}}
         </div>
