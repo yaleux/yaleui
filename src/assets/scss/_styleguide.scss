@@ -139,7 +139,15 @@ a.active{
   }
 }
 
+.nav-title,
 .styleguide-nav-title {
   @include heading_5;
   color: $medium-gray;
+  font-size: rem-calc(12);
+  margin-top: rem-calc(30);
+}
+
+#styleguide-menu,
+#styleguideTOC {
+  font-size: rem-calc(14);
 }

@@ -24,7 +24,7 @@
 
     <div id="styleguide-component" class="main-content">
       <div class="row columns">
-        <div class="medium-7 large-8 medium-push-3 large-push-2 columns">
+        <div class="medium-7 medium-push-2 columns">
 
         {{#unlesspage 'index'}}
         <nav aria-labelledby="breadcrumbs-label" role="navigation">
@@ -42,10 +42,17 @@
 {{> body}}
 {{/markdown}}
         </div>
-        <div class="medium-3 large-2 medium-pull-7 large-pull-8 columns">
+        <div class="medium-2 medium-pull-7 columns">
           {{> component-list}}
         </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          {{#unlesspage 'index'}}
           {{> toc}}
+          {{/unlesspage}}
+        </div>
+
       </div>
 
       {{> footer}}

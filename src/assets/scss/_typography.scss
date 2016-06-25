@@ -26,6 +26,16 @@
     }
 }
 
+@mixin underline_heading {
+  &:after{
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #ddd;
+    content: "";
+    margin-top: 16px;
+  } 
+}
 .site-title,
 .page-title{
   margin-top: 1em;

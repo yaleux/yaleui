@@ -66,14 +66,7 @@
   .feature-card__category,
   .feature-card--media-card__title {
 
-    &:after{
-      display: block;
-      width: 40px;
-      height: 1px;
-      background-color: #ddd;
-      content: "";
-      margin-top: 16px;
-    } 
+    @include underline_heading;
   }
 }
 
