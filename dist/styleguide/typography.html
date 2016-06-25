@@ -64,9 +64,9 @@
           </div>
       </header>
 
-    <div class="main-content">
+    <div id="styleguide-component" class="main-content">
       <div class="row columns">
-        <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+        <div class="medium-7 large-8 medium-push-3 large-push-2 columns">
 
         <nav aria-labelledby="breadcrumbs-label" role="navigation">
             <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
@@ -90,13 +90,15 @@ content so, did you know that there are storms occurring on Jupiter
 that are larger than the Earth? Pretty cool. Wrap strong around type
 to &lt;strong&gt;make it bold!&lt;/strong&gt;. You can also use em to
 &lt;em&gt;italicize your words&lt;/em&gt;.&lt;/p&gt;
-</code></pre><p>This is a paragraph. Paragraphs are preset with a
+</code></pre><div class="styleguide-code-live"><p>This is a paragraph. Paragraphs are preset with a
 font size, line height and spacing to match the overall vertical
 rhythm. To show what a paragraph looks like this needs a little more
 content so, did you know that there are storms occurring on Jupiter
 that are larger than the Earth? Pretty cool. Wrap strong around type
 to <strong>make it bold!</strong>. You can also use em to
 <em>italicize your words</em>.</p> 
+</div>
+
 
 <div class="callout primary">
   <p>If the emphasis of a phrase is important, don&#39;t make the emphasis purely visual&mdash;use the <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code> tags to mark it as well. Both of these tags have built-in styles, but there&#39;s no harm in adding additional styles in specific contexts.</p>
@@ -114,12 +116,14 @@ to <strong>make it bold!</strong>. You can also use em to
 &lt;h4&gt;h4. This is a moderate header.&lt;/h4&gt;
 &lt;h5&gt;h5. This is a small header.&lt;/h5&gt;
 &lt;h6&gt;h6. This is a tiny header.&lt;/h6&gt;
-</code></pre><p><h1>h1. This is a very large header.</h1></p>
-<p><h2>h2. This is a large header.</h2></p>
-<p><h3>h3. This is a medium header.</h3></p>
-<p><h4>h4. This is a moderate header.</h4></p>
-<p><h5>h5. This is a small header.</h5></p>
+</code></pre><div class="styleguide-code-live"><h1>h1. This is a very large header.</h1>
+<h2>h2. This is a large header.</h2>
+<h3>h3. This is a medium header.</h3>
+<h4>h4. This is a moderate header.</h4>
+<h5>h5. This is a small header.</h5>
 <h6>h6. This is a tiny header.</h6>
+</div>
+
 
 
 <hr>
@@ -130,13 +134,17 @@ to <strong>make it bold!</strong>. You can also use em to
 
 
 <pre><code>&lt;p&gt;Links are very standard, and the color is preset to the &lt;a href=&quot;#colors&quot;&gt;primary color&lt;/a&gt;.&lt;/p&gt;
-</code></pre><p>Links are very standard, and the color is preset to the <a href="#colors">primary color</a>.</p>
+</code></pre><div class="styleguide-code-live"><p>Links are very standard, and the color is preset to the <a href="#colors">primary color</a>.</p>
+</div>
+
 
 <hr>
 <h2 id="dividers">Dividers</h2>
 <p>Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it&#39;s better to use the <code>&lt;section&gt;</code> tag.</p>
 <pre><code>&lt;hr&gt;
-</code></pre><hr>
+</code></pre><div class="styleguide-code-live"><hr>
+</div>
+
 
 <hr>
 <h2 id="unordered-lists">Unordered Lists</h2>
@@ -155,7 +163,7 @@ to <strong>make it bold!</strong>. You can also use em to
   &lt;li&gt;List item&lt;/li&gt;
   &lt;li&gt;List item&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre><ul>
+</code></pre><div class="styleguide-code-live"><ul>
   <li>List item with a much longer description or more content.</li>
   <li>List item</li>
   <li>List item
@@ -169,6 +177,8 @@ to <strong>make it bold!</strong>. You can also use em to
   <li>List item</li>
   <li>List item</li>
 </ul>
+</div>
+
 
 
 <hr>
@@ -187,7 +197,7 @@ to <strong>make it bold!</strong>. You can also use em to
   &lt;li&gt;Onions&lt;/li&gt;
   &lt;li&gt;Mushrooms&lt;/li&gt;
 &lt;/ol&gt;
-</code></pre><ol>
+</code></pre><div class="styleguide-code-live"><ol>
   <li>Cheese (essential)</li>
   <li>Pepperoni</li>
   <li>Bacon
@@ -200,6 +210,8 @@ to <strong>make it bold!</strong>. You can also use em to
   <li>Onions</li>
   <li>Mushrooms</li>
 </ol>
+</div>
+
 
 
 <hr>
@@ -212,13 +224,16 @@ to <strong>make it bold!</strong>. You can also use em to
   &lt;dd&gt;A continuous area or expanse that is free, available, or unoccupied.&lt;/dd&gt;
   &lt;dd&gt;The dimensions of height, depth, and width within which all things exist and move.&lt;/dd&gt;
 &lt;/dl&gt;
-</code></pre><dl>
+</code></pre><div class="styleguide-code-live"><dl>
   <dt>Time</dt>
   <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
   <dt>Space</dt>
   <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
   <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
 </dl>
+</div>
+
+
 
 <hr>
 <h2 id="blockquotes">Blockquotes</h2>
@@ -227,17 +242,21 @@ to <strong>make it bold!</strong>. You can also use em to
   Those people who think they know everything are a great annoyance to those of us who do.
   &lt;cite&gt;Isaac Asimov&lt;/cite&gt;
 &lt;/blockquote&gt;
-</code></pre><blockquote>
+</code></pre><div class="styleguide-code-live"><blockquote>
   Those people who think they know everything are a great annoyance to those of us who do.
   <cite>Isaac Asimov</cite>
 </blockquote>
+</div>
+
 
 
 <hr>
 <h2 id="abbreviations">Abbreviations</h2>
 <p>Use the <code>&lt;abbr&gt;</code> tag to annotate a shortened term. Abbreviations must always have a <code>title</code> attribute which clarifies the full term.</p>
 <pre><code>&lt;p&gt;In my dream last night, I saw &lt;abbr title=&quot;John Ronald Reuel&quot;&gt;J. R. R.&lt;/abbr&gt; Tolkien and George &lt;abbr title=&quot;Raymond Richard&quot;&gt;R. R.&lt;/abbr&gt; Martin hanging out on Sunset &lt;abbr title=&quot;Boulevard&quot;&gt;Blvd&lt;/abbr&gt;.&lt;/p&gt;
-</code></pre><p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p>
+</code></pre><div class="styleguide-code-live"><p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p>
+</div>
+
 
 
 <hr>
@@ -248,7 +267,9 @@ to <strong>make it bold!</strong>. You can also use em to
 <h2 id="keystrokes">Keystrokes</h2>
 <p>Use the <code>&lt;kbd&gt;</code> element to annotate a key stroke or combination.</p>
 <pre><code>&lt;p&gt;Press &lt;kbd&gt;Cmd+Q&lt;/kbd&gt; (or &lt;kbd&gt;Ctrl+Q&lt;/kbd&gt; on Windows) to play Half-Life 3.&lt;/p&gt;
-</code></pre><p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p>
+</code></pre><div class="styleguide-code-live"><p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p>
+</div>
+
 
 <hr>
 <h2 id="text-accessibility">Text Accessibility</h2>
@@ -259,7 +280,11 @@ to <strong>make it bold!</strong>. You can also use em to
 <h3 id="text-vs-images">Text vs. Images</h3>
 <p>Prefer using actual text over text inside a graphic. Assistive technologies can&#39;t read an image, and the text in an image can&#39;t be resized by a browser, like normal text. If an image has text that needs to be read, add it in the <code>alt</code> attribute of the image.</p>
 <pre><code>&lt;img src=&quot;assets/img/buy-now.jpg&quot; alt=&quot;Buy now&quot;&gt;
-</code></pre><p><img src="assets/img/buy-now.jpg" alt="Buy now"></p>
+</code></pre><div class="styleguide-code-live"><img src="assets/img/buy-now.jpg" alt="Buy now">
+</div>
+
+
+
 <hr>
 <h3 id="contrast">Contrast</h3>
 <p>The contrast between the color of an element&#39;s text and its background should be high enough that low-vision users can read it. <strong>The minimum recommended contrast ratio is 4.5:1.</strong> There are no automated tools that can effectively check this for you, but if you aren&#39;t sure about a specific color combination, you can run it through one of many color contrast checkers, such as <a href="http://webaim.org/resources/contrastchecker/">WebAIM&#39;s color contrast checker</a>.</p>
@@ -281,7 +306,7 @@ to <strong>make it bold!</strong>. You can also use em to
 <li><a href="http://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
 </ul>
         </div>
-        <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns">
+        <div class="medium-3 large-2 medium-pull-7 large-pull-8 columns">
           <ul class="vertical menu" id="styleguide-menu">
             <li class="nav-title">General</li>
             <li><a href="grid.html">Grid</a></li>
@@ -328,6 +353,15 @@ to <strong>make it bold!</strong>. You can also use em to
           </ul>
           
         </div>
+          <div class="medium-3 large-2 columns" data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <ul class="vertical menu" data-styleguide-toc>
+                  <li class="styleguide-nav-title">On this page:</li>
+                </ul>
+              </div>
+            </nav>
+          </div>
       </div>
 
       <footer class="yale-footer">
@@ -342,6 +376,7 @@ to <strong>make it bold!</strong>. You can also use em to
     </div>
     </div>
   </div>
+
 
   <script src="../assets/js/app.js"></script>
   <script type='text/javascript'>

@@ -793,7 +793,7 @@ Here's a basic Menu.
 <nav role="navigation" aria-labelledby="main-menu-heading">
   <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
   <ul class="menu">
-    <li><a href="#">Item One</a></li>
+    <li class="active"><a href="#">Item One</a></li>
     <li><a href="#">Item Two</a></li>
     <li><a href="#">Item Three</a></li>
   </ul>

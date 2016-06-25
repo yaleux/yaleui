@@ -130,3 +130,16 @@ Main components
 pre code {
   margin-bottom: 1rem;
 }
+
+a.active{
+  background: $marine;
+  color: $white;
+  &:hover{
+    @include light_link;
+  }
+}
+
+.styleguide-nav-title {
+  @include heading_5;
+  color: $medium-gray;
+}

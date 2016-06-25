@@ -22,9 +22,9 @@
 
       {{> header-no-search}}
 
-    <div class="main-content">
+    <div id="styleguide-component" class="main-content">
       <div class="row columns">
-        <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+        <div class="medium-7 large-8 medium-push-3 large-push-2 columns">
 
         {{#unlesspage 'index'}}
         <nav aria-labelledby="breadcrumbs-label" role="navigation">
@@ -42,15 +42,17 @@
 {{> body}}
 {{/markdown}}
         </div>
-        <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns">
+        <div class="medium-3 large-2 medium-pull-7 large-pull-8 columns">
           {{> component-list}}
         </div>
+          {{> toc}}
       </div>
 
       {{> footer}}
     </div>
     </div>
   </div>
+
 
   <script src="{{root}}assets/js/app.js"></script>
   <script type='text/javascript'>
