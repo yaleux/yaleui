@@ -1,0 +1,152 @@
+---
+title: Forms
+layout: styleguide
+---
+
+# Forms
+
+
+## Elements of a Form
+
+A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):
+
+- Form
+- Label
+- Input
+- Select
+- Text area
+- Button
+
+---
+
+## Form Layouts
+
+Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:
+
+- You can size inputs using column sizes, like `.medium-6`, `.small-6`.
+- You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
+
+---
+
+## Form Accessibility
+
+### Labelling Basics
+For each control on a form, there must be a label providing information about the control's purpose. This is generally using a `label` element. Form labels provide a number of accessibility benefits. When clicking on a control's `label` element, focus will be applied to the control, thus increasing the size of the clickable area. Also, assistive technology can read the label each form control a blind user interacts with the control.
+Form labels can be marked up in one of two ways:
+<ol>
+  <li>Setting the `for` attribute of the `label` equal to the `id` attribute of the form control being labelled.</li>
+  <li>Wrapping the form control within its label.</li>
+</ol>
+<div class="callout warning">
+  While the `placeholder` attribute may be used, it is never a substitute for a `label` element.
+</div>
+
+{{#example_html}}
+<label for="sample-form-control">Form Control</label>
+<input type="text" id="sample-form-control" />
+
+<label>Form Control<input type="text" /></label>
+{{/example_html}}
+
+
+<div class="callout warning">
+  When adding labels to form elements, each `label` element must be associated to exactly one form control, and each form control must have exactly one label.
+  `label` elements can <strong>only</strong> be associated with form controls. Associating `label` elements with other elements can create accessibility problems.
+</div>
+
+{{#example_html}}
+<div class="callout alert">
+
+<!-- The following is incorrect because it associates a label element with a div -->
+  <label for="form-control-container">Inaccessible Form Label (! Don't do this)</label>
+  <div id="form-control-container">
+    <input type="text" id="form-control" />
+  </div>
+
+</div>
+{{/example_html}}
+
+---
+
+### Self-Labelling Form Controls
+
+In general, buttons do not require `label` elements. For `button` elements, the text contained within the opening and closing tags functions as a label. For `input type="button"` and `input type="submit"` elements, provde a `value` attribute in lieu of a label.
+
+{{#example_html}}
+<button>Button</button>
+<input type="button" value="Button" />
+<input type="submit" value="Submit" />
+{{/example_html}}
+
+
+<br>
+
+{{#example_html}}
+<button class="button primary">Button</button>
+<input class="button primary" type="button" value="Button" />
+<input class="button primary" type="submit" value="Submit" />
+{{/example_html}}
+
+
+---
+### Fieldsets
+In long forms, groups of fields with a common purpose should be grouped together in a `fieldset` wrapper. Within the `fieldset`, include a `legend` element describing the purpose of the fieldset. Nesting fieldsets should be avoided.
+
+{{#example_html}}
+  <fieldset class="fieldset">
+    <legend>List Your Hobbies</legend>
+    <label>Hobby 1<input type="text"></label>
+    <label>Hobby 2<input type="text"></label>
+    <label>Hobby 3<input type="text"></label>
+    <label>Hobby 4<input type="text"></label>
+  </fieldset>
+{{/example_html}}
+
+---
+### Checkboxes and Radio Buttons
+Checkboxes and radio buttons should generally be wrapped in a `fieldset` and have a `legend` describe the purpose of the controls. This is the semantically correct way to mark up these elements, and assistive technology handles such markup well. Omitting those elements often leads to accessibility errors, even if the form controls are described in other ways.
+
+{{#example_html}}
+<fieldset class="fieldset">
+  <legend>What is your favorite Ivy League school?</legend>
+  <label><input type="radio" name="ivy">Brown</label>
+  <label><input type="radio" name="ivy">Columbia</label>
+  <label><input type="radio" name="ivy">Cornell</label>
+  <label><input type="radio" name="ivy">Dartmouth</label>
+  <label class="disabled" ><input type="radio" name="ivy" disabled>Harvard</label>
+  <label><input type="radio" name="ivy">Penn</label>
+  <label><input type="radio" name="ivy">Princeton</label>
+  <label><input type="radio" name="ivy">Yale</label>
+</fieldset>
+
+<fieldset class="fieldset">
+  <legend>What is your Yale affiliation?</legend>
+  <label><input type="checkbox" name="affiliation">Undergraduate</label>
+  <label><input type="checkbox" name="affiliation">Graduate Student</label>
+  <label><input type="checkbox" name="affiliation">Alumni</label>
+  <label><input type="checkbox" name="affiliation">Faculty</label>
+  <label><input type="checkbox" name="affiliation">Staff</label>
+</fieldset>
+{{/example_html}}
+
+---
+
+### Search Forms
+For simple search forms, such as those appearing in the header of many websites, the `input` need not have a label if the search button has a label such as "search" or "submit search" AND the form has a `role="search"` ARIA attribute AND the search button is visually rendered adjacent to the text input. If the visual design calls for an icon or image for the search button (such as magnifying class) in stead of text, adding a span with the text "Search" and a `show-for-sr` class is desirable.
+
+{{#example_html}}
+<form role="search" aria-label="Site Search">
+  <ul class="menu">
+    <li><input type="search" placeholder="Search" /></li>
+    <li><button type="button" class="small button">search</button></li>
+  </ul>
+</form>
+{{/example_html}}
+
+
+---
+
+### Labeling with ARIA
+
+While using the `label` element is preferable, there may be cases where it is not possible. As a fallback, using ARIA labels (the attributes `aria-label` and `aria-labelledby`) is acceptable.
+
