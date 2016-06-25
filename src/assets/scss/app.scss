@@ -16,6 +16,8 @@
 @include foundation-accordion-menu;
 @include foundation-badge;
 @include foundation-breadcrumbs;
+// WE override foundation's button group 
+// to fix a bug with expanded groups
 // @include foundation-button-group;
 @include foundation-callout;
 @include foundation-close-button;
