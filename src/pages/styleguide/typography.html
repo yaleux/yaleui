@@ -12,7 +12,7 @@ layout: styleguide
 
 ## Paragraphs
 
-```
+{{#example_html}}
 <p>This is a paragraph. Paragraphs are preset with a
 font size, line height and spacing to match the overall vertical
 rhythm. To show what a paragraph looks like this needs a little more
@@ -20,15 +20,7 @@ content so, did you know that there are storms occurring on Jupiter
 that are larger than the Earth? Pretty cool. Wrap strong around type
 to <strong>make it bold!</strong>. You can also use em to
 <em>italicize your words</em>.</p> 
-```
-
-<p>This is a paragraph. Paragraphs are preset with a
-font size, line height and spacing to match the overall vertical
-rhythm. To show what a paragraph looks like this needs a little more
-content so, did you know that there are storms occurring on Jupiter
-that are larger than the Earth? Pretty cool. Wrap strong around type
-to <strong>make it bold!</strong>. You can also use em to
-<em>italicize your words</em>.</p> 
+{{/example_html}}
 
 <div class="callout primary">
   <p>If the emphasis of a phrase is important, don't make the emphasis purely visual&mdash;use the `<em>` or `<strong>` tags to mark it as well. Both of these tags have built-in styles, but there's no harm in adding additional styles in specific contexts.</p>
@@ -42,21 +34,14 @@ to <strong>make it bold!</strong>. You can also use em to
   <p>Avoid skipping heading levels when structuring your document, as it confuses screen readers. For example, after using an `h2` in your code, the next heading used should be either `h2` or `h3`. If you need a heading to look bigger or smaller to match a specific style, use CSS to override the default size.</p>
 </div>
 
-```
+{{#example_html}}
 <h1>h1. This is a very large header.</h1>
 <h2>h2. This is a large header.</h2>
 <h3>h3. This is a medium header.</h3>
 <h4>h4. This is a moderate header.</h4>
 <h5>h5. This is a small header.</h5>
 <h6>h6. This is a tiny header.</h6>
-```
-
-<h1>h1. This is a very large header.</h1>
-<h2>h2. This is a large header.</h2>
-<h3>h3. This is a medium header.</h3>
-<h4>h4. This is a moderate header.</h4>
-<h5>h5. This is a small header.</h5>
-<h6>h6. This is a tiny header.</h6>
+{{/example_html}}
 
 
 ---
@@ -68,11 +53,9 @@ to <strong>make it bold!</strong>. You can also use em to
 </div>
 
 
-```
+{{#example_html}}
 <p>Links are very standard, and the color is preset to the <a href="#colors">primary color</a>.</p>
-```
-
-<p>Links are very standard, and the color is preset to the <a href="#colors">primary color</a>.</p>
+{{/example_html}}
 
 ---
 
@@ -80,11 +63,9 @@ to <strong>make it bold!</strong>. You can also use em to
 
 Use dividers to define thematic breaks between paragraphs. To denote the end of one section of a page and the start of another, it's better to use the `<section>` tag.
 
-```
+{{#example_html}}
 <hr>
-```
-
-<hr>
+{{/example_html}}
 
 ---
 
@@ -92,7 +73,7 @@ Use dividers to define thematic breaks between paragraphs. To denote the end of 
 
 Use an unordered list to... *list things*, if the order of the items doesn't matter.
 
-```
+{{#example_html}}
 <ul>
   <li>List item with a much longer description or more content.</li>
   <li>List item</li>
@@ -107,22 +88,8 @@ Use an unordered list to... *list things*, if the order of the items doesn't mat
   <li>List item</li>
   <li>List item</li>
 </ul>
-```
+{{/example_html}}
 
-<ul>
-  <li>List item with a much longer description or more content.</li>
-  <li>List item</li>
-  <li>List item
-    <ul>
-      <li>Nested list item</li>
-      <li>Nested list item</li>
-      <li>Nested list item</li>
-    </ul>
-  </li>
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item</li>
-</ul>
 
 ---
 
@@ -130,7 +97,7 @@ Use an unordered list to... *list things*, if the order of the items doesn't mat
 
 Use an `<ol>` when creating a list where the order of the items is important, like ranking pizza toppings from best to worst.
 
-```
+{{#example_html}}
 <ol>
   <li>Cheese (essential)</li>
   <li>Pepperoni</li>
@@ -144,21 +111,8 @@ Use an `<ol>` when creating a list where the order of the items is important, li
   <li>Onions</li>
   <li>Mushrooms</li>
 </ol>
-```
+{{/example_html}}
 
-<ol>
-  <li>Cheese (essential)</li>
-  <li>Pepperoni</li>
-  <li>Bacon
-    <ol>
-      <li>Normal bacon</li>
-      <li>Canadian bacon</li>
-    </ol>
-  </li>
-  <li>Sausage</li>
-  <li>Onions</li>
-  <li>Mushrooms</li>
-</ol>
 
 ---
 
@@ -166,7 +120,7 @@ Use an `<ol>` when creating a list where the order of the items is important, li
 
 A definition list (`<dl>`) is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).
 
-```
+{{#example_html}}
 <dl>
   <dt>Time</dt>
   <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
@@ -174,7 +128,7 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
   <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
   <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
 </dl>
-```
+{{/example_html}}
 
 ---
 
@@ -182,17 +136,13 @@ A definition list (`<dl>`) is used to display name-value pairs, like metadata or
 
 Sometimes other people say smart things, and you may want to mention those things with a quote. We've got you covered.
 
-```
+{{#example_html}}
 <blockquote>
   Those people who think they know everything are a great annoyance to those of us who do.
   <cite>Isaac Asimov</cite>
 </blockquote>
-```
+{{/example_html}}
 
-<blockquote>
-  Those people who think they know everything are a great annoyance to those of us who do.
-  <cite>Isaac Asimov</cite>
-</blockquote>
 
 ---
 
@@ -200,21 +150,16 @@ Sometimes other people say smart things, and you may want to mention those thing
 
 Use the `<abbr>` tag to annotate a shortened term. Abbreviations must always have a `title` attribute which clarifies the full term.
 
-```
+{{#example_html}}
 <p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p>
-```
+{{/example_html}}
 
-<p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p>
 
 ---
 
 ## Code
 
 Format references to code with the `<code>` tag.
-
-```
-Remember to escape angle brackets when printing HTML: `div`
-```
 
 Remember to escape angle brackets when printing HTML: `div`
 
@@ -224,11 +169,9 @@ Remember to escape angle brackets when printing HTML: `div`
 
 Use the `<kbd>` element to annotate a key stroke or combination.
 
-```
+{{#example_html}}
 <p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p>
-```
-
-<p>Press <kbd>Cmd+Q</kbd> (or <kbd>Ctrl+Q</kbd> on Windows) to play Half-Life 3.</p>
+{{/example_html}}
 
 ---
 
@@ -247,11 +190,10 @@ Avoid styling non-link text with underlines. Some readers will mistake underline
 
 Prefer using actual text over text inside a graphic. Assistive technologies can't read an image, and the text in an image can't be resized by a browser, like normal text. If an image has text that needs to be read, add it in the `alt` attribute of the image.
 
-```
+{{#example_html}}
 <img src="assets/img/buy-now.jpg" alt="Buy now">
-```
+{{/example_html}}
 
-<img src="assets/img/buy-now.jpg" alt="Buy now">
 
 ---
 
