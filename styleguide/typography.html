@@ -170,6 +170,7 @@ to <strong>make it bold!</strong>. You can also use em to
   <li>List item</li>
 </ul>
 
+
 <hr>
 <h2 id="ordered-lists">Ordered Lists</h2>
 <p>Use an <code>&lt;ol&gt;</code> when creating a list where the order of the items is important, like ranking pizza toppings from best to worst.</p>
@@ -200,6 +201,7 @@ to <strong>make it bold!</strong>. You can also use em to
   <li>Mushrooms</li>
 </ol>
 
+
 <hr>
 <h2 id="definition-lists">Definition Lists</h2>
 <p>A definition list (<code>&lt;dl&gt;</code>) is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>&lt;dt&gt;</code>) is paired with one or more definitions (<code>&lt;dd&gt;</code>).</p>
@@ -210,7 +212,15 @@ to <strong>make it bold!</strong>. You can also use em to
   &lt;dd&gt;A continuous area or expanse that is free, available, or unoccupied.&lt;/dd&gt;
   &lt;dd&gt;The dimensions of height, depth, and width within which all things exist and move.&lt;/dd&gt;
 &lt;/dl&gt;
-</code></pre><hr>
+</code></pre><dl>
+  <dt>Time</dt>
+  <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
+  <dt>Space</dt>
+  <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
+  <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
+</dl>
+
+<hr>
 <h2 id="blockquotes">Blockquotes</h2>
 <p>Sometimes other people say smart things, and you may want to mention those things with a quote. We&#39;ve got you covered.</p>
 <pre><code>&lt;blockquote&gt;
@@ -222,17 +232,18 @@ to <strong>make it bold!</strong>. You can also use em to
   <cite>Isaac Asimov</cite>
 </blockquote>
 
+
 <hr>
 <h2 id="abbreviations">Abbreviations</h2>
 <p>Use the <code>&lt;abbr&gt;</code> tag to annotate a shortened term. Abbreviations must always have a <code>title</code> attribute which clarifies the full term.</p>
 <pre><code>&lt;p&gt;In my dream last night, I saw &lt;abbr title=&quot;John Ronald Reuel&quot;&gt;J. R. R.&lt;/abbr&gt; Tolkien and George &lt;abbr title=&quot;Raymond Richard&quot;&gt;R. R.&lt;/abbr&gt; Martin hanging out on Sunset &lt;abbr title=&quot;Boulevard&quot;&gt;Blvd&lt;/abbr&gt;.&lt;/p&gt;
 </code></pre><p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr> Tolkien and George <abbr title="Raymond Richard">R. R.</abbr> Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.</p>
 
+
 <hr>
 <h2 id="code">Code</h2>
 <p>Format references to code with the <code>&lt;code&gt;</code> tag.</p>
-<pre><code>Remember to escape angle brackets when printing HTML: `div`
-</code></pre><p>Remember to escape angle brackets when printing HTML: <code>div</code></p>
+<p>Remember to escape angle brackets when printing HTML: <code>div</code></p>
 <hr>
 <h2 id="keystrokes">Keystrokes</h2>
 <p>Use the <code>&lt;kbd&gt;</code> element to annotate a key stroke or combination.</p>
