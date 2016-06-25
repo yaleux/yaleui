@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-  <title>Yale UI Style Guide | Yale UI Style Guide</title>
+  <title>Yale UI Style Guide | Breadcrumbs</title>
   <link rel="stylesheet" href="../assets/css/app.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
@@ -68,9 +68,54 @@
       <div class="row expanded">
         <div class="medium-7 medium-push-2 columns">
 
-<p><p class="lead">The Yale UI Style Guide was built with <a href="http://foundation.zurb.com/docs/">Foundation for Sites</a>. For more information on how to use this responsive front-end framework, check out the documentation or get help from the Foundation community.</p>
-<a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
-<a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a></p>
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>breadcrumbs
+                </li>
+            </ul>
+        </nav>
+<h1 id="breadcrumbs">Breadcrumbs</h1>
+<p class="lead">Breadcrumbs come in handy to show a navigation trail for users clicking through your site.</p>
+
+<p>To make a set of breadcrumb links, just add the class <code>.breadcrumbs</code> to a <code>&lt;ul&gt;</code>, and then add links instead of <code>&lt;li&gt;</code> elements.</p>
+<p>The current page doesn&#39;t require a link or a class, but you should add some explanatory text for AT that indicates which item is the current page.</p>
+<p>To mark a disabled item, add the class <code>.disabled</code> to the <code>&lt;li&gt;</code>, and just use plain text instead of a link.</p>
+<pre><code class="lang-html">&lt;nav aria-labelledby=&quot;breadcrumbs-label&quot; role=&quot;navigation&quot;&gt;
+    &lt;h2 id=&quot;breadcrumbs-label&quot; class=&quot;show-for-sr&quot; &gt;You are here:&lt;/h2&gt;
+    &lt;ul class=&quot;breadcrumbs&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;disabled&quot;&gt;Gene Splicing&lt;/li&gt;
+        &lt;li&gt;
+            &lt;span class=&quot;show-for-sr&quot;&gt;Current: &lt;/span&gt;Cloning
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<div class="styleguide-code-live"><nav aria-labelledby="breadcrumbs-label" role="navigation">
+    <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+    <ul class="breadcrumbs">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li class="disabled">Gene Splicing</li>
+        <li>
+            <span class="show-for-sr">Current: </span>Cloning
+        </li>
+    </ul>
+</nav>
+</div>
+
+
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<div class="warning callout">
+  <p>We use a CSS <code>::after</code> element containing a slash character to create the separator between items. Some screen readers will read this character out loud&mdash;if this is an issue, you can use a background image or a separate element with <code>aria-hidden=&quot;true&quot;</code> to create the separator instead.</p>
+</div>
+
         </div>
         <div class="medium-2 medium-pull-7 columns">
           <ul class="vertical menu" id="styleguide-menu">
@@ -95,7 +140,7 @@
            
            
             <li><a href="pagination.html">Pagination</a></li>
-            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+            <li class="current"><a href="breadcrumbs.html">Breadcrumbs</a></li>
           
             <li class="nav-title">Containers</li>
             <li><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
@@ -119,6 +164,16 @@
         
         <div class="medium-3 columns">
         <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
 
       </div>

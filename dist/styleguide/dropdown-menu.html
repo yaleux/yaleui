@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-  <title>Yale UI Style Guide | Progress Bar</title>
+  <title>Yale UI Style Guide | Dropdown Menu</title>
   <link rel="stylesheet" href="../assets/css/app.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
@@ -74,99 +74,149 @@
                 <li><a href="../">Home</a></li>
                 <li><a href="../styleguide">StyleGuide</a></li>
                 <li>
-                    <span class="show-for-sr">Current: </span>progress-bar
+                    <span class="show-for-sr">Current: </span>dropdown-menu
                 </li>
             </ul>
         </nav>
-<h1 id="progress-bar">Progress Bar</h1>
-<p class="lead">Show your progress. A simple way to add progress bars to your layouts. You only need two HTML elements to make them and they&#39;re easy to customize.</p>
+<h1 id="dropdown-menu">Dropdown Menu</h1>
+<p class="lead"> Change a basic Menu into an expandable dropdown menu with the Dropdown Menu plugin.</p>
 
+<h2 id="horizontal">Horizontal</h2>
+<p>Dropdown menus build on the <a href="http://foundation.zurb.com/sites/docs/menu.html">Menu</a> component&#39;s syntax. Add the class <code>.dropdown</code> and the attribute <code>data-dropdown-menu</code> to the menu container to set up the dropdown.</p>
+<pre><code class="lang-html">&lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>To create dropdown menus, nest a new <code>&lt;ul&gt;</code> inside an <code>&lt;li&gt;</code>. You can nest further to create more levels of dropdowns.</p>
+<div class="primary callout">
+  <p>Note that the <code>ul</code> goes <em>after</em> the <code>a</code>, and not inside of it.</p>
+</div>
 
-<h2 id="basics">Basics</h2>
-<p>A progress bar has two elements: the container <code>.progress</code>, and the meter <code>.progress-meter</code>. The <code>role</code> and <code>aria-</code> attributes in the code example clarify the status of the bar:</p>
-<ul>
-<li><code>aria-valuemin</code>: Minimum value.</li>
-<li><code>aria-valuemax</code>: Maximum value.</li>
-<li><code>aria-valuenow</code>: Current value.</li>
+<pre><code class="lang-html">&lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1A&lt;/a&gt;&lt;/li&gt;
+      &lt;!-- ... --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<ul class="dropdown menu" data-dropdown-menu>
+  <li>
+    <a>Item 1</a>
+    <ul class="menu">
+      <li><a href="#Item-1A">Item 1A</a></li>
+      <li>
+        <a href="#Item-1B">Item 1B</a>
+        <ul class="menu">
+          <li><a href="#Item-1Bi">Item 1B i</a></li>
+          <li><a href="#Item-1Bii">Item 1B ii</a></li>
+          <li>
+            <a href="#Item-1Biii">Item 1B iii</a>
+            <ul class="menu">
+              <li><a href="#Item-1Biiialpha">Item 1B iii alpha</a></li>
+              <li><a href="#Item-1Biiiomega">Item 1B iii omega</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Item-1Biv">Item 1B iv</a>
+            <ul class="menu">
+              <li><a href="#Item-1Bivalpha">Item 1B iv alpha</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#Item-1C">Item 1C</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#Item-2">Item 2</a>
+    <ul class="menu">
+      <li><a href="#Item-2A">Item 2A</a></li>
+      <li><a href="#Item-2B">Item 2B</a></li>
+    </ul>
+  </li>
+  <li><a href="#Item-3">Item 3</a></li>
+  <li><a href="#Item-4">Item 4</a></li>
 </ul>
-<p>If the value of the progress bar is not numeric, also add the attribute <code>aria-valuetext</code>, which should include a human-readable version of the bar&#39;s value.</p>
-<pre><code class="lang-html">&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<div class="styleguide-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-meter"></div>
-</div>
-</div>
-
-
-<p>Add a <code>width</code> CSS property to the inner meter to fill the progress bar.</p>
-<pre><code class="lang-html">&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuetext=&quot;50 percent&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<div class="styleguide-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
-  <div class="progress-meter" style="width: 50%"></div>
-</div>
-</div>
-
-
 
 <hr>
-<h2 id="colors">Colors</h2>
-<p>A progress bar can be styled with the <code>.secondary</code>, <code>.success</code>, <code>.warning</code>, and <code>.alert</code> colors.</p>
-<pre><code class="lang-html">&lt;div class=&quot;secondary progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuetext=&quot;25 percent&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<h2 id="vertical">Vertical</h2>
+<p>Add the <code>.vertical</code> class to the top-level menu to make it vertical. Sub-menus are automatically vertical, regardless of the orientation of the top-level menu.</p>
+<div class="primary callout">
+  <p>Menus are block-level elements, which means they stretch to fill the width of their container. To make the below example less goofy, we&#39;ve hard-coded a <code>max-width</code> on the menu.</p>
+</div>
 
-&lt;div class=&quot;success progress&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;warning progress&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;alert progress&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 75%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="lang-html">&lt;ul class=&quot;vertical dropdown menu&quot; data-dropdown-menu style=&quot;max-width: 300px;&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+  &lt;!-- ... --&gt;
+&lt;/ul&gt;
 </code></pre>
-<div class="styleguide-code-live"><div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-  <div class="progress-meter" style="width: 25%"></div>
-</div>
-
-<div class="success progress">
-  <div class="progress-meter" style="width: 50%"></div>
-</div>
-
-<div class="warning progress">
-  <div class="progress-meter" style="width: 50%"></div>
-</div>
-
-<div class="alert progress">
-  <div class="progress-meter" style="width: 75%"></div>
-</div>
-</div>
-
-
+<ul class="vertical dropdown menu" data-dropdown-menu style="max-width: 300px;">
+  <li>
+    <a>Item 1</a>
+    <ul class="menu">
+      <li><a href="#Item-1A">Item 1A</a></li>
+      <li>
+        <a href="#Item-1B">Item 1B</a>
+        <ul class="menu">
+          <li><a href="#Item-1Bi">Item 1B i</a></li>
+          <li><a href="#Item-1Bii">Item 1B ii</a></li>
+          <li>
+            <a href="#Item-1Biii">Item 1B iii</a>
+            <ul class="menu">
+              <li><a href="#Item-1Biiialpha">Item 1B iii alpha</a></li>
+              <li><a href="#Item-1Biiiomega">Item 1B iii omega</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Item-1Biv">Item 1B iv</a>
+            <ul class="menu">
+              <li><a href="#Item-1Bivalpha">Item 1B iv alpha</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#Item-1C">Item 1C</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#Item-2">Item 2</a>
+    <ul class="menu">
+      <li><a href="#Item-2A">Item 2A</a></li>
+      <li><a href="#Item-2B">Item 2B</a></li>
+    </ul>
+  </li>
+  <li><a href="#Item-3">Item 3</a></li>
+  <li><a href="#Item-4">Item 4</a></li>
+</ul>
 
 <hr>
-<h2 id="with-text">With Text</h2>
-<p>You can add text inside the meter of a progress bar. Make sure the text you use in the meter is also used in the <code>aria-valuetext</code> attribute.</p>
-<pre><code class="lang-html">&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuetext=&quot;25 percent&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;span class=&quot;progress-meter&quot; style=&quot;width: 25%&quot;&gt;
-    &lt;p class=&quot;progress-meter-text&quot;&gt;25%&lt;/p&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
+<h2 id="sticky-navigation">Sticky Navigation</h2>
+<p>See the documentation for the <a href="sticky.html#sticky-navigation">Sticky</a> plugin to see how to easily make a sticky nav bar. </p>
+<hr>
+<h3 id="preventing-fouc">Preventing FOUC</h3>
+<p>Before the JavaScript on your page loads, the dropdown menus will not have arrows. However, once the JavaScript file has loaded, the arrows will appear causing a <a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content">flash of unstyled content</a>. You can prevent this by adding the <code>is-dropdown-submenu-parent</code> class manually. </p>
+<pre><code class="lang-html">&lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
+  &lt;li class=&quot;is-dropdown-submenu-parent&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1A&lt;/a&gt;&lt;/li&gt;
+      &lt;!-- ... --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </code></pre>
-<div class="styleguide-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-  <span class="progress-meter" style="width: 25%">
-    <p class="progress-meter-text">25%</p>
-  </span>
-</div>
-</div>
-
-
         </div>
         <div class="medium-2 medium-pull-7 columns">
           <ul class="vertical menu" id="styleguide-menu">
@@ -178,7 +228,7 @@
           
             <li class="nav-title">Navigation</li>
             <li><a href="navigation.html">Overview</a></li>
-            <li><a href="dropdown-menu.html">Dropdown Menu</a></li>
+            <li class="current"><a href="dropdown-menu.html">Dropdown Menu</a></li>
           
           
           
@@ -206,7 +256,7 @@
             <li class="nav-title">Media</li>
             <li><a href="badge.html">Badge</a></li>
             <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
-            <li class="current"><a href="progress-bar.html">Progress Bar</a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
             <li><a href="thumbnail.html">Thumbnail</a></li>
             <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
           </ul>

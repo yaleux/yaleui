@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-  <title>Yale UI Style Guide | Progress Bar</title>
+  <title>Yale UI Style Guide | Buttons</title>
   <link rel="stylesheet" href="../assets/css/app.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
@@ -74,96 +74,115 @@
                 <li><a href="../">Home</a></li>
                 <li><a href="../styleguide">StyleGuide</a></li>
                 <li>
-                    <span class="show-for-sr">Current: </span>progress-bar
+                    <span class="show-for-sr">Current: </span>buttons
                 </li>
             </ul>
         </nav>
-<h1 id="progress-bar">Progress Bar</h1>
-<p class="lead">Show your progress. A simple way to add progress bars to your layouts. You only need two HTML elements to make them and they&#39;re easy to customize.</p>
+<h1 id="buttons">Buttons</h1>
+<p class="lead">Buttons are tied to an <strong>action</strong> of some kind.</p>
 
 
-<h2 id="basics">Basics</h2>
-<p>A progress bar has two elements: the container <code>.progress</code>, and the meter <code>.progress-meter</code>. The <code>role</code> and <code>aria-</code> attributes in the code example clarify the status of the bar:</p>
-<ul>
-<li><code>aria-valuemin</code>: Minimum value.</li>
-<li><code>aria-valuemax</code>: Maximum value.</li>
-<li><code>aria-valuenow</code>: Current value.</li>
-</ul>
-<p>If the value of the progress bar is not numeric, also add the attribute <code>aria-valuetext</code>, which should include a human-readable version of the bar&#39;s value.</p>
-<pre><code class="lang-html">&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<hr>
+<h2 id="primary-buttons">Primary Buttons</h2>
+<p>These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the <code>.tiny</code>, <code>.small</code>, and <code>.large</code> classes.</p>
+<pre><code class="lang-html">&lt;button class=&quot;primary large button&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;primary button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button class=&quot;primary small button&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;primary tiny button&quot;&gt;Tiny button&lt;/button&gt;
 </code></pre>
-<div class="styleguide-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-meter"></div>
-</div>
+<div class="styleguide-code-live"><button class="primary large button">Large button</button>
+<button class="primary button">Regular button</button>
+<button class="primary small button">Small button</button>
+<button class="primary tiny button">Tiny button</button>
 </div>
 
 
-<p>Add a <code>width</code> CSS property to the inner meter to fill the progress bar.</p>
-<pre><code class="lang-html">&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuetext=&quot;50 percent&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="lang-html">&lt;button class=&quot;primary large hollow button&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;primary hollow button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button class=&quot;primary small hollow button&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;primary tiny hollow button&quot;&gt;Tiny button&lt;/button&gt;
 </code></pre>
-<div class="styleguide-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
-  <div class="progress-meter" style="width: 50%"></div>
+<div class="styleguide-code-live"><button class="primary large hollow button">Large button</button>
+<button class="primary hollow button">Regular button</button>
+<button class="primary small hollow button">Small button</button>
+<button class="primary tiny hollow button">Tiny button</button>
 </div>
+
+
+<hr>
+<h2 id="secondary-buttons">Secondary Buttons</h2>
+<p>These buttons are used for less important, secondary actions on a page.</p>
+<pre><code class="lang-html">&lt;button class=&quot;secondary large button&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;secondary button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button class=&quot;secondary small button&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;secondary tiny button&quot;&gt;Tiny button&lt;/button&gt;
+</code></pre>
+<div class="styleguide-code-live"><button class="secondary large button">Large button</button>
+<button class="secondary button">Regular button</button>
+<button class="secondary small button">Small button</button>
+<button class="secondary tiny button">Tiny button</button>
+</div>
+
+
+
+<pre><code class="lang-html">&lt;button  class=&quot;secondary large hollow button&quot;&gt;Large button&lt;/button&gt;
+&lt;button  class=&quot;secondary hollow button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button  class=&quot;secondary small hollow button&quot;&gt;Small button&lt;/button&gt;
+&lt;button  class=&quot;secondary tiny hollow button&quot;&gt;Tiny button&lt;/button&gt;
+</code></pre>
+<div class="styleguide-code-live"><button  class="secondary large hollow button">Large button</button>
+<button  class="secondary hollow button">Regular button</button>
+<button  class="secondary small hollow button">Small button</button>
+<button  class="secondary tiny hollow button">Tiny button</button>
 </div>
 
 
 
 <hr>
-<h2 id="colors">Colors</h2>
-<p>A progress bar can be styled with the <code>.secondary</code>, <code>.success</code>, <code>.warning</code>, and <code>.alert</code> colors.</p>
-<pre><code class="lang-html">&lt;div class=&quot;secondary progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuetext=&quot;25 percent&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 25%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+<h2 id="button-accessibility">Button Accessibility</h2>
+<p>It is best to use the <code>button</code> or <code>input type=&quot;button&quot;</code> elements for buttons. These elements have ineractivity and accessibility features built in automatically. </p>
+<p>When using other elements (e.g. <code>div</code> and <code>li</code>), important functionality such as focus, mouse interaction, and keyboard interaction must be added manually. If the interaction is not added manually, then it will be inaccessible.</p>
+<p>One common practice is to use <code>a</code> elements instead of <code>button</code> elements for styling purposes. <strong>That approach is not necessary with Yale UI.</strong> It is still best to reserve use of <code>a</code> tags for links, and to use <code>button</code> or <code>input type=&quot;button&quot;</code> elements for buttons. Visual appearance can be controlled through CSS and selecting appropriate classes; visual appearance should not influence tag selection.</p>
+<pre><code class="lang-html">&lt;!-- This is best --&gt;
+&lt;button class=&quot;primary button&quot;&gt;Best&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;primary button&quot; value=&quot;Also Best&quot; /&gt;
 
-&lt;div class=&quot;success progress&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;!-- This is acceptable but discouraged --&gt;
+&lt;a href=&quot;#&quot; class=&quot;primary button&quot;&gt;Discouraged&lt;/a&gt;
 
-&lt;div class=&quot;warning progress&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 50%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;alert progress&quot;&gt;
-  &lt;div class=&quot;progress-meter&quot; style=&quot;width: 75%&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;!-- This must be avoided --&gt;
+&lt;div class=&quot;primary button&quot;&gt;Avoid&lt;/div&gt;
 </code></pre>
-<div class="styleguide-code-live"><div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-  <div class="progress-meter" style="width: 25%"></div>
-</div>
+<div class="styleguide-code-live"><!-- This is best -->
+<button class="primary button">Best</button>
+<input type="button" class="primary button" value="Also Best" />
 
-<div class="success progress">
-  <div class="progress-meter" style="width: 50%"></div>
-</div>
+<!-- This is acceptable but discouraged -->
+<a href="#" class="primary button">Discouraged</a>
 
-<div class="warning progress">
-  <div class="progress-meter" style="width: 50%"></div>
-</div>
-
-<div class="alert progress">
-  <div class="progress-meter" style="width: 75%"></div>
-</div>
+<!-- This must be avoided -->
+<div class="primary button">Avoid</div>
 </div>
 
 
 
-<hr>
-<h2 id="with-text">With Text</h2>
-<p>You can add text inside the meter of a progress bar. Make sure the text you use in the meter is also used in the <code>aria-valuetext</code> attribute.</p>
-<pre><code class="lang-html">&lt;div class=&quot;progress&quot; role=&quot;progressbar&quot; tabindex=&quot;0&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuetext=&quot;25 percent&quot; aria-valuemax=&quot;100&quot;&gt;
-  &lt;span class=&quot;progress-meter&quot; style=&quot;width: 25%&quot;&gt;
-    &lt;p class=&quot;progress-meter-text&quot;&gt;25%&lt;/p&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
+
+<div class="callout primary">
+    <strong>Note:</strong> It is approprite to use <code>a</code> elements with <code>class=&quot;button&quot;</code> if the objective is to create a link that visually resembles a button. An element&#39;s <strong>purpose</strong> and <strong>desired visual appearance*</strong> are completely separate concerns.
+</div>
+
+
+<pre><code class="lang-html">&lt;!-- This is discouraged --&gt;
+&lt;a href=&quot;#&quot; class=&quot;primary button&quot; onclick=&quot;doInteraction()&quot; &gt;Discouraged&lt;/a&gt;
+
+&lt;!-- This is appropriate --&gt;
+&lt;a href=&quot;someurl.com&quot; class=&quot;primary button&quot; &gt;Appropriate&lt;/a&gt;
 </code></pre>
-<div class="styleguide-code-live"><div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-  <span class="progress-meter" style="width: 25%">
-    <p class="progress-meter-text">25%</p>
-  </span>
-</div>
+<div class="styleguide-code-live"><!-- This is discouraged -->
+<a href="#" class="primary button" onclick="doInteraction()" >Discouraged</a>
+
+<!-- This is appropriate -->
+<a href="someurl.com" class="primary button" >Appropriate</a>
 </div>
 
 
@@ -183,7 +202,7 @@
           
           
             <li class="nav-title">Controls</li>
-            <li><a href="buttons.html">Buttons</a></li>
+            <li class="current"><a href="buttons.html">Buttons</a></li>
             <li><a href="button-groups.html">Button Groups</a></li>
             <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
             <li><a href="switch.html">Switch</a></li>
@@ -206,7 +225,7 @@
             <li class="nav-title">Media</li>
             <li><a href="badge.html">Badge</a></li>
             <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
-            <li class="current"><a href="progress-bar.html">Progress Bar</a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
             <li><a href="thumbnail.html">Thumbnail</a></li>
             <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
           </ul>
