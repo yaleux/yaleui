@@ -109,11 +109,12 @@ Form labels can be marked up in one of two ways:</p>
   While the <code>placeholder</code> attribute may be used, it is never a substitute for a <code>label</code> element.
 </div>
 
-<pre><code>&lt;label for=&quot;sample-form-control&quot;&gt;Form Control&lt;/label&gt;
+<pre><code class="lang-html">&lt;label for=&quot;sample-form-control&quot;&gt;Form Control&lt;/label&gt;
 &lt;input type=&quot;text&quot; id=&quot;sample-form-control&quot; /&gt;
 
 &lt;label&gt;Form Control&lt;input type=&quot;text&quot; /&gt;&lt;/label&gt;
-</code></pre><div class="styleguide-code-live"><label for="sample-form-control">Form Control</label>
+</code></pre>
+<div class="styleguide-code-live"><label for="sample-form-control">Form Control</label>
 <input type="text" id="sample-form-control" />
 
 <label>Form Control<input type="text" /></label>
@@ -126,7 +127,7 @@ Form labels can be marked up in one of two ways:</p>
   <code>label</code> elements can <strong>only</strong> be associated with form controls. Associating <code>label</code> elements with other elements can create accessibility problems.
 </div>
 
-<pre><code>&lt;div class=&quot;callout alert&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;callout alert&quot;&gt;
 
 &lt;!-- The following is incorrect because it associates a label element with a div --&gt;
   &lt;label for=&quot;form-control-container&quot;&gt;Inaccessible Form Label (! Don&#39;t do this)&lt;/label&gt;
@@ -135,7 +136,8 @@ Form labels can be marked up in one of two ways:</p>
   &lt;/div&gt;
 
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="callout alert">
+</code></pre>
+<div class="styleguide-code-live"><div class="callout alert">
 
 <!-- The following is incorrect because it associates a label element with a div -->
   <label for="form-control-container">Inaccessible Form Label (! Don&#39;t do this)</label>
@@ -148,10 +150,11 @@ Form labels can be marked up in one of two ways:</p>
 <hr>
 <h3 id="self-labelling-form-controls">Self-Labelling Form Controls</h3>
 <p>In general, buttons do not require <code>label</code> elements. For <code>button</code> elements, the text contained within the opening and closing tags functions as a label. For <code>input type=&quot;button&quot;</code> and <code>input type=&quot;submit&quot;</code> elements, provde a <code>value</code> attribute in lieu of a label.</p>
-<pre><code>&lt;button&gt;Button&lt;/button&gt;
+<pre><code class="lang-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Button&quot; /&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-</code></pre><div class="styleguide-code-live"><button>Button</button>
+</code></pre>
+<div class="styleguide-code-live"><button>Button</button>
 <input type="button" value="Button" />
 <input type="submit" value="Submit" />
 </div>
@@ -159,10 +162,11 @@ Form labels can be marked up in one of two ways:</p>
 
 
 <p><br></p>
-<pre><code>&lt;button class=&quot;button primary&quot;&gt;Button&lt;/button&gt;
+<pre><code class="lang-html">&lt;button class=&quot;button primary&quot;&gt;Button&lt;/button&gt;
 &lt;input class=&quot;button primary&quot; type=&quot;button&quot; value=&quot;Button&quot; /&gt;
 &lt;input class=&quot;button primary&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-</code></pre><div class="styleguide-code-live"><button class="button primary">Button</button>
+</code></pre>
+<div class="styleguide-code-live"><button class="button primary">Button</button>
 <input class="button primary" type="button" value="Button" />
 <input class="button primary" type="submit" value="Submit" />
 </div>
@@ -172,14 +176,15 @@ Form labels can be marked up in one of two ways:</p>
 <hr>
 <h3 id="fieldsets">Fieldsets</h3>
 <p>In long forms, groups of fields with a common purpose should be grouped together in a <code>fieldset</code> wrapper. Within the <code>fieldset</code>, include a <code>legend</code> element describing the purpose of the fieldset. Nesting fieldsets should be avoided.</p>
-<pre><code>  &lt;fieldset class=&quot;fieldset&quot;&gt;
+<pre><code class="lang-html">  &lt;fieldset class=&quot;fieldset&quot;&gt;
     &lt;legend&gt;List Your Hobbies&lt;/legend&gt;
     &lt;label&gt;Hobby 1&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
     &lt;label&gt;Hobby 2&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
     &lt;label&gt;Hobby 3&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
     &lt;label&gt;Hobby 4&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
   &lt;/fieldset&gt;
-</code></pre><div class="styleguide-code-live">  <fieldset class="fieldset">
+</code></pre>
+<div class="styleguide-code-live">  <fieldset class="fieldset">
     <legend>List Your Hobbies</legend>
     <label>Hobby 1<input type="text"></label>
     <label>Hobby 2<input type="text"></label>
@@ -192,7 +197,7 @@ Form labels can be marked up in one of two ways:</p>
 <hr>
 <h3 id="checkboxes-and-radio-buttons">Checkboxes and Radio Buttons</h3>
 <p>Checkboxes and radio buttons should generally be wrapped in a <code>fieldset</code> and have a <code>legend</code> describe the purpose of the controls. This is the semantically correct way to mark up these elements, and assistive technology handles such markup well. Omitting those elements often leads to accessibility errors, even if the form controls are described in other ways.</p>
-<pre><code>&lt;fieldset class=&quot;fieldset&quot;&gt;
+<pre><code class="lang-html">&lt;fieldset class=&quot;fieldset&quot;&gt;
   &lt;legend&gt;What is your favorite Ivy League school?&lt;/legend&gt;
   &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Brown&lt;/label&gt;
   &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Columbia&lt;/label&gt;
@@ -212,7 +217,8 @@ Form labels can be marked up in one of two ways:</p>
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Faculty&lt;/label&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Staff&lt;/label&gt;
 &lt;/fieldset&gt;
-</code></pre><div class="styleguide-code-live"><fieldset class="fieldset">
+</code></pre>
+<div class="styleguide-code-live"><fieldset class="fieldset">
   <legend>What is your favorite Ivy League school?</legend>
   <label><input type="radio" name="ivy">Brown</label>
   <label><input type="radio" name="ivy">Columbia</label>
@@ -238,13 +244,14 @@ Form labels can be marked up in one of two ways:</p>
 <hr>
 <h3 id="search-forms">Search Forms</h3>
 <p>For simple search forms, such as those appearing in the header of many websites, the <code>input</code> need not have a label if the search button has a label such as &quot;search&quot; or &quot;submit search&quot; AND the form has a <code>role=&quot;search&quot;</code> ARIA attribute AND the search button is visually rendered adjacent to the text input. If the visual design calls for an icon or image for the search button (such as magnifying class) in stead of text, adding a span with the text &quot;Search&quot; and a <code>show-for-sr</code> class is desirable.</p>
-<pre><code>&lt;form role=&quot;search&quot; aria-label=&quot;Site Search&quot;&gt;
+<pre><code class="lang-html">&lt;form role=&quot;search&quot; aria-label=&quot;Site Search&quot;&gt;
   &lt;ul class=&quot;menu&quot;&gt;
     &lt;li&gt;&lt;input type=&quot;search&quot; placeholder=&quot;Search&quot; /&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button type=&quot;button&quot; class=&quot;small button&quot;&gt;search&lt;/button&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/form&gt;
-</code></pre><div class="styleguide-code-live"><form role="search" aria-label="Site Search">
+</code></pre>
+<div class="styleguide-code-live"><form role="search" aria-label="Site Search">
   <ul class="menu">
     <li><input type="search" placeholder="Search" /></li>
     <li><button type="button" class="small button">search</button></li>
@@ -290,7 +297,7 @@ Form labels can be marked up in one of two ways:</p>
             <li><a href="media-object.html">Media Object</a></li>
             <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
             <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
-            <li><a href="table.html">Table</a></li>
+            <li><a href="tables.html">Tables</a></li>
             <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
           
             <li class="nav-title">Media</li>

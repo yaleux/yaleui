@@ -90,12 +90,13 @@
 <li>The fill (<code>.slider-fill</code>), which resizes dynamically based on where the handle is.</li>
 <li>A hidden <code>&lt;input&gt;</code>, which is where the value of the slider is stored.</li>
 </ul>
-<pre><code>&lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot; data-end=&quot;200&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot; data-end=&quot;200&quot;&gt;
   &lt;span class=&quot;slider-handle&quot;  data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
   &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
   &lt;input type=&quot;hidden&quot;&gt;
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="slider" data-slider data-initial-start="50" data-end="200">
+</code></pre>
+<div class="styleguide-code-live"><div class="slider" data-slider data-initial-start="50" data-end="200">
   <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
   <span class="slider-fill" data-slider-fill></span>
   <input type="hidden">
@@ -106,12 +107,13 @@
 <hr>
 <h2 id="vertical">Vertical</h2>
 <p>To get <em>vertical</em>, just add a <code>.vertical</code> class and <code>data-vertical=&quot;true&quot;</code> the slider.</p>
-<pre><code>&lt;div class=&quot;slider vertical&quot; data-slider data-initial-start=&quot;25&quot; data-end=&quot;200&quot; data-vertical=&quot;true&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;slider vertical&quot; data-slider data-initial-start=&quot;25&quot; data-end=&quot;200&quot; data-vertical=&quot;true&quot;&gt;
   &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
   &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
   &lt;input type=&quot;hidden&quot;&gt;
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true">
+</code></pre>
+<div class="styleguide-code-live"><div class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true">
   <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
   <span class="slider-fill" data-slider-fill></span>
   <input type="hidden">
@@ -122,12 +124,13 @@
 <hr>
 <h2 id="disabled">Disabled</h2>
 <p>Add the class <code>.disabled</code> to disable interaction with the slider.</p>
-<pre><code>&lt;div class=&quot;slider disabled&quot; data-slider data-initial-start=&quot;78&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;slider disabled&quot; data-slider data-initial-start=&quot;78&quot;&gt;
   &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
   &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
   &lt;input type=&quot;hidden&quot;&gt;
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="slider disabled" data-slider data-initial-start="78">
+</code></pre>
+<div class="styleguide-code-live"><div class="slider disabled" data-slider data-initial-start="78">
   <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
   <span class="slider-fill" data-slider-fill></span>
   <input type="hidden">
@@ -140,14 +143,15 @@
 <p>Two-handle sliders can be used to define a range of values, versus a single value. To make a two-handle slider, add a second handle, and a second <code>&lt;input&gt;</code>. This works with horizontal and vertical sliders.</p>
 <p>You can add IDs to the <code>&lt;input&gt;</code>s inside the sliders to make it easier to access the values. If you don&#39;t, the plugin will add an ID to each for you.</p>
 <p>Note that the first handle manipulates the first <code>&lt;input&gt;</code>, while the second handle manipulates the second <code>&lt;input&gt;</code>.</p>
-<pre><code>&lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;25&quot; data-initial-end=&quot;75&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;25&quot; data-initial-end=&quot;75&quot;&gt;
   &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
   &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
   &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
   &lt;input type=&quot;hidden&quot;&gt;
   &lt;input type=&quot;hidden&quot;&gt;
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="slider" data-slider data-initial-start="25" data-initial-end="75">
+</code></pre>
+<div class="styleguide-code-live"><div class="slider" data-slider data-initial-start="25" data-initial-end="75">
   <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
   <span class="slider-fill" data-slider-fill></span>
   <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
@@ -161,7 +165,7 @@
 <h2 id="data-binding">Data Binding</h2>
 <p>Data binding allows you to connect the slider to an external <code>&lt;input&gt;</code> field. With data binding set up, dragging the handle will change the value inside the text field, and editing the number in the text field will move the slider in real-time.</p>
 <p>To set it all up, create an <code>&lt;input&gt;</code> with an ID and add <code>aria-controls=&quot;id&quot;</code> to the slider handle, where <code>id</code> is the ID of the <code>&lt;input&gt;</code>.</p>
-<pre><code>&lt;div class=&quot;small-10 columns&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;small-10 columns&quot;&gt;
   &lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot;&gt;
     &lt;span class=&quot;slider-handle&quot;  data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot; aria-controls=&quot;sliderOutput1&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
@@ -170,7 +174,8 @@
 &lt;div class=&quot;small-2 columns&quot;&gt;
   &lt;input type=&quot;number&quot; id=&quot;sliderOutput1&quot;&gt;
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="small-10 columns">
+</code></pre>
+<div class="styleguide-code-live"><div class="small-10 columns">
   <div class="slider" data-slider data-initial-start="50">
     <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
     <span class="slider-fill" data-slider-fill></span>
@@ -184,7 +189,7 @@
 
 <hr>
 <p>Or with a step size:</p>
-<pre><code>&lt;div class=&quot;small-10 columns&quot;&gt;
+<pre><code class="lang-html">&lt;div class=&quot;small-10 columns&quot;&gt;
   &lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot; data-step=&quot;5&quot;&gt;
     &lt;span class=&quot;slider-handle&quot;  data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot; aria-controls=&quot;sliderOutput2&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
@@ -193,7 +198,8 @@
 &lt;div class=&quot;small-2 columns&quot;&gt;
   &lt;input type=&quot;number&quot; id=&quot;sliderOutput2&quot;&gt;
 &lt;/div&gt;
-</code></pre><div class="styleguide-code-live"><div class="small-10 columns">
+</code></pre>
+<div class="styleguide-code-live"><div class="small-10 columns">
   <div class="slider" data-slider data-initial-start="50" data-step="5">
     <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
     <span class="slider-fill" data-slider-fill></span>
@@ -208,8 +214,9 @@
 <hr>
 <h2 id="native-range-slider">Native Range Slider</h2>
 <p>In Foundation 6.2, we introduced styles for <code>&lt;input type=&quot;range&quot;&gt;</code>, the native HTML element for range sliders. It&#39;s not supported in every browser, namely IE9 and some older mobile browsers. <a href="http://caniuse.com/#feat=input-range">View browser support for the range input type.</a></p>
-<pre><code>&lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;100&quot; step=&quot;1&quot;&gt;
-</code></pre><div class="styleguide-code-live"><input type="range" min="1" max="100" step="1">
+<pre><code class="lang-html">&lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;100&quot; step=&quot;1&quot;&gt;
+</code></pre>
+<div class="styleguide-code-live"><input type="range" min="1" max="100" step="1">
 </div>
 
 
@@ -257,7 +264,7 @@
             <li><a href="media-object.html">Media Object</a></li>
             <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
             <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
-            <li><a href="table.html">Table</a></li>
+            <li><a href="tables.html">Tables</a></li>
             <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
           
             <li class="nav-title">Media</li>

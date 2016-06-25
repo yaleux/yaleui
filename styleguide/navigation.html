@@ -64,8 +64,8 @@
           </div>
       </header>
 
-    <div id="styleguide-component" class="main-content">
-      <div class="row columns">
+    <div id="styleguide-component">
+      <div class="row expanded">
         <div class="medium-7 medium-push-2 columns">
 
         <nav aria-labelledby="breadcrumbs-label" role="navigation">
@@ -91,7 +91,7 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
 <p>The Menu is an all-purpose navigation component. It can be aligned horizontally or vertically, can be nested, and supports icons. <a href="http://foundation.zurb.com/sites/docs/menu.html">Learn more about the Menu.</a></p>
 <p>All menus use the <code>ul &gt; li &gt; a</code> pattern. The markup is a little strict, but this makes it easy to attach a navigation plugin to any menu, as you&#39;ll see below.</p>
 <p>Here&#39;s a basic Menu.</p>
-<pre><code>&lt;nav role=&quot;navigation&quot; aria-labelledby=&quot;main-menu-heading&quot;&gt;
+<pre><code class="lang-html">&lt;nav role=&quot;navigation&quot; aria-labelledby=&quot;main-menu-heading&quot;&gt;
   &lt;h2 id=&quot;main-menu-heading&quot; class=&quot;show-for-sr&quot;&gt;Main Menu&lt;/h2&gt;
   &lt;ul class=&quot;menu&quot;&gt;
     &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item One&lt;/a&gt;&lt;/li&gt;
@@ -99,7 +99,8 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item Three&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-</code></pre><div class="styleguide-code-live"><nav role="navigation" aria-labelledby="main-menu-heading">
+</code></pre>
+<div class="styleguide-code-live"><nav role="navigation" aria-labelledby="main-menu-heading">
   <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
   <ul class="menu">
     <li class="active"><a href="#">Item One</a></li>
@@ -152,7 +153,7 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
 <h2 id="menu-plugins">Menu Plugins</h2>
 <p>The basic Menu can be enhanced with one of three <strong>Menu plugins</strong>. All three use the exact same markup to create a different style of multi-tier navigation.</p>
 <h3 id="dropdown-menu">Dropdown Menu</h3>
-<p>The dropdown menu plugin (<code>data-dropdown-menu</code>) converts a nested menu into a series of dropdown menus. The nested menus can be opened through hover, click, or keyboard. <a href="http://foundation.zurb.com/sites/docs/dropdown-menu.html">Learn more about the dropdown menu.</a></p>
+<p>The dropdown menu plugin (<code>data-dropdown-menu</code>) converts a nested menu into a series of dropdown menus. The nested menus can be opened through hover, click, or keyboard. <a href="../styleguide/dropdown-menu.html">Learn more about the dropdown menu.</a></p>
 <nav role="navigation" aria-labelledby="main-menu-heading">
   <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
   <ul class="dropdown menu" data-dropdown-menu>
@@ -363,7 +364,7 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
 <h2 id="menu-accessibility">Menu Accessibility</h2>
 <p>Menus should be wrapped in a <code>nav</code> element to make it easier for screen readers to quickly move to the menu. <code>nav</code> elements also benefit from having an ARIA label associated with them. One way of providing an ARIA label is to use an <code>aria-label</code> attribute.</p>
 <p>Menus also benefit from approprite headings being included within the containing <code>nav</code> element. The heading can be visually hidden using the <code>show-for-sr</code> class, so that it is only visible to screen readers. Headings can be used as ARIA labels for <code>nav</code> elements by giving the heading an <code>id</code> attribute and giving the <code>nav</code> an <code>aria-labelledby</code> attribute whose value equals the value of the heading&#39;s <code>id</code> attribute.</p>
-<pre><code>&lt;nav role=&quot;navigation&quot; aria-labelledby=&quot;main-menu-heading&quot;&gt;
+<pre><code class="lang-html">&lt;nav role=&quot;navigation&quot; aria-labelledby=&quot;main-menu-heading&quot;&gt;
   &lt;h2 id=&quot;main-menu-heading&quot; class=&quot;show-for-sr&quot;&gt;Main Menu&lt;/h2&gt;
     &lt;ul class=&quot;menu&quot;&gt;
       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item One&lt;/a&gt;&lt;/li&gt;
@@ -371,7 +372,8 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item Three&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
-</code></pre><div class="styleguide-code-live"><nav role="navigation" aria-labelledby="main-menu-heading">
+</code></pre>
+<div class="styleguide-code-live"><nav role="navigation" aria-labelledby="main-menu-heading">
   <h2 id="main-menu-heading" class="show-for-sr">Main Menu</h2>
     <ul class="menu">
       <li><a href="#">Item One</a></li>
@@ -392,14 +394,18 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
             <li><a href="colors.html">Colors</a></li>
             <li><a href="forms.html">Forms</a></li>
           
+            <li class="nav-title">Navigation</li>
+            <li class="current"><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown Menu</a></li>
+          
+          
           
             <li class="nav-title">Controls</li>
-            <li><a href="button.html">Buttons</a></li>
-            <li><a href="button-group.html">Button Group</a></li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
             <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
             <li><a href="switch.html">Switch</a></li>
           
-            <li class="current"><a href="navigation.html">Navigation</a></li>
            
            
             <li><a href="pagination.html">Pagination</a></li>
@@ -411,8 +417,8 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
             <li><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
             <li><a href="media-object.html">Media Object</a></li>
             <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
-            <li><a href="reveal.html">Reveal <span class="label">JS</span> <small>Modal</small></a></li>
-            <li><a href="table.html">Table</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
             <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
           
             <li class="nav-title">Media</li>
@@ -430,8 +436,9 @@ Take a look at our <strong>Yale Header &amp; Footer Example</strong>, which cont
           <div data-sticky-container>
             <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
               <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
                 <ul class="vertical menu" data-styleguide-toc>
-                  <li class="styleguide-nav-title">On this page:</li>
                 </ul>
               </div>
             </nav>
