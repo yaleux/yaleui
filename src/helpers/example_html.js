@@ -2,7 +2,6 @@
 
 module.exports = function(example_html) {
   var html_code = '```\n' + example_html.fn(this) + '\n```\n\n';
-  var example_output = example_html.fn(this);
-
+  var example_output = '<div class="styleguide-code-live">' + example_html.fn(this) + '</div>\n\n';
   return html_code + example_output;
 }
