@@ -16,7 +16,7 @@
 @include foundation-accordion-menu;
 @include foundation-badge;
 @include foundation-breadcrumbs;
-@include foundation-button-group;
+// @include foundation-button-group;
 @include foundation-callout;
 @include foundation-close-button;
 @include foundation-menu;
@@ -59,6 +59,7 @@
 @import 'styleguide';
 @import 'examples';
 @import 'components/button';
+@import 'components/button-group';
 @import 'components/breadcrumbs';
 @import 'components/logos-yale';
 @import 'components/header';
@@ -68,6 +69,7 @@
 @import 'components/tabs';
 @import 'components/accordion';
 @import 'components/cards';
+
 
 // Font Awesome icon font
 @import 'font-awesome.min';
