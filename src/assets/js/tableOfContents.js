@@ -15,7 +15,7 @@ $h2s.each(function() {
   if ($(this).is('#breadcrumbs-label')) return;
 
   // Ignore the main menu label
-    if ($(this).is('#main-menu-heading')) return;
+  if ($(this).is('#main-menu-heading')) return;
 
   //Add Magellan Target 
   $( this ).attr("data-magellan-target", this.id);
