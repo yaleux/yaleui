@@ -1,0 +1,283 @@
+---
+title: Tables
+layout: styleguide
+---
+
+
+# Tables
+
+
+## Basics
+
+{{#example_html}}
+<table>
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+{{/example_html}}
+
+---
+
+## Hover State
+
+Add the class `.hover` to lightly darken the table rows on hover.
+
+```html
+<table class="hover">
+</table>
+```
+
+<table class="hover">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Stacked Table
+
+To stack a table on small screens, add the class `.stack`. To see the below example in action, scale your browser down. 
+
+
+```html
+<table class="stack">
+</table>
+```
+
+<table class="stack">
+  <thead>
+    <tr>
+      <th>Cookies</th>
+      <th>Taste</th>
+      <th>Calories</th>
+      <th>Overall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chocolate Chip</td>
+      <td>Tastey</td>
+      <td>120cal</td>
+      <td>7.5/10</td>
+    </tr>
+    <tr>
+      <td>Snickerdoodle</td>
+      <td>Delicious</td>
+      <td>95cal</td>
+      <td>8/10</td>
+    </tr>
+    <tr>
+      <td>Oatmeal Raisin</td>
+      <td>Superb</td>
+      <td>10cal</td>
+      <td>11/10</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Scrolling Table
+
+Add a wrapper element with the class `.table-scroll` around your table to enable horizontal scrolling.
+
+
+```html
+<div class="table-scroll">
+  <table></table>
+</div>
+```
+
+<div class="table-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th>This is the description!</th>
+        <th>One</th>
+        <th>Two</th>
+        <th>Three</th>
+        <th>Four</th>
+        <th>Five</th>
+        <th>Six</th>
+        <th>Seven</th>
+        <th>Eight</th>
+        <th>Nine</th>
+        <th>Ten</th>
+        <th>Eleven</th>
+        <th>Twelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="display:block; width:400px;">Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
+      </tr>
+      <tr>
+        <td>Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
+      </tr>
+      <tr>
+        <td>Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Here's a footer, just in case</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+---
+
+## Table Accessibility
+
+A comprehensive guide to tables can be found at the <a href="http://www.w3.org/WAI/tutorials/tables/">W3C Accessibility Tutorial for Tables</a>.
+
+### Layout Tables vs. Data Tables
+In the past, tables were used to achieve specific layouts, such as correctly aligning the content from multiple columns. We strongly discourage that approach: it is outdated; it violates separation of content and visual presentation, and it creates accessibiltiy problems. 
+
+<div class="warning callout"> 
+**Tables must be reserved only for presenting tabular data.**
+</div>
+
+### Captions and Summaries
+The `caption` element functions as a title or heading for the title. It should be succinct and identify the content of hte table. Screen readers allow users to access a list of all tables on a page, and will also announce each table's `caption` element, if one is provided. Providing a `caption` element also allows screen reader users to decide whether they want to read or skip over a table. The `caption` element should be a child of the `table` element. In lieu of `caption` elements, ARIA labels can be used, as well.
+Table summaries provides information about how a data table is structured. If a table is large or complex, captions can explain how rows and columns are related. In previous versions of HTML, a `summary` attribute existed for this purpose. In HTML5, the `summary` attribute is depricated. Summaries can be provided within the `caption` element or with an ARIA description by using the `aria-describedby` attribute.
+Using `figure` and `figcaption` is also an appropriate way to provide table captions and summaries. However, when using `figure` and `figcaption`, ARIA labels and descriptions must also be used.
+
+{{#example_html}}
+<!-- Describing a table using a caption -->
+<table class="stack">
+  <caption>Degrees Conferred (July 1, 2014 - June 30, 2015)</caption>
+  <thead>
+    <tr>
+      <th scope="col">Degree</th>
+      <th scope="col">Men</th>
+      <th scope="col">Women</th>
+      <th scope="col">Total</th>
+      <th scope="col">% who are international</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bachelors</th>
+      <td>677</th>
+      <td>650</th>
+      <td>1327</th>
+      <td>10%</th>
+    </tr>
+    <tr>
+      <td>Masters & Post-Masters Certificates</th>
+      <td>1,119</th>
+      <td>1,101</th>
+      <td>2,220%</th>
+      <td>29%</th>
+    </tr>
+  </tbody>
+</table>
+{{/example_html}}
+
+### Table Headers
+
+Simple tables with few rows and columns may only require either one header row or one header column. Longer tables require using both a header row and a header column. In any case, `scope="col"` or `scope="row"` should be added to each table header cell, as appropriate.
+
+It is possible to make tables with more complex columns usable and accessible, but in practice, it is often more difficult than it is worthwhile. In general, it is better to split up data among multiple tables than try to design complex tables.
