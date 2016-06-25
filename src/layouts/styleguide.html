@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{description}}">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide{{#unlesspage 'styleguide'}} | {{title}}{{/unlesspage}}</title>
+  <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      {{> header-no-search}}
+
+    <div class="main-content">
+      <div class="row columns">
+        <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="{{root}}">Home</a></li>
+                <li><a href="{{root}}styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>{{page}}
+                </li>
+            </ul>
+        </nav>
+
+{{> body}}
+        </div>
+        <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns">
+          {{> component-list}}
+        </div>
+      </div>
+
+      {{> footer}}
+    </div>
+    </div>
+  </div>
+
+  <script src="{{root}}assets/js/app.js"></script>
+  <script type='text/javascript'>
+    (function (d, t) {
+      var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      bh.type = 'text/javascript';
+      bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+      s.parentNode.insertBefore(bh, s);
+      })(document, 'script');
+  </script>
+
+</body>
+</html>
