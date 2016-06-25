@@ -64,15 +64,15 @@
           </div>
       </header>
 
-    <div class="main-content">
+    <div id="styleguide-component" class="main-content">
       <div class="row columns">
-        <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+        <div class="medium-7 large-8 medium-push-3 large-push-2 columns">
 
 <p><p class="lead">The Yale UI Style Guide was built with <a href="http://foundation.zurb.com/docs/">Foundation for Sites</a>. For more information on how to use this responsive front-end framework, check out the documentation or get help from the Foundation community.</p>
 <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
 <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a></p>
         </div>
-        <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns">
+        <div class="medium-3 large-2 medium-pull-7 large-pull-8 columns">
           <ul class="vertical menu" id="styleguide-menu">
             <li class="nav-title">General</li>
             <li><a href="grid.html">Grid</a></li>
@@ -119,6 +119,15 @@
           </ul>
           
         </div>
+          <div class="medium-3 large-2 columns" data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <ul class="vertical menu" data-styleguide-toc>
+                  <li class="styleguide-nav-title">On this page:</li>
+                </ul>
+              </div>
+            </nav>
+          </div>
       </div>
 
       <footer class="yale-footer">
@@ -133,6 +142,7 @@
     </div>
     </div>
   </div>
+
 
   <script src="../assets/js/app.js"></script>
   <script type='text/javascript'>
