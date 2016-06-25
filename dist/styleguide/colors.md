@@ -1,0 +1,250 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Colors</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide.html">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div class="main-content">
+      <div class="row columns">
+        <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>colors.md
+                </li>
+            </ul>
+        </nav>
+<h1 id="colors">Colors</h1>
+<h2 id="blues">Blues</h2>
+<div class="row up-1 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #286DC0"></span>
+      #286DC0
+      <br> $marine
+      <br> .primary
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #00356B"></span>
+      #00356B
+      <br> $yale-blue
+      <br> .success
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #63AAFF"></span>
+      #63AAFF
+      <br> $blue-lt
+    </div>
+  </div><br></div>
+
+<hr>
+<h2 id="grays">Grays</h2>
+<div class="row up-1 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #786f67"></span>
+      #786f67
+      <br> $medium-gray
+      <br> .secondary
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #222222"></span>
+      #222222
+      <br> $black
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #4a4a4a"></span>
+      #4a4a4a
+      <br> $dark-gray
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #DDDDDD"></span>
+      #DDDDDD
+      <br> $light-gray
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #F9F9F9"></span>
+      #F9F9F9
+      <br> $off-white
+    </div>
+  </div>
+</div>
+
+<hr>
+<h2 id="accent-colors">Accent Colors</h2>
+<div class="row up-1 medium-up-3 large-up-5">
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #5F712D"></span>
+      #5F712D
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #BD5319"></span>
+      #BD5319
+      <br> .warning
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #AF1109"></span>
+      #AF1109
+      <br> .alert
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Typography</li>
+            <li><a href="typography-base.html">Base Styles</a></li>
+            <li><a href="typography-helpers.html">Helper Classes</a></li>
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="button.html">Button</a></li>
+            <li><a href="button-group.html">Button Group</a></li>
+            <li><a href="close-button.html">Close Button</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="dropdown-menu.html">Dropdown Menu <span class="label">JS</span></a></li>
+            <li><a href="drilldown-menu.html">Drilldown Menu <span class="label">JS</span></a></li>
+            <li><a href="accordion-menu.html">Accordion Menu <span class="label">JS</span></a></li>
+            <li><a href="top-bar.html">Top Bar</a></li>
+            <li><a href="responsive-navigation.html">Responsive Navigation</a></li>
+            <li><a href="magellan.html">Magellan <span class="label">JS</span></a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="media-object.html">Media Object</a></li>
+            <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
+            <li><a href="reveal.html">Reveal <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          
+            <li class="nav-title">Media</li>
+            <li><a href="badge.html">Badge</a></li>
+            <li><a href="flex-video.html">Flex Video</a></li>
+            <li><a href="label.html">Label</a></li>
+            <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+            <li><a href="thumbnail.html">Thumbnail</a></li>
+            <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row columns">
+              <div>
+                  <a class="y-icons y-yale y-mark" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  </span></a>
+              </div>
+          </div>
+      </footer>
+    </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script type='text/javascript'>
+    (function (d, t) {
+      var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      bh.type = 'text/javascript';
+      bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+      s.parentNode.insertBefore(bh, s);
+      })(document, 'script');
+  </script>
+
+</body>
+</html>

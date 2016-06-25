@@ -1,0 +1,539 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | The Grid</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide.html">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div class="main-content">
+      <div class="row columns">
+        <div class="medium-9 large-10 medium-push-3 large-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>grid.md
+                </li>
+            </ul>
+        </nav>
+<h1 id="the-grid">The Grid</h1>
+<p class="lead">The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a row or column.</p>
+
+<hr>
+<h2 id="basics">Basics</h2>
+<p>Start by adding an element with a class of <code>.row</code>. This will create a horizontal block to contain vertical columns. Then add elements with a <code>.column</code> class within that row. You can use <code>.column</code> or <code>.columns</code>&mdash;the only difference is grammar. Specify the widths of each column with the <code>.small-#</code>, <code>.medium-#</code>, and <code>.large-#</code> classes.</p>
+<p><strong>Foundation is mobile-first.</strong> Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-2 large-4 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-4 large-4 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-6 large-4 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-3 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;large-3 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-6 large-2 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-6 large-8 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-12 large-2 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-3 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-9 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-4 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;large-8 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-6 large-5 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-6 large-7 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="small-2 large-4 columns"><span class="hide-for-large">2</span><span class="show-for-large">4</span></div>
+  <div class="small-4 large-4 columns">4</div>
+  <div class="small-6 large-4 columns"><span class="hide-for-large">6</span><span class="show-for-large">4</span></div>
+</div>
+<div class="row display">
+  <div class="large-3 columns"><span class="hide-for-large">full</span><span class="show-for-large">3</span></div>
+  <div class="large-6 columns"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+  <div class="large-3 columns"><span class="hide-for-large">full</span><span class="show-for-large">3</span></div>
+</div>
+<div class="row display">
+  <div class="small-6 large-2 columns"><span class="hide-for-large">6</span><span class="show-for-large">2</span></div>
+  <div class="small-6 large-8 columns"><span class="hide-for-large">6</span><span class="show-for-large">8</span></div>
+  <div class="small-12 large-2 columns"><span class="hide-for-large">full</span><span class="show-for-large">2</span></div>
+</div>
+<div class="row display">
+  <div class="small-3 columns">3</div>
+  <div class="small-9 columns">9</div>
+</div>
+<div class="row display">
+  <div class="large-4 columns"><span class="hide-for-large">full</span><span class="show-for-large">4</span></div>
+  <div class="large-8 columns"><span class="hide-for-large">full</span><span class="show-for-large">8</span></div>
+</div>
+<div class="row display">
+  <div class="small-6 large-5 columns"><span class="hide-for-large">6</span><span class="show-for-large">5</span></div>
+  <div class="small-6 large-7 columns"><span class="hide-for-large">6</span><span class="show-for-large">7</span></div>
+</div>
+<div class="row display">
+  <div class="large-6 columns"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+  <div class="large-6 columns"><span class="hide-for-large">full</span><span class="show-for-large">6</span></div>
+</div>
+
+<hr>
+<h3 id="small-grids">Small Grids</h3>
+<p>Small grids expand to large screens easier than large grids cram into small screens.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-2 columns&quot;&gt;2 &lt;span class=&quot;hide-for-small-only&quot;&gt;columns&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;small-10 columns&quot;&gt;10 columns&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-3 columns&quot;&gt;3 columns&lt;/div&gt;
+  &lt;div class=&quot;small-9 columns&quot;&gt;9 columns&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="small-2 columns">2 columns</div>
+  <div class="small-10 columns">10 columns</div>
+</div>
+<div class="row display">
+  <div class="small-3 columns">3 columns</div>
+  <div class="small-9 columns">9 columns</div>
+</div>
+
+<hr>
+<h3 id="medium-grid">Medium Grid</h3>
+<p>Medium sized screens will inherit styles from small, unless you specify a different layout using the medium grid classes.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;medium-2 columns&quot;&gt;2 columns&lt;/div&gt;
+  &lt;div class=&quot;medium-10 columns&quot;&gt;10 columns&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;3 columns&lt;/div&gt;
+  &lt;div class=&quot;medium-9 columns&quot;&gt;9 columns&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="medium-2 columns">2 columns</div>
+  <div class="medium-10 columns">10 columns</div>
+</div>
+<div class="row display">
+  <div class="medium-3 columns">3 columns</div>
+  <div class="medium-9 columns">9 columns</div>
+</div>
+
+<hr>
+<h2 id="advanced">Advanced</h2>
+<h3 id="combined-column-row">Combined Column/Row</h3>
+<p>If you need a full-width column to use as a container, put the <code>.column</code> and <code>.row</code> classes on the same element. You can still nest more grids inside this container like usual.</p>
+<div class="warning callout">
+  <p>Column rows can use sizing classes like <code>.small-8</code>, but only when used as a top-level container&mdash;not when nested inside another row.</p>
+</div>
+
+<pre><code class="lang-html">&lt;div class=&quot;column row&quot;&gt;
+  Row column
+&lt;/div&gt;
+</code></pre>
+<div class="column row display">
+  Row column
+</div>
+
+<hr>
+<h3 id="fluid-row">Fluid Row</h3>
+<p>Normally, a row is always 1200 pixels wide. Make a row completely fluid by adding the <code>.expanded</code> class.</p>
+<pre><code class="lang-html">&lt;div class=&quot;expanded row&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h3 id="nesting">Nesting</h3>
+<p>In the Grid you can nest columns down as far as you&#39;d like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-8 columns&quot;&gt;8
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;small-8 columns&quot;&gt;8 Nested
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;small-8 columns&quot;&gt;8 Nested Again&lt;/div&gt;
+          &lt;div class=&quot;small-4 columns&quot;&gt;4&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;small-4 columns&quot;&gt;4&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;small-4 columns&quot;&gt;4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="small-8 columns">8
+    <div class="row">
+      <div class="small-8 columns">8 Nested
+        <div class="row">
+          <div class="small-8 columns">8 Nested Again</div>
+          <div class="small-4 columns">4</div>
+        </div>
+      </div>
+      <div class="small-4 columns">4</div>
+    </div>
+  </div>
+  <div class="small-4 columns">4</div>
+</div>
+
+<hr>
+<h3 id="offsets">Offsets</h3>
+<p>Move blocks up to 11 columns to the right by using classes like <code>.large-offset-1</code> and <code>.small-offset-3</code>.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-1 columns&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;large-11 columns&quot;&gt;11&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-1 columns&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;large-10 large-offset-1 columns&quot;&gt;10, offset 1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-1 columns&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;large-9 large-offset-2 columns&quot;&gt;9, offset 2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-1 columns&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;large-8 large-offset-3 columns&quot;&gt;8, offset 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="large-1 columns">1</div>
+  <div class="large-11 columns">11</div>
+</div>
+<div class="row display">
+  <div class="large-1 columns">1</div>
+  <div class="large-10 large-offset-1 columns">10, offset 1</div>
+</div>
+<div class="row display">
+  <div class="large-1 columns">1</div>
+  <div class="large-9 large-offset-2 columns">9, offset 2</div>
+</div>
+<div class="row display">
+  <div class="large-1 columns">1</div>
+  <div class="large-8 large-offset-3 columns">8, offset 3</div>
+</div>
+
+<hr>
+<h3 id="incomplete-rows">Incomplete Rows</h3>
+<p>In order to work around browsers&#39; different rounding behaviors, Foundation will float the last column in a row to the right so the edge aligns. If your row doesn&#39;t have a count that adds up to 12 columns, you can tag the last column with a class of <code>.end</code> in order to override that behavior.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;3&lt;/div&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;3&lt;/div&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;3&lt;/div&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;3&lt;/div&gt;
+  &lt;div class=&quot;medium-3 columns end&quot;&gt;3 end&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display-end">
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+</div>
+<div class="row display-end">
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns">3</div>
+  <div class="medium-3 columns end">3 end</div>
+</div>
+
+<hr>
+<h3 id="gutters">Gutters</h3>
+<p>The grid <em>gutter</em>&mdash;the space between two columns in a row, and the space between the edge of a grid and the edge of the page&mdash;is responsive, and becomes wider on larger screens.</p>
+<table>
+<thead>
+<tr>
+<th>Breakpoint</th>
+<th>Gutter Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>small</code></td>
+<td>20px</td>
+</tr>
+<tr>
+<td><code>medium</code></td>
+<td>30px</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="collapse-uncollapse-rows">Collapse/Uncollapse Rows</h3>
+<p>The <code>.collapse</code> class lets you remove column gutters (padding).</p>
+<p>There are times when you won&#39;t want each media query to be collapsed or uncollapsed. In this case, use the media query size you want and collapse or uncollapse and add that to your row element. Example shows no gutter at small media size and then adds the gutter to columns at medium.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row medium-uncollapse large-collapse&quot;&gt;
+  &lt;div class=&quot;small-6 columns&quot;&gt;
+    Removes gutter at large media query
+  &lt;/div&gt;
+  &lt;div class=&quot;small-6 columns&quot;&gt;
+    Removes gutter at large media query
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p class="lead">Scale the browser down to a medium size to see the difference.</p>
+
+<div class="row medium-uncollapse large-collapse">
+  <div class="small-6 columns">
+    <div class="callout secondary">
+      <p class="show-for-small-only">On a small screen, I have gutters!</p>
+      <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
+      <p class="show-for-large">On a large screen, I have no gutters!</p>
+    </div>
+  </div>
+  <div class="small-6 columns">
+    <div class="callout secondary">
+      <p class="show-for-small-only">On a small screen, I have gutters!</p>
+      <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
+      <p class="show-for-large">On a large screen, I have no gutters!</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+<h3 id="centered-columns">Centered Columns</h3>
+<p>Center your columns by adding a class of <code>.small-centered</code> to your column. Large will inherit small centering by default, but you can also center solely on large by applying a <code>.large-centered</code> class. To uncenter on large screens, use <code>.large-uncentered</code>.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-3 small-centered columns&quot;&gt;3 centered&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-6 large-centered columns&quot;&gt;6 centered&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-9 small-centered large-uncentered columns&quot;&gt;9 centered&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-11 small-centered columns&quot;&gt;11 centered&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="small-3 small-centered columns">3 centered</div>
+</div>
+<div class="row display">
+  <div class="small-6 large-centered columns">6 centered, large</div>
+</div>
+<div class="row display">
+  <div class="small-9 small-centered large-uncentered columns">9 centered small</div>
+</div>
+<div class="row display">
+  <div class="small-11 small-centered columns">11 centered</div>
+</div>
+
+<hr>
+<h3 id="source-ordering">Source Ordering</h3>
+<p>Using these source ordering classes, you can shift columns around between our breakpoints. This means if you place sub-navigation below main content on small displays, you have the option to position the sub-navigation on either the left or right of the page for large displays. Prefix push/pull with the size of the device you want to apply the styles to. <code>.medium-push-#</code>, <code>.large-push-#</code> is the syntax you&#39;ll use. Use the number 0 instead to reset a push/pull, such as <code>.medium-push-0</code> or <code>.large-pull-0</code>.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-10 small-push-2 columns&quot;&gt;10&lt;/div&gt;
+  &lt;div class=&quot;small-2 small-pull-10 columns&quot;&gt;2, last&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-9 large-push-3 columns&quot;&gt;9&lt;/div&gt;
+  &lt;div class=&quot;large-3 large-pull-9 columns&quot;&gt;3, last&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-8 large-push-4 columns&quot;&gt;8&lt;/div&gt;
+  &lt;div class=&quot;large-4 large-pull-8 columns&quot;&gt;4, last&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-5 small-push-7 medium-7 medium-push-5 columns&quot;&gt;7&lt;/div&gt;
+  &lt;div class=&quot;small-7 small-pull-5 medium-5 medium-pull-7 columns&quot;&gt;5, last&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;medium-6 medium-push-6 columns&quot;&gt;6&lt;/div&gt;
+  &lt;div class=&quot;medium-6 medium-pull-6 columns&quot;&gt;6, last&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row display">
+  <div class="small-10 small-push-2 columns">10</div>
+  <div class="small-2 small-pull-10 columns">2, last</div>
+</div>
+<div class="row display">
+  <div class="large-9 large-push-3 columns">9</div>
+  <div class="large-3 large-pull-9 columns">3, last</div>
+</div>
+<div class="row display">
+  <div class="large-8 large-push-4 columns">8</div>
+  <div class="large-4 large-pull-8 columns">4, last</div>
+</div>
+<div class="row display">
+  <div class="small-5 small-push-7 medium-7 medium-push-5 columns">7</div>
+  <div class="small-7 small-pull-5 medium-5 medium-pull-7 columns">5, last</div>
+</div>
+<div class="row display">
+  <div class="medium-6 medium-push-6 columns">6</div>
+  <div class="medium-6 medium-pull-6 columns">6, last</div>
+</div>
+
+<hr>
+<h3 id="block-grids">Block Grids</h3>
+<p>To create a block grid, add a class of the format <code>[size]-up-[n]</code> to change the size of all columns within the row. By default, the max number of columns you can use with block grid are 8.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row small-up-1 medium-up-2 large-up-4&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img src=&quot;//placehold.it/300x300&quot; class=&quot;thumbnail&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img src=&quot;//placehold.it/300x300&quot; class=&quot;thumbnail&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img src=&quot;//placehold.it/300x300&quot; class=&quot;thumbnail&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img src=&quot;//placehold.it/300x300&quot; class=&quot;thumbnail&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img src=&quot;//placehold.it/300x300&quot; class=&quot;thumbnail&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;img src=&quot;//placehold.it/300x300&quot; class=&quot;thumbnail&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+        <div class="medium-3 large-2 medium-pull-9 large-pull-10 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Typography</li>
+            <li><a href="typography-base.html">Base Styles</a></li>
+            <li><a href="typography-helpers.html">Helper Classes</a></li>
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="button.html">Button</a></li>
+            <li><a href="button-group.html">Button Group</a></li>
+            <li><a href="close-button.html">Close Button</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="dropdown-menu.html">Dropdown Menu <span class="label">JS</span></a></li>
+            <li><a href="drilldown-menu.html">Drilldown Menu <span class="label">JS</span></a></li>
+            <li><a href="accordion-menu.html">Accordion Menu <span class="label">JS</span></a></li>
+            <li><a href="top-bar.html">Top Bar</a></li>
+            <li><a href="responsive-navigation.html">Responsive Navigation</a></li>
+            <li><a href="magellan.html">Magellan <span class="label">JS</span></a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="media-object.html">Media Object</a></li>
+            <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
+            <li><a href="reveal.html">Reveal <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          
+            <li class="nav-title">Media</li>
+            <li><a href="badge.html">Badge</a></li>
+            <li><a href="flex-video.html">Flex Video</a></li>
+            <li><a href="label.html">Label</a></li>
+            <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+            <li><a href="thumbnail.html">Thumbnail</a></li>
+            <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row columns">
+              <div>
+                  <a class="y-icons y-yale y-mark" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  </span></a>
+              </div>
+          </div>
+      </footer>
+    </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script type='text/javascript'>
+    (function (d, t) {
+      var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      bh.type = 'text/javascript';
+      bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+      s.parentNode.insertBefore(bh, s);
+      })(document, 'script');
+  </script>
+
+</body>
+</html>
