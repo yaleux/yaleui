@@ -6,7 +6,7 @@ import browser  from 'browser-sync';
 import gulp     from 'gulp';
 import panini   from 'panini';
 import rimraf   from 'rimraf';
-import sherpa   from 'style-sherpa';
+// import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 
@@ -65,12 +65,12 @@ function resetPages(done) {
 }
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
-function styleGuide(done) {
-  sherpa('src/styleguide/index.md', {
-    output: PATHS.dist + '/styleguide.html',
-    template: 'src/styleguide/template.html'
-  }, done);
-}
+// function styleGuide(done) {
+//   sherpa('src/styleguide/index.md', {
+//     output: PATHS.dist + '/styleguide.html',
+//     template: 'src/styleguide/template.html'
+//   }, done);
+// }
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
