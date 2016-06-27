@@ -43,7 +43,7 @@ Requirements:
 
 ###  Setup
 
-1. Download the Yale UI Style Guide with Git:
+Download the Yale UI Style Guide with Git:
 
 
 ```bash
