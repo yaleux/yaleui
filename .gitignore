@@ -1,6 +1,6 @@
 .DS_Store
-node_modules
+#node_modules
 npm-debug.log
-bower_components
-dist/assets/fonts/TheSans*
-src/assets/fonts/TheSans*
+#bower_components
+#dist/assets/fonts/TheSans*
+#src/assets/fonts/TheSans*
