@@ -80,8 +80,6 @@
         </nav>
 <h2 id="basics">Basics</h2>
 <p>A pagination list is just a <code>&lt;ul&gt;</code> with the class <code>.pagination</code>, and a series of <code>&lt;li&gt;</code>/<code>&lt;a&gt;</code> pairs. Add the class <code>.current</code> to an <code>&lt;li&gt;</code> to mark the current page, or <code>.disabled</code> to add disabled styles to a link.</p>
-<p>Note that the container has the attributes <code>role=&quot;navigation&quot;</code> and <code>aria-label=&quot;Pagination&quot;</code>. These explain the purpose of the component to assistive technologies.</p>
-<p>Extra screen reader-only text should also be added to a pagination element. In the below example, users reading the page will just see &quot;Next&quot; and &quot;Previous&quot;, but screen readers will read it as &quot;Next page&quot; and &quot;Previous page&quot;. Additionally, the text for the current page will read as &quot;You&#39;re on page one&quot;.</p>
 <pre><code class="lang-html">&lt;ul class=&quot;pagination&quot; role=&quot;navigation&quot; aria-label=&quot;Pagination&quot;&gt;
   &lt;li class=&quot;pagination-previous disabled&quot;&gt;Previous &lt;span class=&quot;show-for-sr&quot;&gt;page&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;current&quot;&gt;&lt;span class=&quot;show-for-sr&quot;&gt;You&#39;re on page&lt;/span&gt; 1&lt;/li&gt;
@@ -137,6 +135,10 @@
 </div>
 
 
+<hr>
+<h2 id="accessibility">Accessibility</h2>
+<p>Note that the container has the attributes <code>role=&quot;navigation&quot;</code> and <code>aria-label=&quot;Pagination&quot;</code>. These explain the purpose of the component to assistive technologies.</p>
+<p>Extra screen reader-only text should also be added to a pagination element. In the below example, users reading the page will just see &quot;Next&quot; and &quot;Previous&quot;, but screen readers will read it as &quot;Next page&quot; and &quot;Previous page&quot;. Additionally, the text for the current page will read as &quot;You&#39;re on page one&quot;.</p>
         </div>
         <div class="medium-2 medium-pull-7 columns">
           <ul class="vertical menu" id="styleguide-menu">
@@ -149,7 +151,7 @@
             <li class="nav-title">Navigation</li>
             <li><a href="navigation.html">Overview</a></li>
             <li><a href="dropdown-menu.html">Dropdown Menu</a></li>
-          
+            <li><a href="progress-bar.html">Progress Bar</a></li>
           
           
             <li class="nav-title">Controls</li>
@@ -157,28 +159,14 @@
             <li><a href="button-groups.html">Button Groups</a></li>
             <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
             <li><a href="switch.html">Switch</a></li>
-          
-           
-           
             <li class="current"><a href="pagination.html">Pagination</a></li>
             <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
           
             <li class="nav-title">Containers</li>
-            <li><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
             <li><a href="callout.html">Callout</a></li>
-            <li><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
-            <li><a href="media-object.html">Media Object</a></li>
-            <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
             <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
             <li><a href="tables.html">Tables</a></li>
             <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
-          
-            <li class="nav-title">Media</li>
-            <li><a href="badge.html">Badge</a></li>
-            <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
-            <li><a href="progress-bar.html">Progress Bar</a></li>
-            <li><a href="thumbnail.html">Thumbnail</a></li>
-            <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
           </ul>
           
         </div>
