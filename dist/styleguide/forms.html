@@ -198,45 +198,43 @@ Form labels can be marked up in one of two ways:</p>
 <h3 id="checkboxes-and-radio-buttons">Checkboxes and Radio Buttons</h3>
 <p>Checkboxes and radio buttons should generally be wrapped in a <code>fieldset</code> and have a <code>legend</code> describe the purpose of the controls. This is the semantically correct way to mark up these elements, and assistive technology handles such markup well. Omitting those elements often leads to accessibility errors, even if the form controls are described in other ways.</p>
 <pre><code class="lang-html">&lt;fieldset class=&quot;fieldset&quot;&gt;
-  &lt;legend&gt;What is your favorite Ivy League school?&lt;/legend&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Brown&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Columbia&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Cornell&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Dartmouth&lt;/label&gt;
-  &lt;label class=&quot;disabled&quot; &gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot; disabled&gt;Harvard&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Penn&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Princeton&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;ivy&quot;&gt;Yale&lt;/label&gt;
+  &lt;legend&gt;Where do you live?&lt;/legend&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;New Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;West Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;North Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Hamden&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Fairfield&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Other&lt;/label&gt;
 &lt;/fieldset&gt;
 
 &lt;fieldset class=&quot;fieldset&quot;&gt;
-  &lt;legend&gt;What is your Yale affiliation?&lt;/legend&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Undergraduate&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Graduate Student&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Alumni&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Faculty&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;affiliation&quot;&gt;Staff&lt;/label&gt;
+  &lt;legend&gt;Where do you live?&lt;/legend&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;New Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;West Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;North Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Hamden&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Fairfield&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Other&lt;/label&gt;
 &lt;/fieldset&gt;
 </code></pre>
 <div class="styleguide-code-live"><fieldset class="fieldset">
-  <legend>What is your favorite Ivy League school?</legend>
-  <label><input type="radio" name="ivy">Brown</label>
-  <label><input type="radio" name="ivy">Columbia</label>
-  <label><input type="radio" name="ivy">Cornell</label>
-  <label><input type="radio" name="ivy">Dartmouth</label>
-  <label class="disabled" ><input type="radio" name="ivy" disabled>Harvard</label>
-  <label><input type="radio" name="ivy">Penn</label>
-  <label><input type="radio" name="ivy">Princeton</label>
-  <label><input type="radio" name="ivy">Yale</label>
+  <legend>Where do you live?</legend>
+  <label><input type="radio" name="home">New Haven</label>
+  <label><input type="radio" name="home">West Haven</label>
+  <label><input type="radio" name="home">North Haven</label>
+  <label><input type="radio" name="home">Hamden</label>
+  <label><input type="radio" name="home">Fairfield</label>
+  <label><input type="radio" name="home">Other</label>
 </fieldset>
 
 <fieldset class="fieldset">
-  <legend>What is your Yale affiliation?</legend>
-  <label><input type="checkbox" name="affiliation">Undergraduate</label>
-  <label><input type="checkbox" name="affiliation">Graduate Student</label>
-  <label><input type="checkbox" name="affiliation">Alumni</label>
-  <label><input type="checkbox" name="affiliation">Faculty</label>
-  <label><input type="checkbox" name="affiliation">Staff</label>
+  <legend>Where do you live?</legend>
+  <label><input type="radio" name="home">New Haven</label>
+  <label><input type="radio" name="home">West Haven</label>
+  <label><input type="radio" name="home">North Haven</label>
+  <label><input type="radio" name="home">Hamden</label>
+  <label><input type="radio" name="home">Fairfield</label>
+  <label><input type="radio" name="home">Other</label>
 </fieldset>
 </div>
 
