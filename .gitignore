@@ -3,5 +3,4 @@ node_modules
 npm-debug.log
 bower_components
 dist/assets/fonts/TheSans*
-dist/assets/assets.zip
 src/assets/fonts/TheSans*
