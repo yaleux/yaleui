@@ -47,7 +47,7 @@ Download the Yale UI Style Guide with Git:
 
 
 ```bash
-git clone https://git.yale.edu/amc95/Yale_UI.git
+git clone https://github.com/uxdigitalstrategy/Yale_UI.git
 ```
 
 Then open the folder in your command line, and install the needed dependencies:
