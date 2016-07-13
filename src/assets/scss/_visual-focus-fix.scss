@@ -1,0 +1,6 @@
+// By default, Foundaiton remvoes removes
+// visual focus indicator on mouse interaction.
+// This is a fix.
+
+[data-whatinput='mouse'] *:focus {
+  outline: auto !important; }
