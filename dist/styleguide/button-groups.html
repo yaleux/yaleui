@@ -1,0 +1,337 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Button Groups</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>button-groups
+                </li>
+            </ul>
+        </nav>
+<h1 id="button-groups">Button Groups</h1>
+<p class="lead">Button groups are containers for related action items. They&#39;re great when you need to display a group of actions in a bar. These build off the button styles and work perfectly with the grid.</p>
+
+<hr>
+<h2 id="basics">Basics</h2>
+<p>Add the <code>.button-group</code> class to a container, and inside it place any number of buttons. The buttons are separated by a small border.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;button&quot;&gt;One&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Two&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Three&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="button-group">
+  <button class="button">One</button>
+  <button class="button">Two</button>
+  <button class="button">Three</button>
+</div>
+</div>
+
+
+
+<hr>
+<h2 id="sizing">Sizing</h2>
+<p>Button groups can be sized with the same classes as standard buttons: <code>.tiny</code>, <code>.small</code>, and <code>.large</code>.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;small button-group&quot;&gt;
+  &lt;button class=&quot;button&quot;&gt;Small&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Group&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="small button-group">
+  <button class="button">Small</button>
+  <button class="button">Button</button>
+  <button class="button">Group</button>
+</div>
+</div>
+
+
+
+<hr>
+<h2 id="coloring">Coloring</h2>
+<p>Buttons within a button group can be colored individually with the <code>.secondary</code>, <code>.success</code>, <code>.warning</code>, and <code>.alert</code> classes.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;secondary button&quot;&gt;View&lt;/button&gt;
+  &lt;button class=&quot;success button&quot;&gt;Edit&lt;/button&gt;
+  &lt;button class=&quot;warning button&quot;&gt;Share&lt;/button&gt;
+  &lt;button class=&quot;alert button&quot;&gt;Delete&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="button-group">
+  <button class="secondary button">View</button>
+  <button class="success button">Edit</button>
+  <button class="warning button">Share</button>
+  <button class="alert button">Delete</button>
+</div>
+</div>
+
+
+
+<p>The entire group can also be colored using the same classes.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;hollow secondary button-group&quot;&gt;
+  &lt;button class=&quot;button&quot;&gt;Harder&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Better&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Faster&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Stronger&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="hollow secondary button-group">
+  <button class="button">Harder</button>
+  <button class="button">Better</button>
+  <button class="button">Faster</button>
+  <button class="button">Stronger</button>
+</div>
+</div>
+
+
+
+<hr>
+<h2 id="even-width-group">Even-width Group</h2>
+<p>Add the <code>.expanded</code> class to the container to make a full-width button group. Each item will automatically size itself based on how many buttons there are, up to a maximum of six.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;expanded button-group&quot;&gt;
+  &lt;button class=&quot;button&quot;&gt;Expanded&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Group&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="expanded button-group">
+  <button class="button">Expanded</button>
+  <button class="button">Button</button>
+  <button class="button">Group</button>
+</div>
+</div>
+
+
+
+<hr>
+<h2 id="stacking">Stacking</h2>
+<p>A button group can be made vertical with the <code>.stacked</code> class. You can also use <code>.stacked-for-small</code> to only stack a button group on small screens, or <code>.stacked-for-medium</code> to only stack on small and medium screens.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;stacked-for-small button-group&quot;&gt;
+  &lt;button class=&quot;button&quot;&gt;How&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Low&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Can&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;You&lt;/button&gt;
+  &lt;button class=&quot;button&quot;&gt;Go&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="stacked-for-small button-group">
+  <button class="button">How</button>
+  <button class="button">Low</button>
+  <button class="button">Can</button>
+  <button class="button">You</button>
+  <button class="button">Go</button>
+</div>
+</div>
+
+
+
+<hr>
+<h2 id="split-buttons">Split Buttons</h2>
+<p>To build a split button, just create a button group with two buttons.</p>
+<p>To create a button with only an arrow, add the class <code>.arrow-only</code>. Note that the button still needs a label for screen readers, which can be embedded inside the button with a <code>.show-for-sr</code> element. In the example below, an assistive device will read the arrow button as &quot;Show menu&quot;.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;button&quot;&gt;Primary Action&lt;/button&gt;
+  &lt;button class=&quot;dropdown button arrow-only&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Show menu&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="button-group">
+  <button class="button">Primary Action</button>
+  <button class="dropdown button arrow-only">
+    <span class="show-for-sr">Show menu</span>
+  </button>
+</div>
+</div>
+
+
+
+<hr>
+<h2 id="button-group-accessibility">Button Group Accessibility</h2>
+<p>Button groups should be given and ARIA role of &quot;group&quot; by adding the <code>role=&quot;group&quot;</code> attribute to the container. </p>
+<p>Accessibility requires that a a user interface purpose be clear. That purpose can be communicated by using ARIA labels or by associating descriptions with the button container. These labels and descriptions may be visually hidden so long as they are accessible by screen readers.</p>
+<pre><code class="lang-html">&lt;div role=&quot;group&quot; class=&quot;button-group&quot; aria-labelledby=&quot;group-label&quot; 
+aria-describedby=&quot;group-description&quot;&gt;   
+  &lt;h3 id=&quot;group-label&quot; class=&quot;show-for-sr&quot;&gt;Change widget amount&lt;/h3&gt;   
+  &lt;span id=&quot;group-label&quot; class=&quot;show-for-sr&quot;&gt;These buttons increase or 
+  decrease the amount of widgets in the widget collection.&lt;/span&gt;   
+  &lt;button class=&quot;button&quot;&gt;Increase&lt;/button&gt; &lt;button class=&quot;button&quot;&gt;Decrease&lt;/button&gt; 
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div role="group" class="button-group" aria-labelledby="group-label" 
+aria-describedby="group-description"><br>  <h3 id="group-label" class="show-for-sr">Change widget amount</h3><br>  <span id="group-label" class="show-for-sr">These buttons increase or 
+  decrease the amount of widgets in the widget collection.</span><br>  <button class="button">Increase</button> <button class="button">Decrease</button> 
+</div> 
+</div>
+
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li class="current"><a href="button-groups.html">Button Groups</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+              <div class="column large-4">
+                  <a class="y-icons y-yale y-mark" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  </span></a>
+              </div>
+             
+      
+              <div class="column large-4">
+              <ul>
+                <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+                <li><a href="http://uxdigitalstrategy.yale.edu">User Experience &amp; Digital Strategy</a></li>
+              </ul>
+              </div>
+      
+              <div class="column large-2">
+              <h2>Contact</h2>
+              <ul>
+                <li><a href="mailto:uxds@yale.edu" class="mailto">uxds@yale.edu<span class="mailto"><span class="show-for-sr"> (link sends e-mail)</span></span></a>
+      </li>
+              </ul>
+              </div>
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/app.js"></script>
+  <script type='text/javascript'>
+    (function (d, t) {
+      var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      bh.type = 'text/javascript';
+      bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+      s.parentNode.insertBefore(bh, s);
+      })(document, 'script');
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70849264-3', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>
