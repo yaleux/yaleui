@@ -14,4 +14,17 @@ footer.yale-footer {
       text-decoration: none;
     }
   }
+
+  h2 {
+    color: $white;
+    font-size: rem-calc(20);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li a{
+    font-size: rem-calc(14);
+  }
 }
