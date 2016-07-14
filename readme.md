@@ -1,4 +1,5 @@
 # Yale UI Style Guide
+Source for [Yale UI Style Guide](https://yaleux.github.io/yaleui/)
 Based on Foundation for Sites
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
@@ -19,7 +20,17 @@ The Yale UI Style guide is based on the official ZURB Template for use with [Fou
 
 ### Basic (CSS Download)
 
-The quickest way to get started is with the [PLACEHOLDER: basic CSS download](http://example.com). 
+The quickest way to get started, just download the assets and link the CSS file in your project. Take a look at the examples folder for inspiration.
+
+[Download Assets](https://yaleux.github.io/yaleui/YaleUI.zip)
+
+```
+  <head>
+      <!-- ... -->
+      <link rel="stylesheet" href="assets/css/app.css">
+      <!-- ... -->
+  </head>
+```
 
 ### Advanced (Custom Build)
 

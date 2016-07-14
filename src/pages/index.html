@@ -1,4 +1,7 @@
 ---
+github: https://github.com/yaleux/yaleui
+public-url: https://yaleux.github.io/yaleui/
+assets: YaleUI.zip
 featured-examples:
   - title: Yale Header & Footer
     thumb: assets/img/header-footer.png
@@ -19,8 +22,8 @@ featured-examples:
         {{> site-title}}
 
         <div class="button-group">
-          <a download href="{{root}}assets.zip" class="button"><i class="fa fa-4x fa-download" aria-hidden="true"></i> Download</a>
-          <a href="https://github.com/yaleux/Yale_UI" class="button"><i class="fa fa-4x fa-github" aria-hidden="true"></i> GitHub</a>
+          <a download href="{{root}}{{assets}}" class="button"><i class="fa fa-4x fa-download" aria-hidden="true"></i> Download</a>
+          <a href="{{github}}" class="button"><i class="fa fa-4x fa-github" aria-hidden="true"></i> GitHub</a>
         </div>
 
         <a href="{{root}}styleguide" class="large success button">Style Guide</a>
@@ -43,7 +46,7 @@ featured-examples:
       <h3>Basic Download</h3>
       <p>The quickest way to get started, just download the assets and link the CSS file in your project. Take a look at the examples folder for inspiration.</p>
 
-      <a download href="{{root}}YaleUI.zip" class="button expanded"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+      <a download href="{{root}}{{assets}}" class="button expanded"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
 
   {{#markdown}}
 ```
@@ -62,11 +65,11 @@ featured-examples:
       <p>To pick-and-choose elements and have more control over customization, follow the installation instructions in our GitHub repository.</p>
 
 
-      <a href="https://github.com/yaleux/Yale_UI" class="button expanded"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="{{github}}" class="button expanded"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
 
   {{#markdown}}
 ```bash
-    git clone https://github.com/yaleux/Yale_UI.git
+    git clone {{github}}
 cd Yale_UI
 npm install
 bower install
