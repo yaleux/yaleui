@@ -10,8 +10,8 @@ featured-examples:
     thumb: assets/img/login-form.png
     link: examples/login-form.html
   - title: Feature Cards
-    thumb: //placehold.it/300x300
-    link: examples/cards.html    
+    thumb: assets/img/feature-card.png 
+    link: examples/cards.html  
 ---
 
 
@@ -91,11 +91,11 @@ npm start
 <hr>
 
   <section id="examples">
-    <div class="row columns">
+    <div class="row">
       <h2>Examples</h2>
 
       {{#each featured-examples}}
-        <div class="column medium-4">
+        <div class="columns medium-4 panel">
           <article class="feature-card--media-card">
             <a class="feature-card--media-card__link" href="{{root}}{{link}}">
               <div class="feature-card__content">
