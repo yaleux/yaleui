@@ -24,6 +24,10 @@
     &:hover {
         color: lighten($blue-lt, 10%);
     }
+
+    &:focus {
+      outline-color: #fff;
+    }
 }
 
 @mixin underline_heading {
