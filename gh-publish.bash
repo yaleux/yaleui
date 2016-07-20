@@ -4,6 +4,13 @@
 
 args=("$@")
 
+# rebuild
+npm run build
+
+#create assets zip
+zip -r dist/YaleUI.zip dist/*
+
+#add, commit, push & publish
 git add .
 git commit -m "$@"
 git push origin master

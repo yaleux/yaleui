@@ -3,16 +3,17 @@
 
 footer.yale-footer {
   background: $yale-blue;
+  color: $white;
   
   .footer-logo {
     font-size: rem-calc(18);
     padding-top: 30px;
     padding-bottom: 30px;
+  }
 
-    a {
-      @include light_link;
-      text-decoration: none;
-    }
+  a {
+  @include light_link;
+  text-decoration: none;
   }
 
   h2 {
