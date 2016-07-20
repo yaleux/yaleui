@@ -34,19 +34,6 @@ The quickest way to get started, just download the assets and link the CSS file 
 
 ### Advanced (Custom Build)
 
-You may want to use our custom build if any of the following applies:
-
-* You are a Sass user
-* You want to pick-and-choose elements
-* You require significant customization
-
-
-To create a custom build, follow these [Installation]() instructions.
-
-
-## Installation
-
-
 Requirements:
 
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
