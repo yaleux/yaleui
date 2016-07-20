@@ -58,13 +58,13 @@ Download the Yale UI Style Guide with Git:
 
 
 ```bash
-git clone https://github.com/yaleux/Yale_UI.git
+git clone https://github.com/yaleux/yaleui
 ```
 
 Then open the folder in your command line, and install the needed dependencies:
 
 ```bash
-cd Yale_UI
+cd yaleui
 npm install
 bower install
 ```
