@@ -39,7 +39,7 @@ Requirements:
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
 
-###  Setup
+####  Setup
 
 Download the Yale UI Style Guide with Git:
 
