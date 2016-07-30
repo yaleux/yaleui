@@ -90,12 +90,15 @@ a[href$='docx']:after,
 a[href$='xls']:after,
 a[href$='xlsx']:after,
 a[href$='ppt']:after,
-a[href$='pptx']:after {
+a[href$='pptx']:after,
+a[href^="http://"]:not([href*="yale.edu"]):after,
+a[href^="https://"]:not([href*="yale.edu"]):after {
   font-family: 'FontAwesome';
   margin-left: 5px;
   text-decoration: none;
   display: inline-block;
 }
+
 
 
 a[href$='pdf']:after {content: "\f1c1"}
@@ -105,3 +108,5 @@ a[href$='xls']:after {content: "\f1c3"}
 a[href$='xlsx']:after {content: "\f1c3"}
 a[href$='ppt']:after {content: "\f1c4"}
 a[href$='pptx']:after {content: "\f1c4"}
+a[href^="http://"]:not([href*="yale.edu"]):after, 
+a[href^="https://"]:not([href*="yale.edu"]):after  {content: "\f08e"}
