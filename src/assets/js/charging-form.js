@@ -4,6 +4,8 @@ $('#Grant').change(function(){
    $('#GiftID').addClass('hide');
    $('#YaleDesignatedID').addClass('hide');
    $('#additional-required').addClass('hide');
+   $('#submit-payment').removeAttr('disabled');
+
   }
 });
 
@@ -13,6 +15,7 @@ $('#Gift').change(function(){
    $('#GiftID').removeClass('hide');
    $('#YaleDesignatedID').addClass('hide');
    $('#additional-required').removeClass('hide');
+   $('#submit-payment').removeAttr('disabled');
   }
 });
 
@@ -22,11 +25,12 @@ $('#YaleDesignated').change(function(){
    $('#GiftID').addClass('hide');
    $('#YaleDesignatedID').removeClass('hide');
    $('#additional-required').removeClass('hide');
+   $('#submit-payment').removeAttr('disabled');
   }
 });
 
 // Move the input focus to the end of the input string
-$(':input').focus(function() {
+$(':input[type=text]').focus(function() {
     setTimeout((function(el) {
         var strLength = el.value.length;
         return function() {
