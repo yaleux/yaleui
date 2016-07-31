@@ -238,6 +238,8 @@
        $(&#39;#GiftID&#39;).addClass(&#39;hide&#39;);
        $(&#39;#YaleDesignatedID&#39;).addClass(&#39;hide&#39;);
        $(&#39;#additional-required&#39;).addClass(&#39;hide&#39;);
+       $(&#39;#submit-payment&#39;).removeAttr(&#39;disabled&#39;);
+    
       }
     });
     
@@ -247,6 +249,7 @@
        $(&#39;#GiftID&#39;).removeClass(&#39;hide&#39;);
        $(&#39;#YaleDesignatedID&#39;).addClass(&#39;hide&#39;);
        $(&#39;#additional-required&#39;).removeClass(&#39;hide&#39;);
+       $(&#39;#submit-payment&#39;).removeAttr(&#39;disabled&#39;);
       }
     });
     
@@ -256,11 +259,12 @@
        $(&#39;#GiftID&#39;).addClass(&#39;hide&#39;);
        $(&#39;#YaleDesignatedID&#39;).removeClass(&#39;hide&#39;);
        $(&#39;#additional-required&#39;).removeClass(&#39;hide&#39;);
+       $(&#39;#submit-payment&#39;).removeAttr(&#39;disabled&#39;);
       }
     });
     
     // Move the input focus to the end of the input string
-    $(&#39;:input&#39;).focus(function() {
+    $(&#39;:input[type=text]&#39;).focus(function() {
         setTimeout((function(el) {
             var strLength = el.value.length;
             return function() {
