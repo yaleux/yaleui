@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-
-
   </head>
   <body>
 
@@ -59,9 +57,20 @@
         </div>
     </header>
 
-      <div class="row columns small-centered">
-        <h1 class="page-title">Yale Header &amp; Footer</h1>
-      </div>
+    <div id="main-content">
+
+    <div class="row columns">
+    <nav aria-labelledby="breadcrumbs-label" role="navigation">
+        <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+        <ul class="breadcrumbs">
+            <li><a href="../">Home</a></li>
+            <li><a href="../#examples">Examples</a></li>
+            <li>
+                <span class="show-for-sr">Current: </span>header-footer
+            </li>
+        </ul>
+    </nav>
+    </div>
 
     <div class="example">
       <h2 class="example__subheading">Yale Header &amp; Title Bar</h2>
@@ -205,6 +214,7 @@
       </ul>
       </section>
     </div>
+    </div>
 
     <footer class="yale-footer">
          <div class="footer-logo row">
@@ -226,6 +236,7 @@
     
 
     <script src="../assets/js/app.js"></script>
+
     <script type='text/javascript'>
     (function (d, t) {
       var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
