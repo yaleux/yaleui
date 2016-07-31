@@ -1,0 +1,35 @@
+---
+title: Yale Charging Form
+layout: example
+---
+
+<div class="example">
+
+  {{> charging-form }}
+
+<div class="clearfix"></div>
+  {{> show-html-open }}
+
+  {{#markdown}}
+```html
+
+{{> charging-form}}
+```
+  {{/markdown}}  
+
+  {{> show-html-close }}
+
+
+<!-- Show JavaScript -->
+   {{> show-js-open }}
+
+  {{#markdown}}
+```js
+
+{{> charging-form-js}}
+```
+  {{/markdown}}  
+
+  {{> show-js-close }} 
+
+</div>

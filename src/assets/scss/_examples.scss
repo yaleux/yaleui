@@ -33,11 +33,41 @@ a:hover .example {
   color: $medium-gray;
 }
 
+.border {
+   border: 1px solid #ddd;
+   padding: 2em;
+}
+
+#main-content{
+    margin-top: rem-calc(30);
+}
+
+.switch-buttons {
+  input:checked + label{
+    background: $yale-blue;
+    color: $white !important;
+  }
+
+  .button {
+    width: 33%;
+    &:hover{
+      background: $marine;
+      color: $white !important;
+    }
+  }
+}
+
+
 
 // Log in form
-#log-in-form {
-    border: 1px solid #ddd;
-    padding: 2em;
+
+
+#log-in-form,
+#yale-charging-form {
     max-width: 384px;
     margin: auto;
+}
+
+#payment-amount{
+  font-size: rem-calc(30);
 }
