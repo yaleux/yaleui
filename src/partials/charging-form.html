@@ -1,45 +1,46 @@
-<h1 class="text-center"><small>Yale Payment</small></h1>
+<h1 class="text-center"><small>Yale Charging Instructions</small></h1>
 
 <form id="yale-charging-form" class="border">
       
-    <label>Payment Amount
-    <div id="payment-amount">$432.33</div> 
-    </label>
-    <hr>
     <h2><small>How will you pay?</small></h2>
     <div class="button-group switch-buttons">
       <input class="switch-input" id="Grant" type="radio" name="payment-choice">
- 
+    
       <label for="Grant" class="secondary hollow button">
-        <i class="fa fa-2x fa-institution" aria-hidden="true"></i><div class="icon-label hide-for-small">Grant</div>
+      <i class="fa fa-2x fa-institution" aria-hidden="true"></i><div class="icon-label">Grant</div>
+      <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with GR, GC, GK, GT, or GB"><i class="fa fa-question-circle-o"></i></span>
       </label>
 
       <input class="switch-input" id="Gift" type="radio" name="payment-choice">
-
       <label for="Gift" class="secondary hollow button">
         <i class="fa fa-2x fa-gift" aria-hidden="true"></i><div class="icon-label">Gift</div>
+      <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with GE or GS"><i class="fa fa-question-circle-o"></i></span>
        </label>
 
       <input class="switch-input" id="YaleDesignated" type="radio" name="payment-choice">
-
        <label for="YaleDesignated" class="secondary hollow button">
         <i class="y-icons y-yale y-mark" aria-hidden="true"></i><div class="icon-label">Other</div>
+        <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with YD"><i class="fa fa-question-circle-o"></i></span>
        </label>
 
     </div>
 
     <hr>
 
+    <label id="Company" class="hide">Company
+      <input type="text" aria-required="true" required=""  maxlength="4" minlength="4" name="Company" size="60" value="CO">        
+    </label>
+
     <label id="GrantID" class="hide">Grant ID
-      <input type="text" aria-required="true" required=""  maxlength="9" minlength="9" minlength="6" name="GRN" size="60" value="GRN">        
+      <input type="text" aria-required="true" required=""  maxlength="9" minlength="9" name="GRN" size="60">        
     </label>
 
     <label id="GiftID" class="hide">Gift ID
-      <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" minlength="6" name="GFT" size="60" value="GFT">        
+      <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" name="GFT" size="60">        
     </label>
 
     <label id="YaleDesignatedID" class="hide">Yale Designated ID
-      <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" minlength="6" name="IDF" size="60" value="IDF">        
+      <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" name="YD" size="60" value="YD">        
     </label>
     
     <div id="additional-required" class="hide">
@@ -52,15 +53,15 @@
       </label>
 
       <label>Project
-          <input type="text" aria-required="true" required="" minlength="8" maxlength="8" name="PRJ" size="60" value="PRJ">        
+          <input type="text" aria-required="true" required="" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">        
       </label>
 
-      <label>Account Holder's NetID (optional)
+      <label>Assignee (optional)
         <input type="text" aria-required="false" >
       </label>
 
     </div>
 
-    <button disabled id="submit-payment" class="expanded button" name="pay" type="submit" value="Pay">Pay $432.33</button>
+    <button disabled id="submit-payment" class="expanded button" name="submit-payment" type="submit" value="Submit">Submit</button>
 
 </form>

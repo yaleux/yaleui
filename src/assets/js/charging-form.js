@@ -1,5 +1,6 @@
 $('#Grant').change(function(){
   if(this.checked){
+   $('#Company').removeClass('hide');
    $('#GrantID').removeClass('hide');
    $('#GiftID').addClass('hide');
    $('#YaleDesignatedID').addClass('hide');
@@ -11,6 +12,7 @@ $('#Grant').change(function(){
 
 $('#Gift').change(function(){
   if(this.checked){
+   $('#Company').removeClass('hide');
    $('#GrantID').addClass('hide');
    $('#GiftID').removeClass('hide');
    $('#YaleDesignatedID').addClass('hide');
@@ -21,6 +23,7 @@ $('#Gift').change(function(){
 
 $('#YaleDesignated').change(function(){
   if(this.checked){
+   $('#Company').removeClass('hide');
    $('#GrantID').addClass('hide');
    $('#GiftID').addClass('hide');
    $('#YaleDesignatedID').removeClass('hide');
