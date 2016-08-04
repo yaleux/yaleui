@@ -10,6 +10,8 @@ import rimraf   from 'rimraf';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 
+const zip = require('gulp-zip');
+
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
@@ -26,7 +28,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy)));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), compress));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -63,14 +65,6 @@ function resetPages(done) {
   panini.refresh();
   done();
 }
-
-// Generate a style guide from the Markdown content and HTML template in styleguide/
-// function styleGuide(done) {
-//   sherpa('src/styleguide/index.md', {
-//     output: PATHS.dist + '/styleguide.html',
-//     template: 'src/styleguide/template.html'
-//   }, done);
-// }
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
@@ -114,6 +108,14 @@ function images() {
     })))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
+
+// Compress "dist" assest to create a downloadable zip
+function compress(){
+  return gulp.src('dist/*')
+        .pipe(zip('YaleUI.zip'))
+        .pipe(gulp.dest('dist'));
+}
+    
 
 // Start a server with BrowserSync to preview the site in
 function server(done) {
