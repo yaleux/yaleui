@@ -1,0 +1,331 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Slider</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>slider
+                </li>
+            </ul>
+        </nav>
+<h1 id="slider">Slider</h1>
+<p class="lead">This slider is perfect for setting specific values within a range.</p>
+
+
+<div class="warning callout">
+  Sliders require JavaScript. If you&#39;re not using a custom build, make sure to <a download href="../assets/js/app.js">download the JavaScript assets.</a>
+</div>
+
+<h2 id="basics">Basics</h2>
+<p>Create a slider by adding the class <code>.slider</code> and the attribute <code>data-slider</code> to a container element. You should also define both a starting and maximum value for the slider.</p>
+<p>Inside the container are three elements:</p>
+<ul>
+<li>The handle (<code>.slider-handle</code>), which the user drags.</li>
+<li>The fill (<code>.slider-fill</code>), which resizes dynamically based on where the handle is.</li>
+<li>A hidden <code>&lt;input&gt;</code>, which is where the value of the slider is stored.</li>
+</ul>
+<pre><code class="lang-html">&lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot; data-end=&quot;200&quot;&gt;
+  &lt;span class=&quot;slider-handle&quot;  data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
+  &lt;input type=&quot;hidden&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="slider" data-slider data-initial-start="50" data-end="200">
+  <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+  <span class="slider-fill" data-slider-fill></span>
+  <input type="hidden">
+</div>
+</div>
+
+
+<hr>
+<h2 id="vertical">Vertical</h2>
+<p>To get <em>vertical</em>, just add a <code>.vertical</code> class and <code>data-vertical=&quot;true&quot;</code> the slider.</p>
+<pre><code class="lang-html">&lt;div class=&quot;slider vertical&quot; data-slider data-initial-start=&quot;25&quot; data-end=&quot;200&quot; data-vertical=&quot;true&quot;&gt;
+  &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
+  &lt;input type=&quot;hidden&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="slider vertical" data-slider data-initial-start="25" data-end="200" data-vertical="true">
+  <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+  <span class="slider-fill" data-slider-fill></span>
+  <input type="hidden">
+</div>
+</div>
+
+
+<hr>
+<h2 id="disabled">Disabled</h2>
+<p>Add the class <code>.disabled</code> to disable interaction with the slider.</p>
+<pre><code class="lang-html">&lt;div class=&quot;slider disabled&quot; data-slider data-initial-start=&quot;78&quot;&gt;
+  &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
+  &lt;input type=&quot;hidden&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="slider disabled" data-slider data-initial-start="78">
+  <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+  <span class="slider-fill" data-slider-fill></span>
+  <input type="hidden">
+</div>
+</div>
+
+
+<hr>
+<h2 id="two-handles">Two Handles</h2>
+<p>Two-handle sliders can be used to define a range of values, versus a single value. To make a two-handle slider, add a second handle, and a second <code>&lt;input&gt;</code>. This works with horizontal and vertical sliders.</p>
+<p>You can add IDs to the <code>&lt;input&gt;</code>s inside the sliders to make it easier to access the values. If you don&#39;t, the plugin will add an ID to each for you.</p>
+<p>Note that the first handle manipulates the first <code>&lt;input&gt;</code>, while the second handle manipulates the second <code>&lt;input&gt;</code>.</p>
+<pre><code class="lang-html">&lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;25&quot; data-initial-end=&quot;75&quot;&gt;
+  &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
+  &lt;span class=&quot;slider-handle&quot; data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot;&gt;&lt;/span&gt;
+  &lt;input type=&quot;hidden&quot;&gt;
+  &lt;input type=&quot;hidden&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="slider" data-slider data-initial-start="25" data-initial-end="75">
+  <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+  <span class="slider-fill" data-slider-fill></span>
+  <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+  <input type="hidden">
+  <input type="hidden">
+</div>
+</div>
+
+
+<hr>
+<h2 id="data-binding">Data Binding</h2>
+<p>Data binding allows you to connect the slider to an external <code>&lt;input&gt;</code> field. With data binding set up, dragging the handle will change the value inside the text field, and editing the number in the text field will move the slider in real-time.</p>
+<p>To set it all up, create an <code>&lt;input&gt;</code> with an ID and add <code>aria-controls=&quot;id&quot;</code> to the slider handle, where <code>id</code> is the ID of the <code>&lt;input&gt;</code>.</p>
+<pre><code class="lang-html">&lt;div class=&quot;small-10 columns&quot;&gt;
+  &lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot;&gt;
+    &lt;span class=&quot;slider-handle&quot;  data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot; aria-controls=&quot;sliderOutput1&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;small-2 columns&quot;&gt;
+  &lt;input type=&quot;number&quot; id=&quot;sliderOutput1&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="small-10 columns">
+  <div class="slider" data-slider data-initial-start="50">
+    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
+    <span class="slider-fill" data-slider-fill></span>
+  </div>
+</div>
+<div class="small-2 columns">
+  <input type="number" id="sliderOutput1">
+</div>
+</div>
+
+
+<hr>
+<p>Or with a step size:</p>
+<pre><code class="lang-html">&lt;div class=&quot;small-10 columns&quot;&gt;
+  &lt;div class=&quot;slider&quot; data-slider data-initial-start=&quot;50&quot; data-step=&quot;5&quot;&gt;
+    &lt;span class=&quot;slider-handle&quot;  data-slider-handle role=&quot;slider&quot; tabindex=&quot;1&quot; aria-controls=&quot;sliderOutput2&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;slider-fill&quot; data-slider-fill&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;small-2 columns&quot;&gt;
+  &lt;input type=&quot;number&quot; id=&quot;sliderOutput2&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="small-10 columns">
+  <div class="slider" data-slider data-initial-start="50" data-step="5">
+    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+    <span class="slider-fill" data-slider-fill></span>
+  </div>
+</div>
+<div class="small-2 columns">
+  <input type="number" id="sliderOutput2">
+</div>
+</div>
+
+
+<hr>
+<h2 id="native-range-slider">Native Range Slider</h2>
+<p>In Foundation 6.2, we introduced styles for <code>&lt;input type=&quot;range&quot;&gt;</code>, the native HTML element for range sliders. It&#39;s not supported in every browser, namely IE9 and some older mobile browsers. <a href="http://caniuse.com/#feat=input-range">View browser support for the range input type.</a></p>
+<pre><code class="lang-html">&lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;100&quot; step=&quot;1&quot;&gt;
+</code></pre>
+<div class="styleguide-code-live"><input type="range" min="1" max="100" step="1">
+</div>
+
+
+<p>If you&#39;re using the Sass version of Foundation, add this line to your main Sass file:</p>
+<pre><code class="lang-scss">@include foundation-range-input;
+</code></pre>
+<p>It&#39;s possible to use both the JavaScript slider and the native slider in the same codebase, as the CSS selectors used don&#39;t overlap. Here&#39;s what&#39;s different about the native slider:</p>
+<ul>
+<li>Less markup: just write <code>&lt;input type=&quot;range&quot;&gt;</code> and you&#39;re good.</li>
+<li>No JavaScript is needed, which guarantees it runs faster in most browsers.</li>
+<li>To disable the slider, add <code>disabled</code> as an attribute, instead of a class.</li>
+<li>No support for vertical orientation.</li>
+<li>No support for two handles.</li>
+</ul>
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
+            <li class="current"><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+             <div class="column small-4">
+                 <a class="y-icons y-yale y-mark" href=
+                 "http://www.yale.edu/"><span class="show-for-sr">Yale
+                 </span></a>
+             </div>
+      
+             <div class="column small-8" align="right">
+             <ul>
+               <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+               <li><a href="http://identity.yale.edu/web">Web Identity Guidelines</a></li>
+               <li><a href="mailto:ux@yale.edu" class="mailto">ux@yale.edu<span class="show-for-sr"> (link sends e-mail)</span></a></li>
+             </ul>
+             </div>
+      
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+    <!-- Bugherd send feedback -->
+        <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+        </script>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70849264-3', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
+
+</body>
+</html>

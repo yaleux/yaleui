@@ -1,0 +1,316 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Switch</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>switch
+                </li>
+            </ul>
+        </nav>
+<h1 id="switch">Switch</h1>
+<h2 id="basics">Basics</h2>
+<p>Add the <code>.switch</code> class to an element to create a switch. Inside the switch, add an <code>&lt;input type=&quot;checkbox&quot;&gt;</code> with the class <code>.switch-input</code>. Next to that, create a <code>&lt;label&gt;</code> with the class <code>.switch-paddle</code>.</p>
+<p>Give the <code>&lt;input&gt;</code> a unique ID and point the <code>&lt;label&gt;</code> to it with the <code>for</code> attribute. This makes the switch clickable.</p>
+<div class="primary callout">
+  <p>Inside the switch label is screen reader-only text, which uses the <code>.show-for-sr</code> class to visually mask the text.</p>
+</div>
+
+<div class="callout warning">
+  <p>Make sure the HTML of the switch goes in the order you see above&mdash;<code>input</code>, then <code>label</code></p>
+</div>
+
+<pre><code class="lang-html">&lt;div class=&quot;switch&quot;&gt;
+  &lt;input class=&quot;switch-input&quot; id=&quot;exampleSwitch&quot; type=&quot;checkbox&quot; name=&quot;exampleSwitch&quot;&gt;
+  &lt;label class=&quot;switch-paddle&quot; for=&quot;exampleSwitch&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Download Kittens&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="switch">
+  <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="exampleSwitch">
+    <span class="show-for-sr">Download Kittens</span>
+  </label>
+</div> 
+</div>
+
+
+<hr>
+<h2 id="radio-switch">Radio Switch</h2>
+<p>You can also use <code>&lt;input type=&quot;radio&quot;&gt;</code> instead of <code>checkbox</code> to create a series of options.</p>
+<pre><code class="lang-html">&lt;div class=&quot;switch&quot;&gt;
+  &lt;input class=&quot;switch-input&quot; id=&quot;exampleRadioSwitch1&quot; type=&quot;radio&quot; checked name=&quot;testGroup&quot;&gt;
+  &lt;label class=&quot;switch-paddle&quot; for=&quot;exampleRadioSwitch1&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Bulbasaur&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="switch">
+  <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+  <label class="switch-paddle" for="exampleRadioSwitch1">
+    <span class="show-for-sr">Bulbasaur</span>
+  </label>
+</div>
+</div>
+
+
+<div class="switch">
+  <input class="switch-input" id="exampleRadioSwitch2" type="radio" name="testGroup">
+  <label class="switch-paddle" for="exampleRadioSwitch2">
+    <span class="show-for-sr">Charmander</span>
+  </label>
+</div> 
+
+<div class="switch">
+  <input class="switch-input" id="exampleRadioSwitch3" type="radio" name="testGroup">
+  <label class="switch-paddle" for="exampleRadioSwitch3">
+    <span class="show-for-sr">Squirtle</span>
+  </label>
+</div>
+
+<hr>
+<h2 id="sizing-classes">Sizing Classes</h2>
+<p>Use the classes <code>.tiny</code>, <code>.small</code>, or <code>.large</code> to change the switch size.</p>
+<pre><code class="lang-html">&lt;div class=&quot;switch tiny&quot;&gt;
+  &lt;input class=&quot;switch-input&quot; id=&quot;tinySwitch&quot; type=&quot;checkbox&quot; name=&quot;exampleSwitch&quot;&gt;
+  &lt;label class=&quot;switch-paddle&quot; for=&quot;tinySwitch&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Tiny Sandwiches Enabled&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;switch small&quot;&gt;
+  &lt;input class=&quot;switch-input&quot; id=&quot;smallSwitch&quot; type=&quot;checkbox&quot; name=&quot;exampleSwitch&quot;&gt;
+  &lt;label class=&quot;switch-paddle&quot; for=&quot;smallSwitch&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Small Portions Only&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt; 
+
+&lt;div class=&quot;switch large&quot;&gt;
+  &lt;input class=&quot;switch-input&quot; id=&quot;largeSwitch&quot; type=&quot;checkbox&quot; name=&quot;exampleSwitch&quot;&gt;
+  &lt;label class=&quot;switch-paddle&quot; for=&quot;largeSwitch&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Show Large Elephants&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="switch tiny">
+  <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="tinySwitch">
+    <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+  </label>
+</div>
+
+<div class="switch small">
+  <input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="smallSwitch">
+    <span class="show-for-sr">Small Portions Only</span>
+  </label>
+</div> 
+
+<div class="switch large">
+  <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="largeSwitch">
+    <span class="show-for-sr">Show Large Elephants</span>
+  </label>
+</div> 
+</div>
+
+
+<hr>
+<h2 id="inner-labels">Inner Labels</h2>
+<p>You can place active and inactive text inside of a switch. The active text (<code>.switch-active</code>) only displays when the switch is on, and the inactive text (<code>.switch-inactive</code>) only displays when the switch is off.</p>
+<p>Active/inactive text goes inside of the switch&#39;s <code>&lt;label&gt;</code>.</p>
+<div class="primary callout">
+  <p>Depending on the length of the words you place inside the switch, you may need to fine-tune the <code>left</code> or <code>right</code> CSS properties of the text to get it positioned right.</p>
+</div>
+
+<div class="primary callout">
+  <p>Add <code>aria-hidden=&quot;true&quot;</code> to these labels to prevent AT from reading them.</p>
+</div>
+
+<pre><code class="lang-html">&lt;p&gt;Do you like me?&lt;/p&gt;
+&lt;div class=&quot;switch large&quot;&gt;
+  &lt;input class=&quot;switch-input&quot; id=&quot;yes-no&quot; type=&quot;checkbox&quot; name=&quot;exampleSwitch&quot;&gt;
+  &lt;label class=&quot;switch-paddle&quot; for=&quot;yes-no&quot;&gt;
+    &lt;span class=&quot;show-for-sr&quot;&gt;Do you like me?&lt;/span&gt;
+    &lt;span class=&quot;switch-active&quot; aria-hidden=&quot;true&quot;&gt;Yes&lt;/span&gt;
+    &lt;span class=&quot;switch-inactive&quot; aria-hidden=&quot;true&quot;&gt;No&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><p>Do you like me?</p>
+<div class="switch large">
+  <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="yes-no">
+    <span class="show-for-sr">Do you like me?</span>
+    <span class="switch-active" aria-hidden="true">Yes</span>
+    <span class="switch-inactive" aria-hidden="true">No</span>
+  </label>
+</div>
+</div>
+
+
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li class="current"><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+             <div class="column small-4">
+                 <a class="y-icons y-yale y-mark" href=
+                 "http://www.yale.edu/"><span class="show-for-sr">Yale
+                 </span></a>
+             </div>
+      
+             <div class="column small-8" align="right">
+             <ul>
+               <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+               <li><a href="http://identity.yale.edu/web">Web Identity Guidelines</a></li>
+               <li><a href="mailto:ux@yale.edu" class="mailto">ux@yale.edu<span class="show-for-sr"> (link sends e-mail)</span></a></li>
+             </ul>
+             </div>
+      
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+    <!-- Bugherd send feedback -->
+        <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+        </script>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70849264-3', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
+
+</body>
+</html>

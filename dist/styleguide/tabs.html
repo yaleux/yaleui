@@ -1,0 +1,307 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Tabs</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>tabs
+                </li>
+            </ul>
+        </nav>
+<h1 id="tabs">Tabs</h1>
+<p class="pre">Tabs are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.</p>
+
+
+<h2 id="basics">Basics</h2>
+<p>There are two pieces to a tabbed interface: the tabs themselves, and the content for each tab. The tabs are an element with the class <code>.tabs</code>, and each item has the class <code>.tabs-title</code>. Each tab contains a link to a tab. The <code>href</code> of each link should match the ID of a tab.</p>
+<pre><code class="lang-html">&lt;ul class=&quot;tabs&quot; data-tabs id=&quot;example-tabs&quot;&gt;
+  &lt;li class=&quot;tabs-title is-active&quot;&gt;&lt;a href=&quot;#panel1&quot; aria-selected=&quot;true&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;tabs-title&quot;&gt;&lt;a href=&quot;#panel2&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>The tab content container has the class <code>.tabs-content</code>, while each section has the class <code>.tabs-panel</code>. Each content pane also has a unique ID, which is targeted by a link in the tabstrip.</p>
+<pre><code class="lang-html">&lt;div class=&quot;tabs-content&quot; data-tabs-content=&quot;example-tabs&quot;&gt;
+  &lt;div class=&quot;tabs-panel is-active&quot; id=&quot;panel1&quot;&gt;
+    &lt;p&gt;Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tabs-panel&quot; id=&quot;panel2&quot;&gt;
+    &lt;p&gt;Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Put it all together, and we get this:</p>
+<ul class="tabs" data-tabs id="example-tabs">
+  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+  <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
+  <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
+  <li class="tabs-title"><a href="#panel4">Tab 4</a></li>
+  <li class="tabs-title"><a href="#panel5">Tab 5</a></li>
+  <li class="tabs-title"><a href="#panel6">Tab 6</a></li>
+</ul>
+
+<div class="tabs-content" data-tabs-content="example-tabs">
+  <div class="tabs-panel is-active" id="panel1">
+    <p>one</p>
+    <p>Check me out! I&#39;m a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel2">
+    <p>two</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+  </div>
+  <div class="tabs-panel" id="panel3">
+    <p>three</p>
+    <p>Check me out! I&#39;m a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel4">
+    <p>four</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+  </div>
+  <div class="tabs-panel" id="panel5">
+    <p>five</p>
+    <p>Check me out! I&#39;m a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel6">
+    <p>six</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
+  </div>
+</div>
+
+<hr>
+<h2 id="vertical-tabs">Vertical Tabs</h2>
+<p>Add the <code>.vertical</code> class to a tabstrip to stack tabs vertically. You can also place the tabstrip and the tab contents in a grid to make them sit side-by-side.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row collapse&quot;&gt;
+  &lt;div class=&quot;medium-3 columns&quot;&gt;
+    &lt;ul class=&quot;tabs vertical&quot; id=&quot;example-vert-tabs&quot; data-tabs&gt;
+      &lt;li class=&quot;tabs-title is-active&quot;&gt;&lt;a href=&quot;#panel1v&quot; aria-selected=&quot;true&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;tabs-title&quot;&gt;&lt;a href=&quot;#panel2v&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;tabs-title&quot;&gt;&lt;a href=&quot;#panel3v&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;tabs-title&quot;&gt;&lt;a href=&quot;#panel4v&quot;&gt;Tab 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;tabs-title&quot;&gt;&lt;a href=&quot;#panel3v&quot;&gt;Tab 5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;tabs-title&quot;&gt;&lt;a href=&quot;#panel4v&quot;&gt;Tab 6&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;medium-9 columns&quot;&gt;
+    &lt;div class=&quot;tabs-content vertical&quot; data-tabs-content=&quot;example-vert-tabs&quot;&gt;
+      &lt;div class=&quot;tabs-panel is-active&quot; id=&quot;panel1v&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabs-panel&quot; id=&quot;panel2v&quot;&gt;
+        &lt;p&gt;Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabs-panel&quot; id=&quot;panel3v&quot;&gt;
+        &lt;img class=&quot;thumbnail&quot; src=&quot;assets/img/generic/rectangle-3.jpg&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabs-panel&quot; id=&quot;panel4v&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabs-panel&quot; id=&quot;panel5v&quot;&gt;
+        &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;tabs-panel&quot; id=&quot;panel6v&quot;&gt;
+        &lt;img class=&quot;thumbnail&quot; src=&quot;assets/img/generic/rectangle-5.jpg&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="row collapse">
+  <div class="medium-3 columns">
+    <ul class="tabs vertical" id="example-vert-tabs" data-tabs>
+      <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Tab 1</a></li>
+      <li class="tabs-title"><a href="#panel2v">Tab 2</a></li>
+      <li class="tabs-title"><a href="#panel3v">Tab 3</a></li>
+      <li class="tabs-title"><a href="#panel4v">Tab 4</a></li>
+      <li class="tabs-title"><a href="#panel3v">Tab 5</a></li>
+      <li class="tabs-title"><a href="#panel4v">Tab 6</a></li>
+    </ul>
+    </div>
+    <div class="medium-9 columns">
+    <div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
+      <div class="tabs-panel is-active" id="panel1v">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="tabs-panel" id="panel2v">
+        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+      </div>
+      <div class="tabs-panel" id="panel3v">
+        <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg">
+      </div>
+      <div class="tabs-panel" id="panel4v">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="tabs-panel" id="panel5v">
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="tabs-panel" id="panel6v">
+        <img class="thumbnail" src="assets/img/generic/rectangle-5.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li class="current"><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+             <div class="column small-4">
+                 <a class="y-icons y-yale y-mark" href=
+                 "http://www.yale.edu/"><span class="show-for-sr">Yale
+                 </span></a>
+             </div>
+      
+             <div class="column small-8" align="right">
+             <ul>
+               <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+               <li><a href="http://identity.yale.edu/web">Web Identity Guidelines</a></li>
+               <li><a href="mailto:ux@yale.edu" class="mailto">ux@yale.edu<span class="show-for-sr"> (link sends e-mail)</span></a></li>
+             </ul>
+             </div>
+      
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+    <!-- Bugherd send feedback -->
+        <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+        </script>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70849264-3', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
+
+</body>
+</html>

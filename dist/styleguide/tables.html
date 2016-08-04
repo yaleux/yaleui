@@ -1,0 +1,485 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Tables</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>tables
+                </li>
+            </ul>
+        </nav>
+<h1 id="tables">Tables</h1>
+<h2 id="basics">Basics</h2>
+<pre><code class="lang-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Table Header&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Table Header&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Table Header&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Table Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;td&gt;This is longer content Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;td&gt;Content Goes Here&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<div class="styleguide-code-live"><table>
+  <thead>
+    <tr>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<hr>
+<h2 id="hover-state">Hover State</h2>
+<p>Add the class <code>.hover</code> to lightly darken the table rows on hover.</p>
+<pre><code class="lang-html">&lt;table class=&quot;hover&quot;&gt;
+&lt;/table&gt;
+</code></pre>
+<table class="hover">
+  <thead>
+    <tr>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 id="stacked-table">Stacked Table</h2>
+<p>To stack a table on small screens, add the class <code>.stack</code>. To see the below example in action, scale your browser down. </p>
+<pre><code class="lang-html">&lt;table class=&quot;stack&quot;&gt;
+&lt;/table&gt;
+</code></pre>
+<table class="stack">
+  <thead>
+    <tr>
+      <th scope="col">Cookies</th>
+      <th scope="col">Taste</th>
+      <th scope="col">Calories</th>
+      <th scope>Overall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chocolate Chip</td>
+      <td>Tastey</td>
+      <td>120cal</td>
+      <td>7.5/10</td>
+    </tr>
+    <tr>
+      <td>Snickerdoodle</td>
+      <td>Delicious</td>
+      <td>95cal</td>
+      <td>8/10</td>
+    </tr>
+    <tr>
+      <td>Oatmeal Raisin</td>
+      <td>Superb</td>
+      <td>10cal</td>
+      <td>11/10</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 id="scrolling-table">Scrolling Table</h2>
+<p>Add a wrapper element with the class <code>.table-scroll</code> around your table to enable horizontal scrolling.</p>
+<pre><code class="lang-html">&lt;div class=&quot;table-scroll&quot;&gt;
+  &lt;table&gt;&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="table-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">This is the description!</th>
+        <th scope="col">One</th>
+        <th scope="col">Two</th>
+        <th scope="col">Three</th>
+        <th scope="col">Four</th>
+        <th scope="col">Five</th>
+        <th scope="col">Six</th>
+        <th scope="col">Seven</th>
+        <th scope="col">Eight</th>
+        <th scope="col">Nine</th>
+        <th scope="col">Ten</th>
+        <th scope="col">Eleven</th>
+        <th scope="col">Twelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="display:block; width:400px;">Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
+      </tr>
+      <tr>
+        <td>Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
+      </tr>
+      <tr>
+        <td>Nulla tempor sem a purus blandit, eu elementum massa sagittis. Proin tortor enim, suscipit sed magna.</td>
+        <td>Nulla</td>
+        <td>tempor</td>
+        <td>sem</td>
+        <td>purus</td>
+        <td>blandit</td>
+        <td>elementum</td>
+        <td>massa</td>
+        <td>sagittis</td>
+        <td>Proin</td>
+        <td>suscipit</td>
+        <td>magna</td>
+        <td>tortor</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Here&#39;s a footer, just in case</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<hr>
+<h2 id="table-accessibility">Table Accessibility</h2>
+<p>A comprehensive guide to tables can be found at the <a href="http://www.w3.org/WAI/tutorials/tables/">W3C Accessibility Tutorial for Tables</a>.</p>
+<h3 id="layout-tables-vs-data-tables">Layout Tables vs. Data Tables</h3>
+<p>In the past, tables were used to achieve specific layouts, such as correctly aligning the content from multiple columns. We strongly discourage that approach: it is outdated; it violates separation of content and visual presentation, and it creates accessibiltiy problems. </p>
+<div class="warning callout"> 
+<strong>Tables must be reserved only for presenting tabular data.</strong>
+</div>
+
+<h3 id="captions-and-summaries">Captions and Summaries</h3>
+<p>The <code>caption</code> element functions as a title or heading for the title. It should be succinct and identify the content of hte table. Screen readers allow users to access a list of all tables on a page, and will also announce each table&#39;s <code>caption</code> element, if one is provided. Providing a <code>caption</code> element also allows screen reader users to decide whether they want to read or skip over a table. The <code>caption</code> element should be a child of the <code>table</code> element. In lieu of <code>caption</code> elements, ARIA labels can be used, as well.
+Table summaries provides information about how a data table is structured. If a table is large or complex, captions can explain how rows and columns are related. In previous versions of HTML, a <code>summary</code> attribute existed for this purpose. In HTML5, the <code>summary</code> attribute is depricated. Summaries can be provided within the <code>caption</code> element or with an ARIA description by using the <code>aria-describedby</code> attribute.
+Using <code>figure</code> and <code>figcaption</code> is also an appropriate way to provide table captions and summaries. However, when using <code>figure</code> and <code>figcaption</code>, ARIA labels and descriptions must also be used.</p>
+<pre><code class="lang-html">&lt;!-- Describing a table using a caption --&gt;
+&lt;table class=&quot;stack&quot;&gt;
+  &lt;caption&gt;Degrees Conferred (July 1, 2014 - June 30, 2015)&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Degree&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Men&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Women&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Total&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;% who are international&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bachelors&lt;/th&gt;
+      &lt;td&gt;677&lt;/th&gt;
+      &lt;td&gt;650&lt;/th&gt;
+      &lt;td&gt;1327&lt;/th&gt;
+      &lt;td&gt;10%&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Masters &amp; Post-Masters Certificates&lt;/th&gt;
+      &lt;td&gt;1,119&lt;/th&gt;
+      &lt;td&gt;1,101&lt;/th&gt;
+      &lt;td&gt;2,220%&lt;/th&gt;
+      &lt;td&gt;29%&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<div class="styleguide-code-live"><!-- Describing a table using a caption -->
+<table class="stack">
+  <caption>Degrees Conferred (July 1, 2014 - June 30, 2015)</caption>
+  <thead>
+    <tr>
+      <th scope="col">Degree</th>
+      <th scope="col">Men</th>
+      <th scope="col">Women</th>
+      <th scope="col">Total</th>
+      <th scope="col">% who are international</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bachelors</th>
+      <td>677</th>
+      <td>650</th>
+      <td>1327</th>
+      <td>10%</th>
+    </tr>
+    <tr>
+      <td>Masters &amp; Post-Masters Certificates</th>
+      <td>1,119</th>
+      <td>1,101</th>
+      <td>2,220%</th>
+      <td>29%</th>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<h3 id="table-headers">Table Headers</h3>
+<p>Simple tables with few rows and columns may only require either one header row or one header column. Longer tables require using both a header row and a header column. In any case, <code>scope=&quot;col&quot;</code> or <code>scope=&quot;row&quot;</code> should be added to each table header cell, as appropriate.</p>
+<p>It is possible to make tables with more complex columns usable and accessible, but in practice, it is often more difficult than it is worthwhile. In general, it is better to split up data among multiple tables than try to design complex tables.</p>
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li class="current"><a href="tables.html">Tables</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+             <div class="column small-4">
+                 <a class="y-icons y-yale y-mark" href=
+                 "http://www.yale.edu/"><span class="show-for-sr">Yale
+                 </span></a>
+             </div>
+      
+             <div class="column small-8" align="right">
+             <ul>
+               <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+               <li><a href="http://identity.yale.edu/web">Web Identity Guidelines</a></li>
+               <li><a href="mailto:ux@yale.edu" class="mailto">ux@yale.edu<span class="show-for-sr"> (link sends e-mail)</span></a></li>
+             </ul>
+             </div>
+      
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+    <!-- Bugherd send feedback -->
+        <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+        </script>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70849264-3', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
+
+</body>
+</html>

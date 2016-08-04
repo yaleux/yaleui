@@ -1,0 +1,282 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Buttons</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>buttons
+                </li>
+            </ul>
+        </nav>
+<h1 id="buttons">Buttons</h1>
+<p class="lead">Buttons are tied to an <strong>action</strong> of some kind.</p>
+
+
+<hr>
+<h2 id="primary-buttons">Primary Buttons</h2>
+<p>These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the <code>.tiny</code>, <code>.small</code>, and <code>.large</code> classes.</p>
+<pre><code class="lang-html">&lt;button class=&quot;primary large button&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;primary button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button class=&quot;primary small button&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;primary tiny button&quot;&gt;Tiny button&lt;/button&gt;
+</code></pre>
+<div class="styleguide-code-live"><button class="primary large button">Large button</button>
+<button class="primary button">Regular button</button>
+<button class="primary small button">Small button</button>
+<button class="primary tiny button">Tiny button</button>
+</div>
+
+
+<pre><code class="lang-html">&lt;button class=&quot;primary large hollow button&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;primary hollow button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button class=&quot;primary small hollow button&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;primary tiny hollow button&quot;&gt;Tiny button&lt;/button&gt;
+</code></pre>
+<div class="styleguide-code-live"><button class="primary large hollow button">Large button</button>
+<button class="primary hollow button">Regular button</button>
+<button class="primary small hollow button">Small button</button>
+<button class="primary tiny hollow button">Tiny button</button>
+</div>
+
+
+<hr>
+<h2 id="secondary-buttons">Secondary Buttons</h2>
+<p>These buttons are used for less important, secondary actions on a page.</p>
+<pre><code class="lang-html">&lt;button class=&quot;secondary large button&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;secondary button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button class=&quot;secondary small button&quot;&gt;Small button&lt;/button&gt;
+&lt;button class=&quot;secondary tiny button&quot;&gt;Tiny button&lt;/button&gt;
+</code></pre>
+<div class="styleguide-code-live"><button class="secondary large button">Large button</button>
+<button class="secondary button">Regular button</button>
+<button class="secondary small button">Small button</button>
+<button class="secondary tiny button">Tiny button</button>
+</div>
+
+
+
+<pre><code class="lang-html">&lt;button  class=&quot;secondary large hollow button&quot;&gt;Large button&lt;/button&gt;
+&lt;button  class=&quot;secondary hollow button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button  class=&quot;secondary small hollow button&quot;&gt;Small button&lt;/button&gt;
+&lt;button  class=&quot;secondary tiny hollow button&quot;&gt;Tiny button&lt;/button&gt;
+</code></pre>
+<div class="styleguide-code-live"><button  class="secondary large hollow button">Large button</button>
+<button  class="secondary hollow button">Regular button</button>
+<button  class="secondary small hollow button">Small button</button>
+<button  class="secondary tiny hollow button">Tiny button</button>
+</div>
+
+
+
+<hr>
+<h2 id="button-accessibility">Button Accessibility</h2>
+<p>It is best to use the <code>button</code> or <code>input type=&quot;button&quot;</code> elements for buttons. These elements have ineractivity and accessibility features built in automatically. </p>
+<p>When using other elements (e.g. <code>div</code> and <code>li</code>), important functionality such as focus, mouse interaction, and keyboard interaction must be added manually. If the interaction is not added manually, then it will be inaccessible.</p>
+<p>One common practice is to use <code>a</code> elements instead of <code>button</code> elements for styling purposes. <strong>That approach is not necessary with Yale UI.</strong> It is still best to reserve use of <code>a</code> tags for links, and to use <code>button</code> or <code>input type=&quot;button&quot;</code> elements for buttons. Visual appearance can be controlled through CSS and selecting appropriate classes; visual appearance should not influence tag selection.</p>
+<pre><code class="lang-html">&lt;!-- This is best --&gt;
+&lt;button class=&quot;primary button&quot;&gt;Best&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;primary button&quot; value=&quot;Also Best&quot; /&gt;
+
+&lt;!-- This is acceptable but discouraged --&gt;
+&lt;a href=&quot;#&quot; class=&quot;primary button&quot;&gt;Discouraged&lt;/a&gt;
+
+&lt;!-- This must be avoided --&gt;
+&lt;div class=&quot;primary button&quot;&gt;Avoid&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><!-- This is best -->
+<button class="primary button">Best</button>
+<input type="button" class="primary button" value="Also Best" />
+
+<!-- This is acceptable but discouraged -->
+<a href="#" class="primary button">Discouraged</a>
+
+<!-- This must be avoided -->
+<div class="primary button">Avoid</div>
+</div>
+
+
+
+
+<div class="callout primary">
+    <strong>Note:</strong> It is approprite to use <code>a</code> elements with <code>class=&quot;button&quot;</code> if the objective is to create a link that visually resembles a button. An element&#39;s <strong>purpose</strong> and <strong>desired visual appearance*</strong> are completely separate concerns.
+</div>
+
+
+<pre><code class="lang-html">&lt;!-- This is discouraged --&gt;
+&lt;a href=&quot;#&quot; class=&quot;primary button&quot; onclick=&quot;doInteraction()&quot; &gt;Discouraged&lt;/a&gt;
+
+&lt;!-- This is appropriate --&gt;
+&lt;a href=&quot;someurl.com&quot; class=&quot;primary button&quot; &gt;Appropriate&lt;/a&gt;
+</code></pre>
+<div class="styleguide-code-live"><!-- This is discouraged -->
+<a href="#" class="primary button" onclick="doInteraction()" >Discouraged</a>
+
+<!-- This is appropriate -->
+<a href="someurl.com" class="primary button" >Appropriate</a>
+</div>
+
+
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li class="current"><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+             <div class="column small-4">
+                 <a class="y-icons y-yale y-mark" href=
+                 "http://www.yale.edu/"><span class="show-for-sr">Yale
+                 </span></a>
+             </div>
+      
+             <div class="column small-8" align="right">
+             <ul>
+               <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+               <li><a href="http://identity.yale.edu/web">Web Identity Guidelines</a></li>
+               <li><a href="mailto:ux@yale.edu" class="mailto">ux@yale.edu<span class="show-for-sr"> (link sends e-mail)</span></a></li>
+             </ul>
+             </div>
+      
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+    <!-- Bugherd send feedback -->
+        <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+        </script>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70849264-3', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
+
+</body>
+</html>

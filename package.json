@@ -1,6 +1,6 @@
 {
   "name": "yale-ui",
-  "version": ",",
+  "version": "1.0.0",
   "main": "gulpfile.js",
   "description": "Yale UI Style Guide. Based on Zurb Foudation 6.",
   "author": "Yale User Experience & Digital Strategy <ux@yale.edu> (https://github.com/yaleux)",
