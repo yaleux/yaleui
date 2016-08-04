@@ -9,10 +9,6 @@ import rimraf   from 'rimraf';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 
-var requireDir = require('require-dir');
-requireDir('./gulp');
-
-
 const zip = require('gulp-zip');
 
 // Load all Gulp plugins into one variable
@@ -112,11 +108,14 @@ function images() {
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
+
 // Compress "dist" assest to create a downloadable zip
 function compress(){
-  return gulp.src('dist/*')
-        .pipe(zip('YaleUI.zip'))
-        .pipe(gulp.dest('dist'));
+  return gulp.src('dist/**/*', {
+        base: 'dist'
+  })
+  .pipe(zip('YaleUI.zip'))
+  .pipe(gulp.dest('dist'));
 }
     
 
@@ -144,3 +143,6 @@ function watch() {
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
   // gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide, browser.reload));
 }
+
+var requireDir = require('require-dir');
+requireDir('./gulp');
