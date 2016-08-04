@@ -1,10 +1,9 @@
 {
-  "name": "foundation-ssg",
-  "version": "1.0.0",
+  "name": "yale-ui",
+  "version": ",",
   "authors": [
-    "ZURB <foundation@zurb.com>"
+    "Yale User Experience & Digital Strategy <ux@yale.edu> (https://github.com/yaleux)"
   ],
-  "description": "Static site generator for Foundation for Sites.",
   "main": "gulpfile.js",
   "license": "MIT",
   "ignore": [

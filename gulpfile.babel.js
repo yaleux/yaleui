@@ -6,9 +6,12 @@ import browser  from 'browser-sync';
 import gulp     from 'gulp';
 import panini   from 'panini';
 import rimraf   from 'rimraf';
-// import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+
+var requireDir = require('require-dir');
+requireDir('./gulp');
+
 
 const zip = require('gulp-zip');
 

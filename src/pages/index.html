@@ -1,19 +1,3 @@
----
-github: https://github.com/yaleux/yaleui
-public-url: https://yaleux.github.io/yaleui/
-assets: YaleUI.zip
-featured-examples:
-  - title: Yale Header & Footer
-    thumb: assets/img/header-footer.png
-    link: examples/header-footer.html
-  - title: Yale Login Form
-    thumb: assets/img/login-form.png
-    link: examples/login-form.html
-  - title: Feature Cards
-    thumb: assets/img/feature-card.png 
-    link: examples/cards.html  
----
-
 
 <div class="content">
   <section>
@@ -22,8 +6,8 @@ featured-examples:
         {{> site-title}}
 
         <div class="button-group">
-          <a download href="{{root}}{{assets}}" class="button"><i class="fa fa-4x fa-download" aria-hidden="true"></i> Download</a>
-          <a href="{{github}}" class="button"><i class="fa fa-4x fa-github" aria-hidden="true"></i> GitHub</a>
+          <a download href="{{root}}{{yaleui.download}}" class="button"><i class="fa fa-4x fa-download" aria-hidden="true"></i> Download</a>
+          <a href="{{yaleui.github}}" class="button"><i class="fa fa-4x fa-github" aria-hidden="true"></i> GitHub</a>
         </div>
 
         <a href="{{root}}styleguide" class="large success button">Style Guide</a>
@@ -46,15 +30,22 @@ featured-examples:
       <h3>Basic Download</h3>
       <p>The quickest way to get started, just download the assets and link the CSS file in your project. Take a look at the examples folder for inspiration.</p>
 
-      <a download href="{{root}}{{assets}}" class="button expanded"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+      <a download href="{{root}}{{yaleui.download}}" class="button expanded"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
 
   {{#markdown}}
 ```
-    <head>
-  <!-- ... -->
+<!-- Example page structure -->
+<html lang="en">
+ <head>
+ <!-- ... -->
   <link rel="stylesheet" href="{{root}}assets/css/app.css">
-  <!-- ... -->
-</head>
+ <!-- ... -->
+ </head>
+ <body>
+ <!-- ... -->
+  <script src="{{root}}assets/js/app.js"></script>
+ </body>
+</html>
 ```
   {{/markdown}}
       
@@ -65,11 +56,11 @@ featured-examples:
       <p>To pick-and-choose elements and have more control over customization, follow the installation instructions in our GitHub repository.</p>
 
 
-      <a href="{{github}}" class="button expanded"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="{{yaleui.github}}" class="button expanded"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
 
   {{#markdown}}
 ```bash
-    git clone {{github}}
+    git clone {{yaleui.github}}
 cd yaleui
 npm install
 bower install
@@ -78,21 +69,28 @@ npm start
   {{/markdown}}
     </div>
 
+  <div class="columns">
+  <h3>Yale UI CDN</h3>
+    {{#markdown}}
+```
+    <!-- Latest compiled CSS -->
+<link rel="stylesheet" href="{{yaleui.cdn}}{{yaleui.version}}{{yaleui.cdn-css}}">
 
+<!-- Latest compiled and minified JavaScript -->
+<script src="{{yaleui.cdn}}{{yaleui.version}}{{yaleui.cdn-js}}"></script>
 
-    <pre>
-      <code>
-        lorem ipsum dolor
-      </code>
-    </pre>
-    </div>
+```  
+  {{/markdown}}
+ 
+  </div>
+
   </section>
 
 <hr>
 
   <section id="examples">
     <div class="row">
-      <h2>Examples</h2>
+      <div class="columns"><h2>Examples</h2></div>
 
       {{#each featured-examples}}
         <div class="columns medium-4 panel">
