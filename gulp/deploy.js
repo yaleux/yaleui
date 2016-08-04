@@ -22,16 +22,16 @@ gulp.task('deploy',
 
 
 function deploy_prompt(done){
- inquirer.prompt([{
+  prompt({
     type: 'input',
     name: 'version',
     message: 'What version are we moving to? (Current version is ' + CURRENT_VERSION + ')'
-  }], function(res) {
+  }, function(res) {
     NEXT_VERSION = res.version;
-    done();
   });
- done();
+  done();
 }
+
 
 // Bumps the version number in any file that has one
 function deploy_version(){
