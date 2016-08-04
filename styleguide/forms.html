@@ -1,0 +1,358 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+  <title>Yale UI Style Guide | Forms</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <div class="off-canvas-wrapper"><div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <header class="yale-header">
+          <div class="topper-logo row">
+              <div class="columns">
+                  <a class="y-icons y-yale y-univ" href=
+                  "http://www.yale.edu/"><span class="show-for-sr">Yale
+                  University</span></a>
+              </div>
+          </div>
+      
+          <div class="top-bar-container">
+              <div class="top-bar row columns">
+                  <div class="top-bar-title">
+                      <span data-hide-for="medium" data-responsive-toggle=
+                      "responsive-menu"><button class="menu-icon dark"
+                      data-toggle="" type="button"><span data-hide-for="medium"
+                      data-responsive-toggle=
+                      "responsive-menu"></span></button></span><a href="../">Yale UI
+                      Style Guide</a>
+                  </div>
+          
+          
+                  <div id="responsive-menu">
+                      <div class="top-bar-left">
+                          <ul class="dropdown menu" data-dropdown-menu="">
+                              <li>
+                                  <a href="../#getting-started">Getting Started</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../styleguide">Style Guide</a>
+                              </li>
+          
+          
+                              <li>
+                                  <a href="../#examples">Examples</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+    <div id="styleguide-component">
+      <div class="row expanded">
+        <div class="medium-7 medium-push-2 columns">
+
+        <nav aria-labelledby="breadcrumbs-label" role="navigation">
+            <h2 id="breadcrumbs-label" class="show-for-sr" >You are here:</h2>
+            <ul class="breadcrumbs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../styleguide">StyleGuide</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span>forms
+                </li>
+            </ul>
+        </nav>
+<h1 id="forms">Forms</h1>
+<h2 id="elements-of-a-form">Elements of a Form</h2>
+<p>A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):</p>
+<ul>
+<li>Form</li>
+<li>Label</li>
+<li>Input</li>
+<li>Select</li>
+<li>Text area</li>
+<li>Button</li>
+</ul>
+<hr>
+<h2 id="form-layouts">Form Layouts</h2>
+<p>Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:</p>
+<ul>
+<li>You can size inputs using column sizes, like <code>.medium-6</code>, <code>.small-6</code>.</li>
+<li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
+</ul>
+<hr>
+<h2 id="form-accessibility">Form Accessibility</h2>
+<h3 id="labelling-basics">Labelling Basics</h3>
+<p>For each control on a form, there must be a label providing information about the control&#39;s purpose. This is generally using a <code>label</code> element. Form labels provide a number of accessibility benefits. When clicking on a control&#39;s <code>label</code> element, focus will be applied to the control, thus increasing the size of the clickable area. Also, assistive technology can read the label each form control a blind user interacts with the control.
+Form labels can be marked up in one of two ways:</p>
+<p><ol>
+  <li>Setting the <code>for</code> attribute of the <code>label</code> equal to the <code>id</code> attribute of the form control being labelled.</li>
+  <li>Wrapping the form control within its label.</li>
+</ol></p>
+<div class="callout warning">
+  While the <code>placeholder</code> attribute may be used, it is never a substitute for a <code>label</code> element.
+</div>
+
+<pre><code class="lang-html">&lt;label for=&quot;sample-form-control&quot;&gt;Form Control&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;sample-form-control&quot; /&gt;
+
+&lt;label&gt;Form Control&lt;input type=&quot;text&quot; /&gt;&lt;/label&gt;
+</code></pre>
+<div class="styleguide-code-live"><label for="sample-form-control">Form Control</label>
+<input type="text" id="sample-form-control" />
+
+<label>Form Control<input type="text" /></label>
+</div>
+
+
+
+<div class="callout warning">
+  When adding labels to form elements, each <code>label</code> element must be associated to exactly one form control, and each form control must have exactly one label.
+  <code>label</code> elements can <strong>only</strong> be associated with form controls. Associating <code>label</code> elements with other elements can create accessibility problems.
+</div>
+
+<pre><code class="lang-html">&lt;div class=&quot;callout alert&quot;&gt;
+
+&lt;!-- The following is incorrect because it associates a label element with a div --&gt;
+  &lt;label for=&quot;form-control-container&quot;&gt;Inaccessible Form Label (! Don&#39;t do this)&lt;/label&gt;
+  &lt;div id=&quot;form-control-container&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;form-control&quot; /&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+<div class="styleguide-code-live"><div class="callout alert">
+
+<!-- The following is incorrect because it associates a label element with a div -->
+  <label for="form-control-container">Inaccessible Form Label (! Don&#39;t do this)</label>
+  <div id="form-control-container">
+    <input type="text" id="form-control" />
+  </div>
+
+<p></div>
+</div></p>
+<hr>
+<h3 id="self-labelling-form-controls">Self-Labelling Form Controls</h3>
+<p>In general, buttons do not require <code>label</code> elements. For <code>button</code> elements, the text contained within the opening and closing tags functions as a label. For <code>input type=&quot;button&quot;</code> and <code>input type=&quot;submit&quot;</code> elements, provde a <code>value</code> attribute in lieu of a label.</p>
+<pre><code class="lang-html">&lt;button&gt;Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; value=&quot;Button&quot; /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+</code></pre>
+<div class="styleguide-code-live"><button>Button</button>
+<input type="button" value="Button" />
+<input type="submit" value="Submit" />
+</div>
+
+
+
+<p><br></p>
+<pre><code class="lang-html">&lt;button class=&quot;button primary&quot;&gt;Button&lt;/button&gt;
+&lt;input class=&quot;button primary&quot; type=&quot;button&quot; value=&quot;Button&quot; /&gt;
+&lt;input class=&quot;button primary&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+</code></pre>
+<div class="styleguide-code-live"><button class="button primary">Button</button>
+<input class="button primary" type="button" value="Button" />
+<input class="button primary" type="submit" value="Submit" />
+</div>
+
+
+
+<hr>
+<h3 id="fieldsets">Fieldsets</h3>
+<p>In long forms, groups of fields with a common purpose should be grouped together in a <code>fieldset</code> wrapper. Within the <code>fieldset</code>, include a <code>legend</code> element describing the purpose of the fieldset. Nesting fieldsets should be avoided.</p>
+<pre><code class="lang-html">  &lt;fieldset class=&quot;fieldset&quot;&gt;
+    &lt;legend&gt;List Your Hobbies&lt;/legend&gt;
+    &lt;label&gt;Hobby 1&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+    &lt;label&gt;Hobby 2&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+    &lt;label&gt;Hobby 3&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+    &lt;label&gt;Hobby 4&lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
+  &lt;/fieldset&gt;
+</code></pre>
+<div class="styleguide-code-live">  <fieldset class="fieldset">
+    <legend>List Your Hobbies</legend>
+    <label>Hobby 1<input type="text"></label>
+    <label>Hobby 2<input type="text"></label>
+    <label>Hobby 3<input type="text"></label>
+    <label>Hobby 4<input type="text"></label>
+  </fieldset>
+</div>
+
+
+<hr>
+<h3 id="checkboxes-and-radio-buttons">Checkboxes and Radio Buttons</h3>
+<p>Checkboxes and radio buttons should generally be wrapped in a <code>fieldset</code> and have a <code>legend</code> describe the purpose of the controls. This is the semantically correct way to mark up these elements, and assistive technology handles such markup well. Omitting those elements often leads to accessibility errors, even if the form controls are described in other ways.</p>
+<pre><code class="lang-html">&lt;fieldset class=&quot;fieldset&quot;&gt;
+  &lt;legend&gt;Where do you live?&lt;/legend&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;New Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;West Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;North Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Hamden&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Fairfield&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Other&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset class=&quot;fieldset&quot;&gt;
+  &lt;legend&gt;Where do you live?&lt;/legend&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;New Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;West Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;North Haven&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Hamden&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Fairfield&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;home&quot;&gt;Other&lt;/label&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<div class="styleguide-code-live"><fieldset class="fieldset">
+  <legend>Where do you live?</legend>
+  <label><input type="radio" name="home">New Haven</label>
+  <label><input type="radio" name="home">West Haven</label>
+  <label><input type="radio" name="home">North Haven</label>
+  <label><input type="radio" name="home">Hamden</label>
+  <label><input type="radio" name="home">Fairfield</label>
+  <label><input type="radio" name="home">Other</label>
+</fieldset>
+
+<fieldset class="fieldset">
+  <legend>Where do you live?</legend>
+  <label><input type="radio" name="home">New Haven</label>
+  <label><input type="radio" name="home">West Haven</label>
+  <label><input type="radio" name="home">North Haven</label>
+  <label><input type="radio" name="home">Hamden</label>
+  <label><input type="radio" name="home">Fairfield</label>
+  <label><input type="radio" name="home">Other</label>
+</fieldset>
+</div>
+
+
+<hr>
+<h3 id="search-forms">Search Forms</h3>
+<p>For simple search forms, such as those appearing in the header of many websites, the <code>input</code> need not have a label if the search button has a label such as &quot;search&quot; or &quot;submit search&quot; AND the form has a <code>role=&quot;search&quot;</code> ARIA attribute AND the search button is visually rendered adjacent to the text input. If the visual design calls for an icon or image for the search button (such as magnifying class) in stead of text, adding a span with the text &quot;Search&quot; and a <code>show-for-sr</code> class is desirable.</p>
+<pre><code class="lang-html">&lt;form role=&quot;search&quot; aria-label=&quot;Site Search&quot;&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;input type=&quot;search&quot; placeholder=&quot;Search&quot; /&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button type=&quot;button&quot; class=&quot;small button&quot;&gt;search&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/form&gt;
+</code></pre>
+<div class="styleguide-code-live"><form role="search" aria-label="Site Search">
+  <ul class="menu">
+    <li><input type="search" placeholder="Search" /></li>
+    <li><button type="button" class="small button">search</button></li>
+  </ul>
+</form>
+</div>
+
+
+
+<hr>
+<h3 id="labeling-with-aria">Labeling with ARIA</h3>
+<p>While using the <code>label</code> element is preferable, there may be cases where it is not possible. As a fallback, using ARIA labels (the attributes <code>aria-label</code> and <code>aria-labelledby</code>) is acceptable.</p>
+        </div>
+        <div class="medium-2 medium-pull-7 columns">
+          <ul class="vertical menu" id="styleguide-menu">
+            <li class="nav-title">General</li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li class="current"><a href="forms.html">Forms</a></li>
+          
+            <li class="nav-title">Navigation</li>
+            <li><a href="navigation.html">Overview</a></li>
+            <li><a href="dropdown-menu.html">Dropdown <span class="label">JS</span></a></li>
+            <li><a href="progress-bar.html">Progress Bar</a></li>
+          
+          
+            <li class="nav-title">Controls</li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="button-groups.html">Button Groups</a></li>
+            <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+            <li><a href="switch.html">Switch</a></li>
+            <li><a href="pagination.html">Pagination</a></li>
+            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          
+            <li class="nav-title">Containers</li>
+            <li><a href="callout.html">Callout</a></li>
+            <li><a href="dialogs.html">Dialogs <span class="label">JS</span> <small>Modal</small></a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="medium-3 columns">
+        <!-- TOC, except on Style Guide landing page -->
+          <div data-sticky-container>
+            <nav class="columns styleguide-toc-wrap" data-sticky data-anchor="styleguide-component" data-sticky-on="large">
+              <div class="styleguide-toc" id="styleguideTOC">
+                <p class="styleguide-nav-title">On this page:</p>
+          
+                <ul class="vertical menu" data-styleguide-toc>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="yale-footer">
+           <div class="footer-logo row">
+             <div class="column small-4">
+                 <a class="y-icons y-yale y-mark" href=
+                 "http://www.yale.edu/"><span class="show-for-sr">Yale
+                 </span></a>
+             </div>
+      
+             <div class="column small-8" align="right">
+             <ul>
+               <li><a href="http://usability.yale.edu">Usability &amp; Web Accessibility</a></li>
+               <li><a href="http://identity.yale.edu/web">Web Identity Guidelines</a></li>
+               <li><a href="mailto:ux@yale.edu" class="mailto">ux@yale.edu<span class="show-for-sr"> (link sends e-mail)</span></a></li>
+             </ul>
+             </div>
+      
+      </footer>
+      
+    </div>
+    </div>
+  </div>
+
+
+    <!-- Bugherd send feedback -->
+        <script type='text/javascript'>
+        (function (d, t) {
+          var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          bh.type = 'text/javascript';
+          bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=2uxoymu8phvyiw48n9ghga';
+          s.parentNode.insertBefore(bh, s);
+          })(document, 'script');
+        </script>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70849264-3', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
+
+</body>
+</html>
