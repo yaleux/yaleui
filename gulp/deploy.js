@@ -59,5 +59,6 @@ function deploy_commit(done){
 function deploy_cdn(done){
   exec('aws s3 sync dist/assets/css s3://yaleui.yale.edu/' + NEXT_VERSION + '/css/');
   exec('aws s3 sync dist/assets/js s3://yaleui.yale.edu/' + NEXT_VERSION + '/js/');
-  done();
+  exec('aws s3 sync dist/assets/img s3://yaleui.yale.edu/' + NEXT_VERSION + '/img/');
+done();
 }

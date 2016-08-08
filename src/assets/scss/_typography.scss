@@ -98,7 +98,7 @@ a[href$='ppt']:after,
 a[href$='pptx']:after,
 a[href^="http://"]:not([href*="yale.edu"]):after,
 a[href^="https://"]:not([href*="yale.edu"]):after {
-  font-family: 'FontAwesome';
+  font-family: $fa-font;
   margin-left: 5px;
   text-decoration: none;
   display: inline-block;

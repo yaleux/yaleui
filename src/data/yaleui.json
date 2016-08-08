@@ -3,7 +3,7 @@
   "github": "https://github.com/yaleux/yaleui",
   "public-url": "https://yaleux.github.io/yaleui/",
   "download": "YaleUI.zip",
-  "cdn": "https://yaleui.yale.edu/",
+  "cdn": "http://yaleui.yale.edu/",
   "cdn-css": "/css/app.css",
   "cdn-js": "/js/app.js"
 }
