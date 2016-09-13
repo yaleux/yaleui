@@ -59,13 +59,19 @@ a:hover .example {
 
 
 
-// Log in form
-
+// Log in form and Charging Form
+//TODO move to own partials
 
 #log-in-form,
 #yale-charging-form {
     max-width: 384px;
     margin: auto;
+}
+
+#yale-charging-form {
+  input[type=text]{
+    text-transform: uppercase;
+  }
 }
 
 #payment-amount{

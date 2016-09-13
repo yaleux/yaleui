@@ -76,60 +76,45 @@
     
       <h1 class="text-center"><small>Yale Charging Instructions</small></h1>
       
-      <form id="yale-charging-form" class="border">
+      <form id="yale-charging-form" data-abide class="border">
             
-          <h2><small>How will you pay?</small></h2>
-          <div class="button-group switch-buttons">
-            <input class="switch-input" id="Grant" type="radio" name="payment-choice">
-          
-            <label for="Grant" class="secondary hollow button">
-            <i class="fa fa-2x fa-institution" aria-hidden="true"></i><div class="icon-label">Grant</div>
-            <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with GR, GC, GK, GT, or GB"><i class="fa fa-question-circle-o"></i></span>
+            <label id="Company">Company
+              <input type="text" value="CO" 
+              name="Company" required pattern="^CO\d{2}$" maxlength="4" minlength="4" aria-required="true">
+              <span class="form-error">
+                Format: CO01
+              </span>
             </label>
       
-            <input class="switch-input" id="Gift" type="radio" name="payment-choice">
-            <label for="Gift" class="secondary hollow button">
-              <i class="fa fa-2x fa-gift" aria-hidden="true"></i><div class="icon-label">Gift</div>
-            <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with GE or GS"><i class="fa fa-question-circle-o"></i></span>
-             </label>
+        
+            <label id="ChargeID">Charge ID (GRN, GFT, or YD)
+              <input type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
+              <span class="form-error">
+                Format: GRN12345 or GFT12345 or YD123456
+              </span>
+            </label>
       
-            <input class="switch-input" id="YaleDesignated" type="radio" name="payment-choice">
-             <label for="YaleDesignated" class="secondary hollow button">
-              <i class="y-icons y-yale y-mark" aria-hidden="true"></i><div class="icon-label">Other</div>
-              <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with YD"><i class="fa fa-question-circle-o"></i></span>
-             </label>
-      
-          </div>
-      
-          <hr>
-      
-          <label id="Company" class="hide">Company
-            <input type="text" aria-required="true" required=""  maxlength="4" minlength="4" name="Company" size="60" value="CO">        
-          </label>
-      
-          <label id="GrantID" class="hide">Grant ID
-            <input type="text" aria-required="true" required=""  maxlength="9" minlength="9" name="GRN" size="60">        
-          </label>
-      
-          <label id="GiftID" class="hide">Gift ID
-            <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" name="GFT" size="60">        
-          </label>
-      
-          <label id="YaleDesignatedID" class="hide">Yale Designated ID
-            <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" name="YD" size="60" value="YD">        
-          </label>
           
           <div id="additional-required" class="hide">
             <label>Cost Center
-                <input type="text" aria-required="true" required="" maxlength="6" minlength="6" name="CC" size="60" value="CC">        
+                <input type="text" aria-required="true" required pattern="^CC\d{4}$" maxlength="6" minlength="6" name="CC" size="60" value="CC">   
+              <span class="form-error">
+                Format: CC1234
+              </span>     
             </label>
       
             <label>Program
-                <input type="text" aria-required="true" required="" maxlength="7" minlength="7" name="PG" size="60" value="PG">        
+                <input type="text" aria-required="true" required pattern="^PG\d{5}$" maxlength="7" minlength="7" name="PG" size="60" value="PG">     
+              <span class="form-error">
+                Format: PG12345
+              </span>      
             </label>
       
             <label>Project
-                <input type="text" aria-required="true" required="" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">        
+                <input type="text" aria-required="true" required pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">        
+              <span class="form-error">
+                Format: PJ123456
+              </span> 
             </label>
       
             <label>Assignee (optional)
@@ -138,7 +123,7 @@
       
           </div>
       
-          <button disabled id="submit-payment" class="expanded button" name="submit-payment" type="submit" value="Submit">Submit</button>
+          <button id="submit-payment" class="expanded button" name="submit-payment" type="submit" value="Submit">Submit</button>
       
       </form>
     
@@ -152,60 +137,45 @@
     <pre><code class="lang-html">
     &lt;h1 class=&quot;text-center&quot;&gt;&lt;small&gt;Yale Charging Instructions&lt;/small&gt;&lt;/h1&gt;
     
-    &lt;form id=&quot;yale-charging-form&quot; class=&quot;border&quot;&gt;
+    &lt;form id=&quot;yale-charging-form&quot; data-abide class=&quot;border&quot;&gt;
     
-        &lt;h2&gt;&lt;small&gt;How will you pay?&lt;/small&gt;&lt;/h2&gt;
-        &lt;div class=&quot;button-group switch-buttons&quot;&gt;
-          &lt;input class=&quot;switch-input&quot; id=&quot;Grant&quot; type=&quot;radio&quot; name=&quot;payment-choice&quot;&gt;
-    
-          &lt;label for=&quot;Grant&quot; class=&quot;secondary hollow button&quot;&gt;
-          &lt;i class=&quot;fa fa-2x fa-institution&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;div class=&quot;icon-label&quot;&gt;Grant&lt;/div&gt;
-          &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;has-tip&quot; title=&quot;Starts with GR, GC, GK, GT, or GB&quot;&gt;&lt;i class=&quot;fa fa-question-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;label id=&quot;Company&quot;&gt;Company
+            &lt;input type=&quot;text&quot; value=&quot;CO&quot; 
+            name=&quot;Company&quot; required pattern=&quot;^CO\d{2}$&quot; maxlength=&quot;4&quot; minlength=&quot;4&quot; aria-required=&quot;true&quot;&gt;
+            &lt;span class=&quot;form-error&quot;&gt;
+              Format: CO01
+            &lt;/span&gt;
           &lt;/label&gt;
     
-          &lt;input class=&quot;switch-input&quot; id=&quot;Gift&quot; type=&quot;radio&quot; name=&quot;payment-choice&quot;&gt;
-          &lt;label for=&quot;Gift&quot; class=&quot;secondary hollow button&quot;&gt;
-            &lt;i class=&quot;fa fa-2x fa-gift&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;div class=&quot;icon-label&quot;&gt;Gift&lt;/div&gt;
-          &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;has-tip&quot; title=&quot;Starts with GE or GS&quot;&gt;&lt;i class=&quot;fa fa-question-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-           &lt;/label&gt;
     
-          &lt;input class=&quot;switch-input&quot; id=&quot;YaleDesignated&quot; type=&quot;radio&quot; name=&quot;payment-choice&quot;&gt;
-           &lt;label for=&quot;YaleDesignated&quot; class=&quot;secondary hollow button&quot;&gt;
-            &lt;i class=&quot;y-icons y-yale y-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;div class=&quot;icon-label&quot;&gt;Other&lt;/div&gt;
-            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;has-tip&quot; title=&quot;Starts with YD&quot;&gt;&lt;i class=&quot;fa fa-question-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-           &lt;/label&gt;
+          &lt;label id=&quot;ChargeID&quot;&gt;Charge ID (GRN, GFT, or YD)
+            &lt;input type=&quot;text&quot; name=&quot;ChargeID&quot; palceholder=&quot;GRN, GFT, or YD&quot; required pattern=&quot;(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)&quot; maxlength=&quot;9&quot; minlength=&quot;8&quot; aria-required=&quot;true&quot;&gt;
+            &lt;span class=&quot;form-error&quot;&gt;
+              Format: GRN12345 or GFT12345 or YD123456
+            &lt;/span&gt;
+          &lt;/label&gt;
     
-        &lt;/div&gt;
-    
-        &lt;hr&gt;
-    
-        &lt;label id=&quot;Company&quot; class=&quot;hide&quot;&gt;Company
-          &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot;  maxlength=&quot;4&quot; minlength=&quot;4&quot; name=&quot;Company&quot; size=&quot;60&quot; value=&quot;CO&quot;&gt;        
-        &lt;/label&gt;
-    
-        &lt;label id=&quot;GrantID&quot; class=&quot;hide&quot;&gt;Grant ID
-          &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot;  maxlength=&quot;9&quot; minlength=&quot;9&quot; name=&quot;GRN&quot; size=&quot;60&quot;&gt;        
-        &lt;/label&gt;
-    
-        &lt;label id=&quot;GiftID&quot; class=&quot;hide&quot;&gt;Gift ID
-          &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot;  maxlength=&quot;8&quot; minlength=&quot;8&quot; name=&quot;GFT&quot; size=&quot;60&quot;&gt;        
-        &lt;/label&gt;
-    
-        &lt;label id=&quot;YaleDesignatedID&quot; class=&quot;hide&quot;&gt;Yale Designated ID
-          &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot;  maxlength=&quot;8&quot; minlength=&quot;8&quot; name=&quot;YD&quot; size=&quot;60&quot; value=&quot;YD&quot;&gt;        
-        &lt;/label&gt;
     
         &lt;div id=&quot;additional-required&quot; class=&quot;hide&quot;&gt;
           &lt;label&gt;Cost Center
-              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot; maxlength=&quot;6&quot; minlength=&quot;6&quot; name=&quot;CC&quot; size=&quot;60&quot; value=&quot;CC&quot;&gt;        
+              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^CC\d{4}$&quot; maxlength=&quot;6&quot; minlength=&quot;6&quot; name=&quot;CC&quot; size=&quot;60&quot; value=&quot;CC&quot;&gt;   
+            &lt;span class=&quot;form-error&quot;&gt;
+              Format: CC1234
+            &lt;/span&gt;     
           &lt;/label&gt;
     
           &lt;label&gt;Program
-              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot; maxlength=&quot;7&quot; minlength=&quot;7&quot; name=&quot;PG&quot; size=&quot;60&quot; value=&quot;PG&quot;&gt;        
+              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PG\d{5}$&quot; maxlength=&quot;7&quot; minlength=&quot;7&quot; name=&quot;PG&quot; size=&quot;60&quot; value=&quot;PG&quot;&gt;     
+            &lt;span class=&quot;form-error&quot;&gt;
+              Format: PG12345
+            &lt;/span&gt;      
           &lt;/label&gt;
     
           &lt;label&gt;Project
-              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required=&quot;&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot; value=&quot;PJ&quot;&gt;        
+              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot; value=&quot;PJ&quot;&gt;        
+            &lt;span class=&quot;form-error&quot;&gt;
+              Format: PJ123456
+            &lt;/span&gt; 
           &lt;/label&gt;
     
           &lt;label&gt;Assignee (optional)
@@ -214,7 +184,7 @@
     
         &lt;/div&gt;
     
-        &lt;button disabled id=&quot;submit-payment&quot; class=&quot;expanded button&quot; name=&quot;submit-payment&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;Submit&lt;/button&gt;
+        &lt;button id=&quot;submit-payment&quot; class=&quot;expanded button&quot; name=&quot;submit-payment&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;Submit&lt;/button&gt;
     
     &lt;/form&gt;
     </code></pre>
@@ -233,44 +203,25 @@
        <div class="accordion-content" data-tab-content>
     
     <pre><code class="lang-js">
-    $(&#39;#Grant&#39;).change(function(){
-      if(this.checked){
-       $(&#39;#Company&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#GrantID&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#GiftID&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#YaleDesignatedID&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#additional-required&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#submit-payment&#39;).removeAttr(&#39;disabled&#39;);
+    // Display fields based on type of Charge ID
+    $(&#39;#ChargeID&#39;).change(function(){
+      chargeID = this.value;
     
+      if(chargeID.startsWith(&quot;GRN&quot;)){
+        $(&#39;#additional-required&#39;).addClass(&#39;hide&#39;);
+      }
+    
+      if( chargeID.startsWith(&quot;GFT&quot;) || chargeID.startsWwith(&quot;YD&quot;) ){
+        $(&#39;#additional-required&#39;).removeClass(&#39;hide&#39;);
       }
     });
     
-    $(&#39;#Gift&#39;).change(function(){
-      if(this.checked){
-       $(&#39;#Company&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#GrantID&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#GiftID&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#YaleDesignatedID&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#additional-required&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#submit-payment&#39;).removeAttr(&#39;disabled&#39;);
-      }
-    });
-    
-    $(&#39;#YaleDesignated&#39;).change(function(){
-      if(this.checked){
-       $(&#39;#Company&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#GrantID&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#GiftID&#39;).addClass(&#39;hide&#39;);
-       $(&#39;#YaleDesignatedID&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#additional-required&#39;).removeClass(&#39;hide&#39;);
-       $(&#39;#submit-payment&#39;).removeAttr(&#39;disabled&#39;);
-      }
-    });
     
     // Move the input focus to the end of the input string
     $(&#39;:input[type=text]&#39;).focus(function() {
-        setTimeout((function(el) {
-            var strLength = el.value.length;
+         setTimeout((function(el) {
+            var strLength = el.value.length
+    
             return function() {
                 if(el.setSelectionRange !== undefined) {
                     el.setSelectionRange(strLength, strLength);
@@ -278,6 +229,12 @@
                     $(el).val(el.value);
                 }
         }}(this)), 0);
+    });
+    
+    // Convert input to uppercase
+    $(&#39;input[type=text]&#39;).bind(&#39;change&#39;, function() {
+       this.value = this.value.toLocaleUpperCase();
+    
     });
     </code></pre>
     

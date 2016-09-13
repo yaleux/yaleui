@@ -1,59 +1,44 @@
 <h1 class="text-center"><small>Yale Charging Instructions</small></h1>
 
-<form id="yale-charging-form" class="border">
+<form id="yale-charging-form" data-abide class="border">
       
-    <h2><small>How will you pay?</small></h2>
-    <div class="button-group switch-buttons">
-      <input class="switch-input" id="Grant" type="radio" name="payment-choice">
-    
-      <label for="Grant" class="secondary hollow button">
-      <i class="fa fa-2x fa-institution" aria-hidden="true"></i><div class="icon-label">Grant</div>
-      <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with GR, GC, GK, GT, or GB"><i class="fa fa-question-circle-o"></i></span>
+      <label id="Company">Company
+        <input type="text" value="CO" 
+        name="Company" required pattern="^CO\d{2}$" maxlength="4" minlength="4" aria-required="true">
+        <span class="form-error">
+          Format: CO01
+        </span>
       </label>
 
-      <input class="switch-input" id="Gift" type="radio" name="payment-choice">
-      <label for="Gift" class="secondary hollow button">
-        <i class="fa fa-2x fa-gift" aria-hidden="true"></i><div class="icon-label">Gift</div>
-      <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with GE or GS"><i class="fa fa-question-circle-o"></i></span>
-       </label>
+  
+      <label id="ChargeID">Charge ID (GRN, GFT, or YD)
+        <input type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
+        <span class="form-error">
+          Format: GRN12345 or GFT12345 or YD123456
+        </span>
+      </label>
 
-      <input class="switch-input" id="YaleDesignated" type="radio" name="payment-choice">
-       <label for="YaleDesignated" class="secondary hollow button">
-        <i class="y-icons y-yale y-mark" aria-hidden="true"></i><div class="icon-label">Other</div>
-        <span data-tooltip aria-haspopup="true" class="has-tip" title="Starts with YD"><i class="fa fa-question-circle-o"></i></span>
-       </label>
-
-    </div>
-
-    <hr>
-
-    <label id="Company" class="hide">Company
-      <input type="text" aria-required="true" required=""  maxlength="4" minlength="4" name="Company" size="60" value="CO">        
-    </label>
-
-    <label id="GrantID" class="hide">Grant ID
-      <input type="text" aria-required="true" required=""  maxlength="9" minlength="9" name="GRN" size="60">        
-    </label>
-
-    <label id="GiftID" class="hide">Gift ID
-      <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" name="GFT" size="60">        
-    </label>
-
-    <label id="YaleDesignatedID" class="hide">Yale Designated ID
-      <input type="text" aria-required="true" required=""  maxlength="8" minlength="8" name="YD" size="60" value="YD">        
-    </label>
     
     <div id="additional-required" class="hide">
       <label>Cost Center
-          <input type="text" aria-required="true" required="" maxlength="6" minlength="6" name="CC" size="60" value="CC">        
+          <input type="text" aria-required="true" required pattern="^CC\d{4}$" maxlength="6" minlength="6" name="CC" size="60" value="CC">   
+        <span class="form-error">
+          Format: CC1234
+        </span>     
       </label>
 
       <label>Program
-          <input type="text" aria-required="true" required="" maxlength="7" minlength="7" name="PG" size="60" value="PG">        
+          <input type="text" aria-required="true" required pattern="^PG\d{5}$" maxlength="7" minlength="7" name="PG" size="60" value="PG">     
+        <span class="form-error">
+          Format: PG12345
+        </span>      
       </label>
 
       <label>Project
-          <input type="text" aria-required="true" required="" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">        
+          <input type="text" aria-required="true" required pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">        
+        <span class="form-error">
+          Format: PJ123456
+        </span> 
       </label>
 
       <label>Assignee (optional)
@@ -62,6 +47,6 @@
 
     </div>
 
-    <button disabled id="submit-payment" class="expanded button" name="submit-payment" type="submit" value="Submit">Submit</button>
+    <button id="submit-payment" class="expanded button" name="submit-payment" type="submit" value="Submit">Submit</button>
 
 </form>

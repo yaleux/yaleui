@@ -1,41 +1,22 @@
-$('#Grant').change(function(){
-  if(this.checked){
-   $('#Company').removeClass('hide');
-   $('#GrantID').removeClass('hide');
-   $('#GiftID').addClass('hide');
-   $('#YaleDesignatedID').addClass('hide');
-   $('#additional-required').addClass('hide');
-   $('#submit-payment').removeAttr('disabled');
+// Display fields based on type of Charge ID
+$('#ChargeID').change(function(){
+  chargeID = this.value;
 
+  if(chargeID.startsWith("GRN")){
+    $('#additional-required').addClass('hide');
+  }
+
+  if( chargeID.startsWith("GFT") || chargeID.startsWwith("YD") ){
+    $('#additional-required').removeClass('hide');
   }
 });
 
-$('#Gift').change(function(){
-  if(this.checked){
-   $('#Company').removeClass('hide');
-   $('#GrantID').addClass('hide');
-   $('#GiftID').removeClass('hide');
-   $('#YaleDesignatedID').addClass('hide');
-   $('#additional-required').removeClass('hide');
-   $('#submit-payment').removeAttr('disabled');
-  }
-});
-
-$('#YaleDesignated').change(function(){
-  if(this.checked){
-   $('#Company').removeClass('hide');
-   $('#GrantID').addClass('hide');
-   $('#GiftID').addClass('hide');
-   $('#YaleDesignatedID').removeClass('hide');
-   $('#additional-required').removeClass('hide');
-   $('#submit-payment').removeAttr('disabled');
-  }
-});
 
 // Move the input focus to the end of the input string
 $(':input[type=text]').focus(function() {
-    setTimeout((function(el) {
-        var strLength = el.value.length;
+     setTimeout((function(el) {
+        var strLength = el.value.length
+
         return function() {
             if(el.setSelectionRange !== undefined) {
                 el.setSelectionRange(strLength, strLength);
@@ -44,3 +25,10 @@ $(':input[type=text]').focus(function() {
             }
     }}(this)), 0);
 });
+
+// Convert input to uppercase
+$('input[type=text]').bind('change', function() {
+   this.value = this.value.toLocaleUpperCase();
+
+});
+
