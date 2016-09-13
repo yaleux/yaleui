@@ -76,7 +76,7 @@
     
       <h1 class="text-center"><small>Yale Charging Instructions</small></h1>
       
-      <form id="yale-charging-form" data-abide class="border">
+      <form id="yale-charging-form" data-abide novalidate class="border" >
             
             <label id="Company">Company
               <input type="text" value="CO" 
@@ -88,7 +88,7 @@
       
         
             <label id="ChargeID">Charge ID (GRN, GFT, or YD)
-              <input type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
+              <input id="ChargeIDValue" type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
               <span class="form-error">
                 Format: GRN12345 or GFT12345 or YD123456
               </span>
@@ -97,7 +97,7 @@
           
           <div id="additional-required" class="hide">
             <label>Cost Center
-                <input type="text" aria-required="true" required pattern="^CC\d{4}$" maxlength="6" minlength="6" name="CC" size="60" value="CC">   
+              <input type="text" aria-required="true" required pattern="^CC\d{4}$" maxlength="6" minlength="6" name="CC" size="60" value="CC">   
               <span class="form-error">
                 Format: CC1234
               </span>     
@@ -137,7 +137,7 @@
     <pre><code class="lang-html">
     &lt;h1 class=&quot;text-center&quot;&gt;&lt;small&gt;Yale Charging Instructions&lt;/small&gt;&lt;/h1&gt;
     
-    &lt;form id=&quot;yale-charging-form&quot; data-abide class=&quot;border&quot;&gt;
+    &lt;form id=&quot;yale-charging-form&quot; data-abide novalidate class=&quot;border&quot; &gt;
     
           &lt;label id=&quot;Company&quot;&gt;Company
             &lt;input type=&quot;text&quot; value=&quot;CO&quot; 
@@ -149,7 +149,7 @@
     
     
           &lt;label id=&quot;ChargeID&quot;&gt;Charge ID (GRN, GFT, or YD)
-            &lt;input type=&quot;text&quot; name=&quot;ChargeID&quot; palceholder=&quot;GRN, GFT, or YD&quot; required pattern=&quot;(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)&quot; maxlength=&quot;9&quot; minlength=&quot;8&quot; aria-required=&quot;true&quot;&gt;
+            &lt;input id=&quot;ChargeIDValue&quot; type=&quot;text&quot; name=&quot;ChargeID&quot; palceholder=&quot;GRN, GFT, or YD&quot; required pattern=&quot;(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)&quot; maxlength=&quot;9&quot; minlength=&quot;8&quot; aria-required=&quot;true&quot;&gt;
             &lt;span class=&quot;form-error&quot;&gt;
               Format: GRN12345 or GFT12345 or YD123456
             &lt;/span&gt;
@@ -158,7 +158,7 @@
     
         &lt;div id=&quot;additional-required&quot; class=&quot;hide&quot;&gt;
           &lt;label&gt;Cost Center
-              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^CC\d{4}$&quot; maxlength=&quot;6&quot; minlength=&quot;6&quot; name=&quot;CC&quot; size=&quot;60&quot; value=&quot;CC&quot;&gt;   
+            &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^CC\d{4}$&quot; maxlength=&quot;6&quot; minlength=&quot;6&quot; name=&quot;CC&quot; size=&quot;60&quot; value=&quot;CC&quot;&gt;   
             &lt;span class=&quot;form-error&quot;&gt;
               Format: CC1234
             &lt;/span&gt;     
