@@ -71,7 +71,16 @@ a:hover .example {
 #yale-charging-form {
   input[type=text]{
     text-transform: uppercase;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
   }
+
+  .form-error{
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+  }
+}
+
+.tooltip {
+    max-width: none !important;
 }
 
 #payment-amount{

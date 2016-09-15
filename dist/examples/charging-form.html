@@ -78,23 +78,32 @@
       
       <form id="yale-charging-form" data-abide novalidate class="border" >
             
-            <label id="company">Company
+            <label id="company">Company 
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-co.png'>"> <i class="fa fa-info-circle"></i></span>
+      
               <input type="text" value="CO" 
               name="company" required pattern="^CO\d{2}$" maxlength="4" minlength="4" aria-required="true">
+      
               <span class="form-error">
                 Format: CO01
               </span>
             </label>
         
             <label id="charge-id">Grant, Gift, or Yale Designated ID <br> (GR, GK, GT, GB, GFT, or YD)
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-cid.png'>"> <i class="fa fa-info-circle"></i></span>
+      
               <input id="charge-id-value" type="text" name="CID" required pattern="(^G[RKTB]\d{6}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="8" minlength="8" aria-required="true">
+             
               <span class="form-error">
                 Formats: GR123456, GK123456, GT123456, GB123456, GFT12345 or YD123456
               </span>
             </label>
       
             <label class="hide" id="cost-share">Cost Share (optional GFT or YD)
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-cs.png'>"> <i class="fa fa-info-circle"></i></span>
+      
               <input id="cost-share-value" type="text" name="CS" pattern="(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="8" minlength="8" aria-required="true">
+      
               <span class="form-error">
                 Formats: GFT12345 or YD123456
               </span>
@@ -102,27 +111,37 @@
           
           <div id="additional-required" >
             <label>Cost Center
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-cc.png'>"> <i class="fa fa-info-circle"></i></span>
+      
               <input type="text" aria-required="true" required pattern="^CC\d{4}$" maxlength="6" minlength="6" name="CC" size="60" value="CC">   
+      
               <span class="form-error">
                 Format: CC1234
               </span>     
             </label>
       
             <label>Program
-                <input type="text" aria-required="true" required pattern="^PG\d{5}$" maxlength="7" minlength="7" name="PG" size="60" value="PG">     
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-pg.png'>"> <i class="fa fa-info-circle"></i></span>
+      
+              <input type="text" aria-required="true" required pattern="^PG\d{5}$" maxlength="7" minlength="7" name="PG" size="60" value="PG">     
+             
               <span class="form-error">
                 Format: PG12345
               </span>      
             </label>
       
             <label>Project
-                <input type="text" aria-required="true" required pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">        
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-pj.png'>"> <i class="fa fa-info-circle"></i></span>
+      
+              <input type="text" aria-required="true" required pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">   
+      
               <span class="form-error">
                 Format: PJ123456
               </span> 
             </label>
       
             <label>Assignee (optional)
+              <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="This should be a NetID associated with these charging instructions."> <i class="fa fa-info-circle"></i></span>
               <input type="text" aria-required="false" pattern="alpha_numeric">
               <span class="form-error">
                 This should be a NetID associated with these charging instructions.
@@ -147,23 +166,32 @@
     
     &lt;form id=&quot;yale-charging-form&quot; data-abide novalidate class=&quot;border&quot; &gt;
     
-          &lt;label id=&quot;company&quot;&gt;Company
+          &lt;label id=&quot;company&quot;&gt;Company 
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-co.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    
             &lt;input type=&quot;text&quot; value=&quot;CO&quot; 
             name=&quot;company&quot; required pattern=&quot;^CO\d{2}$&quot; maxlength=&quot;4&quot; minlength=&quot;4&quot; aria-required=&quot;true&quot;&gt;
+    
             &lt;span class=&quot;form-error&quot;&gt;
               Format: CO01
             &lt;/span&gt;
           &lt;/label&gt;
     
           &lt;label id=&quot;charge-id&quot;&gt;Grant, Gift, or Yale Designated ID &lt;br&gt; (GR, GK, GT, GB, GFT, or YD)
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-cid.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    
             &lt;input id=&quot;charge-id-value&quot; type=&quot;text&quot; name=&quot;CID&quot; required pattern=&quot;(^G[RKTB]\d{6}$)|(^GFT\d{5}$)|(^YD\d{6}$)&quot; maxlength=&quot;8&quot; minlength=&quot;8&quot; aria-required=&quot;true&quot;&gt;
+    
             &lt;span class=&quot;form-error&quot;&gt;
               Formats: GR123456, GK123456, GT123456, GB123456, GFT12345 or YD123456
             &lt;/span&gt;
           &lt;/label&gt;
     
           &lt;label class=&quot;hide&quot; id=&quot;cost-share&quot;&gt;Cost Share (optional GFT or YD)
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-cs.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    
             &lt;input id=&quot;cost-share-value&quot; type=&quot;text&quot; name=&quot;CS&quot; pattern=&quot;(^GFT\d{5}$)|(^YD\d{6}$)&quot; maxlength=&quot;8&quot; minlength=&quot;8&quot; aria-required=&quot;true&quot;&gt;
+    
             &lt;span class=&quot;form-error&quot;&gt;
               Formats: GFT12345 or YD123456
             &lt;/span&gt;
@@ -171,27 +199,37 @@
     
         &lt;div id=&quot;additional-required&quot; &gt;
           &lt;label&gt;Cost Center
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-cc.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    
             &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^CC\d{4}$&quot; maxlength=&quot;6&quot; minlength=&quot;6&quot; name=&quot;CC&quot; size=&quot;60&quot; value=&quot;CC&quot;&gt;   
+    
             &lt;span class=&quot;form-error&quot;&gt;
               Format: CC1234
             &lt;/span&gt;     
           &lt;/label&gt;
     
           &lt;label&gt;Program
-              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PG\d{5}$&quot; maxlength=&quot;7&quot; minlength=&quot;7&quot; name=&quot;PG&quot; size=&quot;60&quot; value=&quot;PG&quot;&gt;     
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-pg.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    
+            &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PG\d{5}$&quot; maxlength=&quot;7&quot; minlength=&quot;7&quot; name=&quot;PG&quot; size=&quot;60&quot; value=&quot;PG&quot;&gt;     
+    
             &lt;span class=&quot;form-error&quot;&gt;
               Format: PG12345
             &lt;/span&gt;      
           &lt;/label&gt;
     
           &lt;label&gt;Project
-              &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot; value=&quot;PJ&quot;&gt;        
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-pj.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    
+            &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot; value=&quot;PJ&quot;&gt;   
+    
             &lt;span class=&quot;form-error&quot;&gt;
               Format: PJ123456
             &lt;/span&gt; 
           &lt;/label&gt;
     
           &lt;label&gt;Assignee (optional)
+            &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;This should be a NetID associated with these charging instructions.&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
             &lt;input type=&quot;text&quot; aria-required=&quot;false&quot; pattern=&quot;alpha_numeric&quot;&gt;
             &lt;span class=&quot;form-error&quot;&gt;
               This should be a NetID associated with these charging instructions.
