@@ -2,22 +2,27 @@
 
 <form id="yale-charging-form" data-abide novalidate class="border" >
       
-      <label id="Company">Company
+      <label id="company">Company
         <input type="text" value="CO" 
-        name="Company" required pattern="^CO\d{2}$" maxlength="4" minlength="4" aria-required="true">
+        name="company" required pattern="^CO\d{2}$" maxlength="4" minlength="4" aria-required="true">
         <span class="form-error">
           Format: CO01
         </span>
       </label>
-
   
-      <label id="ChargeID">Grant, Gift, or Yale Designated ID <br> (GR, GK, GT, GB, GFT, or YD)
-        <input id="ChargeIDValue" type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^G[RKTB]\d{6}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
+      <label id="charge-id">Grant, Gift, or Yale Designated ID <br> (GR, GK, GT, GB, GFT, or YD)
+        <input id="charge-id-value" type="text" name="CID" required pattern="(^G[RKTB]\d{6}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="8" minlength="8" aria-required="true">
         <span class="form-error">
           Formats: GR123456, GK123456, GT123456, GB123456, GFT12345 or YD123456
         </span>
       </label>
 
+      <label class="hide" id="cost-share">Cost Share (optional GFT or YD)
+        <input id="cost-share-value" type="text" name="CS" pattern="(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="8" minlength="8" aria-required="true">
+        <span class="form-error">
+          Formats: GFT12345 or YD123456
+        </span>
+      </label>
     
     <div id="additional-required" >
       <label>Cost Center
@@ -42,7 +47,10 @@
       </label>
 
       <label>Assignee (optional)
-        <input type="text" aria-required="false" >
+        <input type="text" aria-required="false" pattern="alpha_numeric">
+        <span class="form-error">
+          This should be a NetID associated with these charging instructions.
+        </span> 
       </label>
 
     </div>

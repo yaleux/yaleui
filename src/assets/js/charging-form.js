@@ -1,5 +1,5 @@
 // Display fields based on type of Charge ID
-$('#ChargeIDValue').bind('change', function(){
+$('#charge-id-value').bind('change', function(){
   var chargeID = this.value.toLocaleUpperCase();
   var grantID = new RegExp('^G[RKTB]');
   var giftID = new RegExp('^GFT');
@@ -7,10 +7,13 @@ $('#ChargeIDValue').bind('change', function(){
 
   if (grantID.test(chargeID)) {
     $('#additional-required').addClass('hide');
+    $('#cost-share').removeClass('hide');
   }
 
   if (giftID.test(chargeID) || ydesignatedID.test(chargeID)){
     $('#additional-required').removeClass('hide');
+    $('#cost-share').addClass('hide');
+
   }
 });
 
