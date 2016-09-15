@@ -11,10 +11,10 @@
       </label>
 
   
-      <label id="ChargeID">Charge ID (GRN, GFT, or YD)
-        <input id="ChargeIDValue" type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^GRN\d{5}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
+      <label id="ChargeID">Grant, Gift, or Yale Designated ID <br> (GR, GK, GT, GB, GFT, or YD)
+        <input id="ChargeIDValue" type="text" name="ChargeID" palceholder="GRN, GFT, or YD" required pattern="(^G[RKTB]\d{6}$)|(^GFT\d{5}$)|(^YD\d{6}$)" maxlength="9" minlength="8" aria-required="true">
         <span class="form-error">
-          Format: GRN12345 or GFT12345 or YD123456
+          Formats: GR123456, GK123456, GT123456, GB123456, GFT12345 or YD123456
         </span>
       </label>
 

@@ -1,11 +1,15 @@
 // Display fields based on type of Charge ID
 $('#ChargeIDValue').bind('change', function(){
-  var chargeID = this.value.toLocaleUpperCase();;
-  if( chargeID.startsWith("GRN") ){
+  var chargeID = this.value.toLocaleUpperCase();
+  var grantID = new RegExp('^G[RKTB]');
+  var giftID = new RegExp('^GFT');
+  var ydesignatedID = new RegExp('^YD');
+
+  if (grantID.test(chargeID)) {
     $('#additional-required').addClass('hide');
   }
 
-  if( chargeID.startsWith("GFT") || chargeID.startsWith("YD") ){
+  if (giftID.test(chargeID) || ydesignatedID.test(chargeID)){
     $('#additional-required').removeClass('hide');
   }
 });
