@@ -1,13 +1,19 @@
 // Display fields based on type of Charge ID
-$('#ChargeID').change(function(){
-  chargeID = this.value;
+$('#charge-id-value').bind('change', function(){
+  var chargeID = this.value.toLocaleUpperCase();
+  var grantID = new RegExp('^G[RKTB]');
+  var giftID = new RegExp('^G[ES]');
+  var ydesignatedID = new RegExp('^YD');
 
-  if(chargeID.startsWith("GRN")){
+  if (grantID.test(chargeID)) {
     $('#additional-required').addClass('hide');
+    $('#cost-share').removeClass('hide');
   }
 
-  if( chargeID.startsWith("GFT") || chargeID.startsWwith("YD") ){
+  if (giftID.test(chargeID) || ydesignatedID.test(chargeID)){
     $('#additional-required').removeClass('hide');
+    $('#cost-share').addClass('hide');
+
   }
 });
 

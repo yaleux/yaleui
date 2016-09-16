@@ -2,7 +2,7 @@
 $('#charge-id-value').bind('change', function(){
   var chargeID = this.value.toLocaleUpperCase();
   var grantID = new RegExp('^G[RKTB]');
-  var giftID = new RegExp('^GFT');
+  var giftID = new RegExp('^G[ES]');
   var ydesignatedID = new RegExp('^YD');
 
   if (grantID.test(chargeID)) {
