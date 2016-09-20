@@ -130,10 +130,10 @@
               </span>      
             </label>
       
-            <label>Project
+            <label>Project (may be left empty)
               <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-pj.png'>"> <i class="fa fa-info-circle"></i></span>
       
-              <input type="text" aria-required="true" required pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">   
+              <input type="text" pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60" value="PJ">   
       
               <span class="form-error">
                 Format: PJ123456
@@ -144,9 +144,9 @@
             
               <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-assignee.png'>"> <i class="fa fa-info-circle"></i></span>
             
-              <input type="text" aria-required="false" pattern="alpha_numeric">
+              <input type="text" aria-required="false" pattern="alpha_numeric" maxlength="14">
               <span class="form-error">
-                This should be a NetID associated with these charging instructions.
+                This should be the NetID associated with the responsible person for these charging instructions. This is probably <em>not</em> your own NetID).
               </span> 
             </label>
       
@@ -220,10 +220,10 @@
             &lt;/span&gt;      
           &lt;/label&gt;
     
-          &lt;label&gt;Project
+          &lt;label&gt;Project (may be left empty)
             &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-pj.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
     
-            &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot; value=&quot;PJ&quot;&gt;   
+            &lt;input type=&quot;text&quot; pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot; value=&quot;PJ&quot;&gt;   
     
             &lt;span class=&quot;form-error&quot;&gt;
               Format: PJ123456
@@ -234,9 +234,9 @@
     
             &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-assignee.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
     
-            &lt;input type=&quot;text&quot; aria-required=&quot;false&quot; pattern=&quot;alpha_numeric&quot;&gt;
+            &lt;input type=&quot;text&quot; aria-required=&quot;false&quot; pattern=&quot;alpha_numeric&quot; maxlength=&quot;14&quot;&gt;
             &lt;span class=&quot;form-error&quot;&gt;
-              This should be a NetID associated with these charging instructions.
+              This should be the NetID associated with the responsible person for these charging instructions. This is probably &lt;em&gt;not&lt;/em&gt; your own NetID).
             &lt;/span&gt; 
           &lt;/label&gt;
     
