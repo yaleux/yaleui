@@ -48,7 +48,8 @@ function deploy_version(){
 
 // Writes a commit with the changes to the version numbers
 function deploy_commit(done){
-  exec('git commit -am "Bump to version "' + NEXT_VERSION);
+  exec('git add . ');
+  exec('git commit -m "Bump to version "' + NEXT_VERSION);
   exec('git tag v' + NEXT_VERSION);
   exec('git push origin master');
   exec('git push --tags');
