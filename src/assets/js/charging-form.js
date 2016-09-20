@@ -13,7 +13,6 @@ $('#charge-id-value').bind('change', function(){
   if (giftID.test(chargeID) || ydesignatedID.test(chargeID)){
     $('#additional-required').removeClass('hide');
     $('#cost-share').addClass('hide');
-
   }
 });
 
@@ -35,6 +34,5 @@ $(':input[type=text]').focus(function() {
 // Convert input to uppercase
 $('input[type=text]').bind('change', function() {
    this.value = this.value.toLocaleUpperCase();
-
 });
 
