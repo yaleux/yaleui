@@ -50,7 +50,8 @@ function deploy_version(){
 function deploy_commit(done){
   exec('git commit -am "Bump to version "' + NEXT_VERSION);
   exec('git tag v' + NEXT_VERSION);
-  exec('git push origin master --follow-tags');
+  exec('git push origin master');
+  exec('git push --tags');
   exec('git subtree push --prefix dist origin gh-pages');
   done();
 }
