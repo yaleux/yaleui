@@ -71,11 +71,11 @@ a:hover .example {
 #yale-charging-form {
   input[type=text]{
     text-transform: uppercase;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-family: $font-family-monospace
   }
 
   .form-error{
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-family: $font-family-monospace
   }
 }
 
