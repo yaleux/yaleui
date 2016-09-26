@@ -18,7 +18,7 @@ $('#charge-id-value').bind('change', function(){
 
 
 // Move the input focus to the end of the input string
-$(':input[type=text]').focus(function() {
+$('#yale-charging-form :input[type=text]').focus(function() {
      setTimeout((function(el) {
         var strLength = el.value.length
 
@@ -32,7 +32,7 @@ $(':input[type=text]').focus(function() {
 });
 
 // Convert input to uppercase
-$('input[type=text]').bind('change', function() {
+$('#yale-charging-form input[type=text]').bind('change', function() {
    this.value = this.value.toLocaleUpperCase();
 });
 

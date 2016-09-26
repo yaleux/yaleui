@@ -133,7 +133,7 @@
             <label>Project (may be left empty)
               <span data-tooltip aria-haspopup="true" class="coa-tooltip has-tip" title="<img src='../assets/img/coa-pj.png'>"> <i class="fa fa-info-circle"></i></span>
       
-              <input type="text" pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60">   
+              <input type="text" aria-required="true" required pattern="^PJ\d{6}$" minlength="8" maxlength="8" name="PJ" size="60">   
       
               <span class="form-error">
                 Format: PJ123456
@@ -223,7 +223,7 @@
           &lt;label&gt;Project (may be left empty)
             &lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;coa-tooltip has-tip&quot; title=&quot;&lt;img src=&#39;../assets/img/coa-pj.png&#39;&gt;&quot;&gt; &lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
     
-            &lt;input type=&quot;text&quot; pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot;&gt;   
+            &lt;input type=&quot;text&quot; aria-required=&quot;true&quot; required pattern=&quot;^PJ\d{6}$&quot; minlength=&quot;8&quot; maxlength=&quot;8&quot; name=&quot;PJ&quot; size=&quot;60&quot;&gt;   
     
             &lt;span class=&quot;form-error&quot;&gt;
               Format: PJ123456
@@ -281,7 +281,7 @@
     
     
     // Move the input focus to the end of the input string
-    $(&#39;:input[type=text]&#39;).focus(function() {
+    $(&#39;#yale-charging-form :input[type=text]&#39;).focus(function() {
          setTimeout((function(el) {
             var strLength = el.value.length
     
@@ -295,7 +295,7 @@
     });
     
     // Convert input to uppercase
-    $(&#39;input[type=text]&#39;).bind(&#39;change&#39;, function() {
+    $(&#39;#yale-charging-form input[type=text]&#39;).bind(&#39;change&#39;, function() {
        this.value = this.value.toLocaleUpperCase();
     });
     </code></pre>
