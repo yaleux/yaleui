@@ -1,9 +1,9 @@
 - title: Yale Header & Footer
   thumb: assets/img/header-footer.png
   link: examples/header-footer.html
-- title: Yale Login Form
+- title: Yale Charging Instructions
   thumb: assets/img/login-form.png
-  link: examples/login-form.html
+  link: examples/charging-form.html
 - title: Feature Cards
   thumb: assets/img/feature-card.png 
   link: examples/cards.html  
