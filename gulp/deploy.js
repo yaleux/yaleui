@@ -23,9 +23,10 @@ function deploy_commit(done){
 
 // Publishes to AWS S3 bucket
 function deploy_cdn(done){
-  exec('aws s3 sync dist/assets/css s3://yaleui.yale.edu/' + VERSION + '/css/');
-  exec('aws s3 sync dist/assets/js s3://yaleui.yale.edu/' + VERSION + '/js/');
-  exec('aws s3 sync dist/assets/img s3://yaleui.yale.edu/' + VERSION + '/img/');
-  exec('aws s3 sync dist/assets/fonts s3://yaleui.yale.edu/' + VERSION + '/fonts/');
+  exec('get_awstoken');
+  exec('aws --profile saml s3 sync dist/assets/css s3://yaleui.yale.edu/' + VERSION + '/css/');
+  exec('aws --profile saml s3 sync dist/assets/js s3://yaleui.yale.edu/' + VERSION + '/js/');
+  exec('aws --profile saml s3 sync dist/assets/img s3://yaleui.yale.edu/' + VERSION + '/img/');
+  exec('aws --profile saml s3 sync dist/assets/fonts s3://yaleui.yale.edu/' + VERSION + '/fonts/');
 done();
 }
