@@ -71,7 +71,7 @@ To contribute resleases to the Yale UI Style Guide, you will need the following:
 1. Permission from the owner of this repository (ask to be added as a collaborator)
 2. Install YaleITS Get AWS Token: https://git.yale.edu/AWS/yaleits-get_awstoken
 
-### Publish to master and Github Pages
+### Publish to Github Pages
 
 To publish a change to github pages, first run a full build and then user our gh-publish script as follows:
 
@@ -79,6 +79,8 @@ To publish a change to github pages, first run a full build and then user our gh
 npm run build
 ./gh-publish.bash
 ```
+
+You should now see your changes at https://yaleux.github.io/yaleui/
 
 ### Create and release a new version
 
