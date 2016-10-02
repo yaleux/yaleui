@@ -63,3 +63,30 @@ http://localhost:8000
 ```
 
 To create compressed, production-ready assets, run `npm run build`.
+
+## Contributing Releases
+
+To contribute resleases to the Yale UI Style Guide, you will need the following:
+
+1. Permission from the owner of this repository (ask to be as a contributor)
+2. Install YaleITS Get AWS Token: https://git.yale.edu/AWS/yaleits-get_awstoken
+
+### Publish to master and Github Pages
+
+To publish a change to github pages, first run a full build and then user our gh-publish script as follows:
+
+```bash
+npm run build
+./gh-publish.bash
+```
+
+### Create and release a new version
+
+The following sequence will:
+1. Increase (bump) the version tag
+2. Deploy the changes to a new versioned folder in our CDN (using get_awstoken)
+
+```bash
+npm run bump
+npm run deploy
+```
