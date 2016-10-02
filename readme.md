@@ -68,7 +68,7 @@ To create compressed, production-ready assets, run `npm run build`.
 
 To contribute resleases to the Yale UI Style Guide, you will need the following:
 
-1. Permission from the owner of this repository (ask to be as a contributor)
+1. Permission from the owner of this repository (ask to be added as a collaborator)
 2. Install YaleITS Get AWS Token: https://git.yale.edu/AWS/yaleits-get_awstoken
 
 ### Publish to master and Github Pages
