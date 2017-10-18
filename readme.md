@@ -2,7 +2,7 @@
 Source for [Yale UI Style Guide](https://yaleux.github.io/yaleui/)
 Based on Foundation for Sites
 
-The Yale UI Pattern Library (formerly the UI Style Guide) is undergoing a complete rewrite, based on Bootstrap 4, for improved performance and accessibility. This library may temporarily be used as a visual reference but it is no longer being maintained. For early access to the new style guide please e-mail ux@yale.edu (link sends e-mail) and we will notify you when a beta is available.
+### The Yale UI Pattern Library (formerly the UI Style Guide) is undergoing a complete rewrite, based on Bootstrap 4, for improved performance and accessibility. This library may temporarily be used as a visual reference but it is no longer being maintained. For early access to the new style guide please e-mail ux@yale.edu (link sends e-mail) and we will notify you when a beta is available.
 
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
