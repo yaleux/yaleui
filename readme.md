@@ -1,3 +1,11 @@
+
+# Yale UI Pattern Library is no longer current or maintained.
+For the current Yale UI Component Library please see:
+https://usability.yale.edu/web-accessibility/yale-ui-component-library
+
+
+```
+
 # Yale UI Pattern Library (formerly the UI Style Guide)
 Source for [Yale UI Style Guide](https://yaleux.github.io/yaleui/)
 Based on Foundation for Sites
@@ -28,13 +36,14 @@ The quickest way to get started, just download the assets and link the CSS file 
 [Download Assets](https://yaleux.github.io/yaleui/YaleUI.zip)
 
 ```
+```
   <head>
       <!-- ... -->
       <link rel="stylesheet" href="assets/css/app.css">
       <!-- ... -->
   </head>
 ```
-
+```
 ### Advanced (Custom Build)
 
 Requirements:
@@ -46,25 +55,25 @@ Requirements:
 
 Download the Yale UI Style Guide with Git:
 
-
+```
 ```bash
 git clone https://github.com/yaleux/yaleui
 ```
-
+```
 Then open the folder in your command line, and install the needed dependencies:
-
+```
 ```bash
 cd yaleui
 npm install
 bower install
 ```
-
+```
 Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
-
+```
 ```
 http://localhost:8000
 ```
-
+```
 To create compressed, production-ready assets, run `npm run build`.
 
 ## Contributing Releases
@@ -77,12 +86,12 @@ To contribute resleases to the Yale UI Style Guide, you will need the following:
 ### Publish to Github Pages
 
 To publish a change to github pages, first run a full build and then user our gh-publish script as follows:
-
+```
 ```bash
 npm run build
 ./gh-publish.bash
 ```
-
+```
 You should now see your changes at https://yaleux.github.io/yaleui/
 
 ### Create and release a new version
@@ -90,7 +99,7 @@ You should now see your changes at https://yaleux.github.io/yaleui/
 The following sequence will:
 1. Increase (bump) the version tag
 2. Deploy the changes to a new versioned folder in our CDN (using get_awstoken)
-
+```
 ```bash
 npm run bump
 npm run deploy
